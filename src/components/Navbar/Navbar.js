@@ -1,9 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from './Logo';
 
 function Navbar() {
+  useEffect(() => {
+    // Mobile dropdown toggle functionality
+    const handleDropdownClick = (e) => {
+      if (window.innerWidth <= 1199.98) {
+        e.preventDefault();
+        const dropdown = e.target.closest('.dropdown');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('show');
+          }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle('show');
+      }
+    };
+
+    // Add click listeners to dropdown toggles
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', handleDropdownClick);
+    });
+
+    // Close dropdowns when clicking outside
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+          dropdown.classList.remove('show');
+        });
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      dropdownToggles.forEach(toggle => {
+        toggle.removeEventListener('click', handleDropdownClick);
+      });
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
   return (
     <nav className="navbar navbar-expand-xl navbar-dark navbar-custom navbar-scrolled">
       <div className="container-custom">

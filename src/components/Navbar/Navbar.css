@@ -83,6 +83,49 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2852, 80, 80, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Dropdown Styles */
+.navbar-custom .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: auto;
+  min-width: 200px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar-custom .dropdown-item {
+  color: var(--dark-gray) !important;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: rgba(154, 205, 50, 0.1);
+  color: var(--primary-color) !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1199.98px) {
   .navbar-custom .navbar-toggler {
@@ -97,6 +140,47 @@
   .navbar-custom .nav-link {
     margin: 0.25rem 0;
     padding: 0.75rem 1rem !important;
+  }
+  
+  /* Mobile dropdown positioning */
+  .navbar-custom .dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .navbar-custom .dropdown.show .dropdown-menu {
+    display: block;
+    max-height: 300px;
+    transition: max-height 0.3s ease;
+  }
+  
+  .navbar-custom .dropdown-item {
+    padding: 0.75rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: var(--dark-gray) !important;
+  }
+  
+  .navbar-custom .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar-custom .dropdown-item:hover {
+    background-color: rgba(154, 205, 50, 0.1);
+    color: var(--primary-color) !important;
   }
 }
 
