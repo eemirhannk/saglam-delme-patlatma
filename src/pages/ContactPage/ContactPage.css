@@ -78,6 +78,10 @@
   margin-top: 32px;
 }
 
+.btn-submit i{
+  margin-right: 10px;
+}
+
 .btn-submit {
   background-color: var(--primary-color);
   color: white;

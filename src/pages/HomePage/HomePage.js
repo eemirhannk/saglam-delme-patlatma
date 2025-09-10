@@ -10,7 +10,6 @@ function HomePage() {
     {
       id: 1,
       isActive: true,
-      slideClass: "orange-gold",
       title: "Sağlam Delme & Patlatma",
       description: "1997'den beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
       button1: { text: "Projenizi Başlatın", type: "button" },
@@ -22,10 +21,9 @@ function HomePage() {
     {
       id: 2,
       isActive: false,
-      slideClass: "bg-gradient-primary",
       title: "Delme Hizmetleri",
       description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz. Modern ekipmanlarımızla en zorlu projeleri başarıyla tamamlıyoruz.",
-      button1: { text: "Delme Hizmetleri", type: "button" },
+      button1: { text: "Delme Hizmetleri", type: "link", to: "/delme-hizmetleri" },
       button2: { text: "Teknik Detaylar", type: "button" },
       icon: "fas fa-mountain",
       imageTitle: "Hassas Delme",
@@ -34,7 +32,6 @@ function HomePage() {
     {
       id: 3,
       isActive: false,
-      slideClass: "bg-gradient-secondary",
       title: "Patlatma Hizmetleri",
       description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz. En sıkı güvenlik protokolleri ile çalışıyoruz.",
       button1: { text: "Patlatma Hizmetleri", type: "button" },
@@ -46,7 +43,6 @@ function HomePage() {
     {
       id: 4,
       isActive: false,
-      slideClass: "bg-gradient-tertiary",
       title: "Teknik Danışmanlık",
       description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
       button1: { text: "Danışmanlık", type: "link", to: "/danismanlik", icon: "fas fa-user-tie" },
@@ -84,7 +80,7 @@ function HomePage() {
       icon: "fas fa-mountain",
       title: "Delme Hizmetleri",
       description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz.",
-      link: { text: "Detaylar", type: "button" }
+      link: { text: "Detaylar", type: "link", to: "/delme-hizmetleri" }
     },
     {
       id: 2,
@@ -112,7 +108,7 @@ function HomePage() {
       icon: "fas fa-water",
       title: "Su Altı İşleri",
       description: "Sertifikalı dalgıç ekibimizle su altı delme ve patlatma hizmetleri.",
-      link: { text: "Detaylar", type: "button" }
+      link: { text: "Detaylar", type: "link", to: "/patlatma-hizmetleri#underwater-blasting" }
     },
     {
       id: 6,
@@ -167,7 +163,7 @@ function HomePage() {
           <div className="carousel-inner">
             {carouselSlides.map((slide, index) => (
               <div key={slide.id} className={`carousel-item ${slide.isActive ? 'active' : ''}`}>
-                <div className={`hero-slide ${slide.slideClass}`}>
+                <div className={`hero-slide`}>
                   <div className="container">
                     <div className="row align-items-center min-vh-75">
                       <div className="col-lg-6">

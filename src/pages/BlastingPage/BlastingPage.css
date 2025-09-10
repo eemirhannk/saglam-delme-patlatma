@@ -202,10 +202,115 @@
   left: 0;
 }
 
-.benefit-item:last-child {
+  .benefit-item:last-child {
+    margin-bottom: 0;
+  }
+.underwater-image-container {
+  width: 100%;
+  position: relative;
   margin-bottom: 0;
 }
 
+.underwater-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 70vh;
+}
+
+.underwater-content {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.underwater-applications {
+  padding-right: 20px;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.application-card {
+  padding: 25px;
+  background: var(--soft-white);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--orange-gold);
+}
+
+.application-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.application-card:hover .application-title {
+  color: var(--orange-gold);
+}
+
+.application-description {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.underwater-benefits {
+  background: var(--dark-gray);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.underwater-benefits .section-subtitle {
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.underwater-benefits .benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.underwater-benefits .benefit-item {
+  color: var(--orange-gold);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.underwater-benefits .benefit-item::before {
+  content: "•";
+  color: var(--orange-gold);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.underwater-benefits .benefit-item:last-child {
+  margin-bottom: 0;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -222,6 +327,19 @@
   
   .urban-blasting-text {
     padding-right: 0;
+  }
+  
+  .underwater-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .underwater-applications {
+    padding-right: 0;
+  }
+  
+  .applications-grid {
+    grid-template-columns: 1fr;
   }
   
 }
@@ -285,6 +403,30 @@
     font-size: 0.9rem;
   }
   
+  .underwater-content {
+    padding: 60px 0;
+  }
+  
+  .application-card {
+    padding: 20px;
+  }
+  
+  .application-title {
+    font-size: 1rem;
+  }
+  
+  .application-description {
+    font-size: 0.9rem;
+  }
+  
+  .underwater-benefits {
+    padding: 30px;
+  }
+  
+  .underwater-benefits .benefit-item {
+    font-size: 0.9rem;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -338,6 +480,30 @@
   }
   
   .benefit-item {
+    font-size: 0.85rem;
+  }
+  
+  .underwater-content {
+    padding: 40px 0;
+  }
+  
+  .application-card {
+    padding: 15px;
+  }
+  
+  .application-title {
+    font-size: 0.95rem;
+  }
+  
+  .application-description {
+    font-size: 0.85rem;
+  }
+  
+  .underwater-benefits {
+    padding: 20px;
+  }
+  
+  .underwater-benefits .benefit-item {
     font-size: 0.85rem;
   }
 }

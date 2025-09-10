@@ -1,6 +1,3 @@
-/* Drilling Page Styles */
-@import '../../styles/variables/_colors.css';
-
 .drilling-page {
   background: white;
   min-height: 100vh;

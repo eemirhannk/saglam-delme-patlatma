@@ -2,6 +2,8 @@ import React from 'react';
 import './BlastingPage.css';
 import quarryImage from '@public/images/quarry-blasting.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
+import urbanImage2 from '@public/images/sehiricipatlatma2.jpeg';
+import underwaterImage from '@public/images/sualti4.jpeg';
 
 function BlastingPage() {
   const standards = [
@@ -47,6 +49,50 @@ function BlastingPage() {
     "Proje süresince şeffaf raporlama (titreşim ölçüm cihazları ile kayıt)"
   ];
 
+  const underwaterApplications = [
+    {
+      id: 1,
+      title: "Liman ve Rıhtım İnşaatları",
+      description: "Deniz tabanında güvenli kazı ve temel hazırlığı için kontrollü patlatma"
+    },
+    {
+      id: 2,
+      title: "Baraj ve Hidroelektrik Projeleri",
+      description: "Su altında kaya kazısı ve tünel açma işlemleri"
+    },
+    {
+      id: 3,
+      title: "Köprü Ayakları ve Viyadükler",
+      description: "Nehir ve göl tabanında temel kazısı ve kaya temizliği"
+    },
+    {
+      id: 4,
+      title: "Deniz Tüneli Projeleri",
+      description: "Su altı geçişlerinde güvenli kazı ve açma işlemleri"
+    }
+  ];
+
+  const underwaterBenefits = [
+    "Çevresel etkiyi minimize eden kontrollü patlatma",
+    "Su canlılarının korunması için özel önlemler",
+    "Yüksek su basıncına dayanıklı patlayıcı sistemler",
+    "Su altı görüntüleme ve izleme teknolojileri",
+    "Dalga ve akıntı koşullarına uygun operasyon planlaması"
+  ];
+
+  const urbanImages = [
+    {
+      id: 1,
+      src: urbanImage,
+      alt: "Şehir İçi Patlatma 1"
+    },
+    {
+      id: 2,
+      src: urbanImage2,
+      alt: "Şehir İçi Patlatma 2"
+    }
+  ];
+
   return (
     <div className="blasting-page">
         <section className="quarry-image-container">
@@ -55,8 +101,8 @@ function BlastingPage() {
           {/* Overlay Content */}
           <div className="image-overlay-content">
             <div className="overlay-text">
-              <h2 className="blasting-title">
-                <span className="orange-gold">TAŞ OCAĞI</span>
+              <h2 className="blasting-title orange-gold">
+                TAŞ OCAĞI
               </h2>
               
               <div className="blasting-description">
@@ -132,9 +178,11 @@ function BlastingPage() {
             </div>
 
             <div className="urban-blasting-visual">
-              <div className="urban-image-container">
-                <img src={urbanImage} alt="Şehir İçi Patlatma" className="urban-image" />
-              </div>
+              {urbanImages.map((image) => (
+                <div key={image.id} className="urban-image-container">
+                  <img src={image.src} alt={image.alt} className="urban-image" />
+                </div>
+              ))}
               
               <div className="benefits-box">
                 <h3 className="benefits-title">Çevresel ve Teknik Faydalar</h3>
@@ -144,6 +192,67 @@ function BlastingPage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Underwater Blasting Section */}
+      <section id="underwater-blasting" className="underwater-blasting-section">
+        <div className="underwater-image-container">
+          <img src={underwaterImage} alt="Su Altı Patlatma" className="underwater-image" />
+          
+          {/* Overlay Content */}
+          <div className="image-overlay-content">
+            <div className="overlay-text">
+              <h2 className="blasting-title orange-gold">
+                KONTROLLÜ SUALTI PATLATMALARI
+              </h2>
+              
+              <div className="blasting-description">
+                <p>
+                  Deniz, göl veya nehir tabanında yapılan kazı ve inşaat çalışmalarında (liman, rıhtım, baraj, köprü ayakları vb.) 
+                  kullanılan su altı patlatmaları, çevreye ve canlı yaşama zarar vermeden, kontrollü bir şekilde kaya ve beton 
+                  yapıların parçalanmasını sağlar.
+                </p>
+                
+                <p>
+                  Su altı patlatma operasyonlarımızda, yüksek su basıncına dayanıklı özel patlayıcı sistemler ve 
+                  su geçirmez fünye teknolojileri kullanılmaktadır. Operasyonlar sırasında su canlılarının korunması 
+                  için özel önlemler alınır ve çevresel etki minimize edilir.
+                </p>
+                
+                <p>
+                  Dalga ve akıntı koşullarına uygun operasyon planlaması ile güvenli ve verimli kazı işlemleri 
+                  gerçekleştirilir. Su altı görüntüleme ve izleme teknolojileri ile sürekli kontrol sağlanarak 
+                  proje hedeflerine ulaşılır.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-custom">
+          <div className="underwater-content">
+            <div className="underwater-applications">
+              <h3 className="section-subtitle">Uygulama Alanları</h3>
+              <div className="applications-grid">
+                {underwaterApplications.map((application) => (
+                  <div key={application.id} className="application-card">
+                    <h4 className="application-title">{application.title}</h4>
+                    <p className="application-description">{application.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="underwater-benefits">
+              <h3 className="section-subtitle">Teknik Özellikler</h3>
+              <ul className="benefits-list">
+                {underwaterBenefits.map((benefit, index) => (
+                  <li key={index} className="benefit-item">{benefit}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
