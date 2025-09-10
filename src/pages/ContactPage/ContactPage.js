@@ -31,7 +31,7 @@ function ContactPage() {
     };
 
     try {
-      // Send email with EmailJS
+      // EmailJS ile e-posta gönder
       const result = await emailjs.send(
         'service_5v1epin', // EmailJS Service ID
         'template_oxnvwrt', // EmailJS Template ID
@@ -51,13 +51,13 @@ function ContactPage() {
 
       if (result.status === 200) {
         setSubmitStatus('success');
-        e.target.reset(); // Clear form
-        setCompanyType(''); // Clear state too
+        e.target.reset(); // Formu temizle
+        setCompanyType(''); // State'i de temizle
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Email sending error:', error);
+      console.error('E-posta gönderme hatası:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

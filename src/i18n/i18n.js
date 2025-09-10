@@ -824,6 +824,7 @@ i18n
       tr,
       en
     },
+    lng: 'tr', // Varsayılan dil Türkçe
     fallbackLng: 'tr',
     debug: false,
     interpolation: {

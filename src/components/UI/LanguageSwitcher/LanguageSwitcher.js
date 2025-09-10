@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './LanguageSwitcher.css';
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState('tr');
+
+  useEffect(() => {
+    // İlk yüklemede mevcut dili al
+    const currentLang = i18n.language || 'tr';
+    setCurrentLanguage(currentLang);
+  }, [i18n.language]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setCurrentLanguage(lng);
   };
 
   return (
     <div className="language-switcher">
       <button
-        className={`lang-btn ${i18n.language === 'tr' ? 'active' : ''}`}
+        className={`lang-btn ${currentLanguage === 'tr' ? 'active' : ''}`}
         onClick={() => changeLanguage('tr')}
         title="Türkçe"
       >
@@ -20,7 +28,7 @@ function LanguageSwitcher() {
       </button>
       <span className="lang-separator">|</span>
       <button
-        className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+        className={`lang-btn ${currentLanguage === 'en' ? 'active' : ''}`}
         onClick={() => changeLanguage('en')}
         title="English"
       >
