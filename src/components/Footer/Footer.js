@@ -21,9 +21,7 @@ function Footer() {
               </p>
               <p className="footer-contact-item">
                 <i className="fas fa-map-marker-alt"></i>
-                Tığcılar Mahallesi Pamuklar<br />
-                Sokak No : 14 İç Kapı No: 302<br />
-                Adapazarı / SAKARYA
+                <span dangerouslySetInnerHTML={{ __html: t('footer.address') }} />
               </p>
             </div>
           </div>

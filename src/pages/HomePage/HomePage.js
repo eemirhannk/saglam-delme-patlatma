@@ -25,7 +25,7 @@ function HomePage() {
       isActive: false,
       title: t('homepage.carousel.slide2.title'),
       description: t('homepage.carousel.slide2.description'),
-      button1: { text: t('homepage.carousel.slide2.button1'), type: "link", to: "/delme-hizmetleri" },
+      button1: { text: t('homepage.carousel.slide2.button1'), type: "link", to: "/drilling-services" },
       button2: { text: t('homepage.carousel.slide2.button2'), type: "button" },
       icon: "fas fa-mountain",
       imageTitle: t('homepage.carousel.slide2.imageTitle'),
@@ -47,7 +47,7 @@ function HomePage() {
       isActive: false,
       title: t('homepage.carousel.slide4.title'),
       description: t('homepage.carousel.slide4.description'),
-      button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/danismanlik", icon: "fas fa-user-tie" },
+      button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/consulting", icon: "fas fa-user-tie" },
       button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
       icon: "fas fa-user-tie",
       imageTitle: t('homepage.carousel.slide4.imageTitle'),
@@ -82,14 +82,14 @@ function HomePage() {
       icon: "fas fa-mountain",
       title: t('services.drilling.title'),
       description: t('services.drilling.description'),
-      link: { text: t('common.details'), type: "link", to: "/delme-hizmetleri" }
+      link: { text: t('common.details'), type: "link", to: "/drilling-services" }
     },
     {
       id: 2,
       icon: "fas fa-bomb",
       title: t('services.blasting.title'),
       description: t('services.blasting.description'),
-      link: { text: t('common.details'), type: "link", to: "/patlatma-hizmetleri" }
+      link: { text: t('common.details'), type: "link", to: "/blasting-services" }
     },
     {
       id: 3,
@@ -103,14 +103,14 @@ function HomePage() {
       icon: "fas fa-user-tie",
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
-      link: { text: t('common.details'), type: "link", to: "/danismanlik" }
+      link: { text: t('common.details'), type: "link", to: "/consulting" }
     },
     {
       id: 5,
       icon: "fas fa-water",
       title: t('services.underwater.title'),
       description: t('services.underwater.description'),
-      link: { text: t('common.details'), type: "link", to: "/patlatma-hizmetleri#underwater-blasting" }
+      link: { text: t('common.details'), type: "link", to: "/blasting-services#underwater-blasting" }
     },
     {
       id: 6,

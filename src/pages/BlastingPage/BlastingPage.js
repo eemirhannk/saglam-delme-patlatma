@@ -86,19 +86,19 @@ function BlastingPage() {
     {
       id: 1,
       src: urbanImage,
-      alt: "Şehir içi kontrollü patlatma işlemi - Güvenli ve profesyonel hizmet"
+      alt: t('images.urban1')
     },
     {
       id: 2,
       src: urbanImage2,
-      alt: "Şehir merkezinde güvenli patlatma operasyonu - Sağlam Delme & Patlatma"
+      alt: t('images.urban2')
     }
   ];
 
   return (
     <div className="blasting-page">
         <section className="quarry-image-container">
-          <img src={quarryImage} alt="Taş ocağında güvenli ve kontrollü patlatma işlemi - Sağlam Delme & Patlatma" className="quarry-image" />
+          <img src={quarryImage} alt={t('images.quarry')} className="quarry-image" />
           
           {/* Overlay Content */}
           <div className="image-overlay-content">
@@ -191,7 +191,7 @@ function BlastingPage() {
       {/* Underwater Blasting Section */}
       <section id="underwater-blasting" className="underwater-blasting-section">
         <div className="underwater-image-container">
-          <img src={underwaterImage} alt="Su altı kontrollü patlatma işlemi - Deniz ve göl tabanında güvenli operasyon" className="underwater-image" />
+          <img src={underwaterImage} alt={t('images.underwater')} className="underwater-image" />
           
           {/* Overlay Content */}
           <div className="image-overlay-content">

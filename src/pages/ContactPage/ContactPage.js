@@ -31,7 +31,7 @@ function ContactPage() {
     };
 
     try {
-      // EmailJS ile e-posta gönder
+      // Send email with EmailJS
       const result = await emailjs.send(
         'service_5v1epin', // EmailJS Service ID
         'template_oxnvwrt', // EmailJS Template ID
@@ -41,7 +41,7 @@ function ContactPage() {
           from_name: data.name,
           from_email: data.email,
           phone: data.phone,
-          company_type: data.companyType === 'individual' ? 'Şahıs' : 'Firma',
+          company_type: data.companyType === 'individual' ? t('contact.form.individual') : t('contact.form.company'),
           service_type: data.serviceType,
           subject: data.subject,
           message: data.message
@@ -51,13 +51,13 @@ function ContactPage() {
 
       if (result.status === 200) {
         setSubmitStatus('success');
-        e.target.reset(); // Formu temizle
-        setCompanyType(''); // State'i de temizle
+        e.target.reset(); // Clear form
+        setCompanyType(''); // Clear state too
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('E-posta gönderme hatası:', error);
+      console.error('Email sending error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -74,7 +74,7 @@ function ContactPage() {
             <div className="contact-form-wrapper">
               <h2 className="form-title">{t('contact.title')}</h2>
               
-              {/* Başarı/Hata Mesajları */}
+              {/* Success/Error Messages */}
               {submitStatus === 'success' && (
                 <div className="alert alert-success">
                   <i className="fas fa-check-circle"></i>
@@ -90,7 +90,7 @@ function ContactPage() {
               )}
               
               <form className="contact-form" onSubmit={handleSubmit}>
-                        {/* En üstte - Müşteri Tipi ve Hizmet Türü */}
+                        {/* Top - Customer Type and Service Type */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="companyType" className="form-label">{t('contact.form.companyType')}</label>
@@ -124,7 +124,7 @@ function ContactPage() {
                           </div>
                         </div>
 
-                        {/* İkinci sıra - Ad Soyad ve E-posta */}
+                        {/* Second row - Name and Email */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="name" className="form-label">
@@ -152,7 +152,7 @@ function ContactPage() {
                           </div>
                         </div>
 
-                        {/* Üçüncü sıra - Telefon ve Konu */}
+                        {/* Third row - Phone and Subject */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="phone" className="form-label">{t('contact.form.phone')}</label>

@@ -336,7 +336,20 @@ const tr = {
     // Footer
     footer: {
       contact: "İletişim",
-      copyright: "Tüm hakları saklıdır"
+      copyright: "Tüm hakları saklıdır",
+      address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
+    },
+    
+    // Images Alt Texts
+    images: {
+      team: "Sağlam Delme & Patlatma ekibi - 2025'ten beri güvenli hizmet",
+      logo: "Sağlam Delme & Patlatma logosu - Güvenli sondaj ve patlatma hizmetleri",
+      whyUs: "Neden Sağlam Delme & Patlatma - Uzman kadro ve modern ekipmanlar",
+      quarry: "Taş ocağında güvenli ve kontrollü patlatma işlemi - Sağlam Delme & Patlatma",
+      urban1: "Şehir içi kontrollü patlatma işlemi - Güvenli ve profesyonel hizmet",
+      urban2: "Şehir merkezinde güvenli patlatma operasyonu - Sağlam Delme & Patlatma",
+      underwater: "Su altı kontrollü patlatma işlemi - Deniz ve göl tabanında güvenli operasyon",
+      companyLogo: "Sağlam Delme & Patlatma"
     },
     
     // Services Data
@@ -730,7 +743,20 @@ const en = {
     // Footer
     footer: {
       contact: "Contact",
-      copyright: "All rights reserved"
+      copyright: "All rights reserved",
+      address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
+    },
+    
+    // Images Alt Texts
+    images: {
+      team: "Sağlam Delme & Patlatma team - Safe service since 2025",
+      logo: "Sağlam Delme & Patlatma logo - Safe drilling and blasting services",
+      whyUs: "Why Sağlam Delme & Patlatma - Expert staff and modern equipment",
+      quarry: "Safe and controlled blasting operation in quarry - Sağlam Delme & Patlatma",
+      urban1: "Urban controlled blasting operation - Safe and professional service",
+      urban2: "Safe blasting operation in city center - Sağlam Delme & Patlatma",
+      underwater: "Underwater controlled blasting operation - Safe operation on sea and lake floor",
+      companyLogo: "Sağlam Delme & Patlatma"
     },
     
     // Services Data
