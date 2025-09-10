@@ -112,7 +112,7 @@ function BlastingPage() {
 
             <div className="urban-blasting-visual">
               <div className="urban-image-container">
-                <img src="/images/sehiricipatlatma.jpeg" alt="Şehir İçi Patlatma" className="urban-image" />
+                <img src={urbanImage} alt="Şehir İçi Patlatma" className="urban-image" />
               </div>
               
               <div className="benefits-box">

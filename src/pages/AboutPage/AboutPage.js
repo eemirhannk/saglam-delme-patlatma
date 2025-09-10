@@ -61,7 +61,7 @@ function AboutPage() {
           {/* Left Side - Visual */}
           <div className="neden-biz-left">
             <div className="neden-biz-image">
-              <img src="/images/nedenbiz.jpeg" alt="Neden Biz" className="neden-biz-img" />
+              <img src={nedenbizImage} alt="Neden Biz" className="neden-biz-img" />
             </div>
             <div className="advantages-boxes">
               <div className="advantage-box">BAZI ARTILARIMIZ</div>
