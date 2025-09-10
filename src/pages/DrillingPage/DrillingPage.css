@@ -1,0 +1,186 @@
+/* Drilling Page Styles */
+@import '../../styles/variables/_colors.css';
+
+.drilling-page {
+  background: white;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.drilling-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.drilling-hero {
+  padding: 80px 0;
+  background: white;
+}
+
+.drilling-content {
+  display: flex;
+  gap: 60px;
+}
+
+.drilling-right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.drilling-acronym {
+  display: flex;
+  align-items: center;
+}
+
+.drilling-acronym h1 {
+  font-size: 10rem;
+  width: 59%;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  writing-mode: sideways-lr;
+}
+
+.drilling-subtitle {
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.drilling-subtitle span {
+  writing-mode: sideways-lr;
+  display: block;
+}
+
+
+/* Description Section */
+.drilling-description {
+  background: white;
+}
+
+.drilling-description p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: left;
+  margin: 0;
+}
+
+/* Applications Section */
+.drilling-applications {
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.application-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.application-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.application-item h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.application-item p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drilling-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .drilling-acronym {
+    flex-direction: column;
+  }
+  
+  .drilling-acronym h1 {
+    font-size: 6rem;
+    writing-mode: horizontal-tb;
+  }
+  
+  .drilling-subtitle span {
+    writing-mode: horizontal-tb;
+  }
+  
+  .drilling-right-content {
+    gap: 30px;
+  }
+  
+  .drilling-description p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .drilling-applications {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0;
+  }
+  
+  .application-item {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .drilling-hero {
+    padding: 60px 0;
+  }
+  
+  .drilling-acronym h1 {
+    font-size: 4rem;
+    writing-mode: horizontal-tb;
+  }
+  
+  .drilling-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .drilling-description {
+    padding: 40px 0;
+  }
+  
+  .drilling-description p {
+    font-size: 1rem;
+  }
+  
+  .drilling-applications {
+    padding: 30px 0;
+  }
+  
+  .application-item {
+    padding: 20px;
+  }
+  
+  .application-item h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -4,6 +4,49 @@ import quarryImage from '@public/images/quarry-blasting.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
 
 function BlastingPage() {
+  const standards = [
+    {
+      id: 1,
+      title: "USBM Normları",
+      description: "Patlatma titreşimlerinin yapılara etkisini sınırlar ve güvenlik sınırlarını belirler."
+    },
+    {
+      id: 2,
+      title: "DIN 4150 / 4250 Normları",
+      description: "Alman standartları olup hem insan konforu hem de yapı güvenliği için titreşim sınırlarını belirler."
+    }
+  ];
+
+  const principles = [
+    {
+      id: 1,
+      title: "Titreşim Kontrolü",
+      description: "Patlatma tasarımı, çevredeki yapı ve binalara zarar vermeyecek şekilde hesaplanır."
+    },
+    {
+      id: 2,
+      title: "Patlayıcı Yükleme",
+      description: "Delik başına maksimum patlayıcı miktarı sınırlandırılır."
+    },
+    {
+      id: 3,
+      title: "Zaman Gecikmeleri",
+      description: "Elektronik fünye ile kontrollü gecikmeler kullanılarak titreşim ve gürültü azaltılır."
+    },
+    {
+      id: 4,
+      title: "Taş Fırlaması Önlemleri",
+      description: "Delik ağzı sıkıca tıkanır ve güvenlik mesafeleri gözetilir."
+    }
+  ];
+
+  const benefits = [
+    "Çevredeki yapıların korunması",
+    "Gürültü ve titreşim değerlerinin yasal sınırların altında tutulması",
+    "İş güvenliği ve çevre güvenliğinin sağlanması",
+    "Proje süresince şeffaf raporlama (titreşim ölçüm cihazları ile kayıt)"
+  ];
+
   return (
     <div className="blasting-page">
         <section className="quarry-image-container">
@@ -66,48 +109,24 @@ function BlastingPage() {
               <div className="standards-section">
                 <h3 className="section-subtitle">Kullanılan Standartlar</h3>
                 <div className="standards-list">
-                  <div className="standard-item">
-                    <h4 className="standard-title">USBM Normları</h4>
-                    <p className="standard-description">
-                      Patlatma titreşimlerinin yapılara etkisini sınırlar ve güvenlik sınırlarını belirler.
-                    </p>
-                  </div>
-                  <div className="standard-item">
-                    <h4 className="standard-title">DIN 4150 / 4250 Normları</h4>
-                    <p className="standard-description">
-                      Alman standartları olup hem insan konforu hem de yapı güvenliği için titreşim sınırlarını belirler.
-                    </p>
-                  </div>
+                  {standards.map((standard) => (
+                    <div key={standard.id} className="standard-item">
+                      <h4 className="standard-title">{standard.title}</h4>
+                      <p className="standard-description">{standard.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="principles-section">
                 <h3 className="section-subtitle">Uygulama Esasları</h3>
                 <div className="principles-list">
-                  <div className="principle-item">
-                    <h4 className="principle-title">Titreşim Kontrolü</h4>
-                    <p className="principle-description">
-                      Patlatma tasarımı, çevredeki yapı ve binalara zarar vermeyecek şekilde hesaplanır.
-                    </p>
-                  </div>
-                  <div className="principle-item">
-                    <h4 className="principle-title">Patlayıcı Yükleme</h4>
-                    <p className="principle-description">
-                      Delik başına maksimum patlayıcı miktarı sınırlandırılır.
-                    </p>
-                  </div>
-                  <div className="principle-item">
-                    <h4 className="principle-title">Zaman Gecikmeleri</h4>
-                    <p className="principle-description">
-                      Elektronik fünye ile kontrollü gecikmeler kullanılarak titreşim ve gürültü azaltılır.
-                    </p>
-                  </div>
-                  <div className="principle-item">
-                    <h4 className="principle-title">Taş Fırlaması Önlemleri</h4>
-                    <p className="principle-description">
-                      Delik ağzı sıkıca tıkanır ve güvenlik mesafeleri gözetilir.
-                    </p>
-                  </div>
+                  {principles.map((principle) => (
+                    <div key={principle.id} className="principle-item">
+                      <h4 className="principle-title">{principle.title}</h4>
+                      <p className="principle-description">{principle.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -120,10 +139,9 @@ function BlastingPage() {
               <div className="benefits-box">
                 <h3 className="benefits-title">Çevresel ve Teknik Faydalar</h3>
                 <ul className="benefits-list">
-                  <li className="benefit-item">Çevredeki yapıların korunması</li>
-                  <li className="benefit-item">Gürültü ve titreşim değerlerinin yasal sınırların altında tutulması</li>
-                  <li className="benefit-item">İş güvenliği ve çevre güvenliğinin sağlanması</li>
-                  <li className="benefit-item">Proje süresince şeffaf raporlama (titreşim ölçüm cihazları ile kayıt)</li>
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="benefit-item">{benefit}</li>
+                  ))}
                 </ul>
               </div>
             </div>

@@ -6,6 +6,123 @@ function HomePage() {
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
+  const carouselSlides = [
+    {
+      id: 1,
+      isActive: true,
+      slideClass: "orange-gold",
+      title: "Sağlam Delme & Patlatma",
+      description: "1997'den beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
+      button1: { text: "Projenizi Başlatın", type: "button" },
+      button2: { text: "Hizmetlerimiz", type: "button" },
+      icon: "fas fa-hammer",
+      imageTitle: "Profesyonel Ekip",
+      imageDescription: "Uzman kadromuzla güvenli çözümler"
+    },
+    {
+      id: 2,
+      isActive: false,
+      slideClass: "bg-gradient-primary",
+      title: "Delme Hizmetleri",
+      description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz. Modern ekipmanlarımızla en zorlu projeleri başarıyla tamamlıyoruz.",
+      button1: { text: "Delme Hizmetleri", type: "button" },
+      button2: { text: "Teknik Detaylar", type: "button" },
+      icon: "fas fa-mountain",
+      imageTitle: "Hassas Delme",
+      imageDescription: "Her türlü zemin koşulunda çalışma"
+    },
+    {
+      id: 3,
+      isActive: false,
+      slideClass: "bg-gradient-secondary",
+      title: "Patlatma Hizmetleri",
+      description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz. En sıkı güvenlik protokolleri ile çalışıyoruz.",
+      button1: { text: "Patlatma Hizmetleri", type: "button" },
+      button2: { text: "Güvenlik Protokolleri", type: "button" },
+      icon: "fas fa-bomb",
+      imageTitle: "Kontrollü Patlatma",
+      imageDescription: "Güvenli ve profesyonel patlatma"
+    },
+    {
+      id: 4,
+      isActive: false,
+      slideClass: "bg-gradient-tertiary",
+      title: "Teknik Danışmanlık",
+      description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
+      button1: { text: "Danışmanlık", type: "link", to: "/danismanlik", icon: "fas fa-user-tie" },
+      button2: { text: "Teknik Destek", type: "button" },
+      icon: "fas fa-user-tie",
+      imageTitle: "Uzman Danışmanlık",
+      imageDescription: "Projelerinizde rehberlik"
+    }
+  ];
+
+  const safetyFeatures = [
+    {
+      id: 1,
+      icon: "fas fa-shield-alt",
+      title: "Güvenlik Protokolleri",
+      description: "Her proje için özel güvenlik planları geliştiriyoruz."
+    },
+    {
+      id: 2,
+      icon: "fas fa-certificate",
+      title: "Uzman Ekip",
+      description: "Yüksek eğitimli ve sertifikalı personelimiz."
+    },
+    {
+      id: 3,
+      icon: "fas fa-clock",
+      title: "7/24 Hizmet",
+      description: "Acil durumlar için her zaman hazırız."
+    }
+  ];
+
+  const services = [
+    {
+      id: 1,
+      icon: "fas fa-mountain",
+      title: "Delme Hizmetleri",
+      description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz.",
+      link: { text: "Detaylar", type: "button" }
+    },
+    {
+      id: 2,
+      icon: "fas fa-bomb",
+      title: "Patlatma Hizmetleri",
+      description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz.",
+      link: { text: "Detaylar", type: "link", to: "/patlatma-hizmetleri" }
+    },
+    {
+      id: 3,
+      icon: "fas fa-cogs",
+      title: "Proje Yönetimi",
+      description: "Uzman ekibimizle projelerinizi planlama aşamasından teslim aşamasına kadar yönetiyoruz.",
+      link: { text: "Detaylar", type: "button" }
+    },
+    {
+      id: 4,
+      icon: "fas fa-user-tie",
+      title: "Danışmanlık",
+      description: "Uzman ekibimizle projeleriniz için teknik danışmanlık ve rehberlik hizmetleri sunuyoruz.",
+      link: { text: "Detaylar", type: "link", to: "/danismanlik" }
+    },
+    {
+      id: 5,
+      icon: "fas fa-water",
+      title: "Su Altı İşleri",
+      description: "Sertifikalı dalgıç ekibimizle su altı delme ve patlatma hizmetleri.",
+      link: { text: "Detaylar", type: "button" }
+    },
+    {
+      id: 6,
+      icon: "fas fa-building",
+      title: "Yıkım İşleri",
+      description: "Binalar, köprüler ve beton yapılar için güvenli yıkım hizmetleri.",
+      link: { text: "Detaylar", type: "button" }
+    }
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (hasAnimated) return; // Bir kere animasyon yapıldıysa dur
@@ -34,149 +151,60 @@ function HomePage() {
       <section className="hero-slider">
         <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            {carouselSlides.map((slide, index) => (
+              <button 
+                key={slide.id}
+                type="button" 
+                data-bs-target="#heroCarousel" 
+                data-bs-slide-to={index} 
+                className={slide.isActive ? "active" : ""} 
+                aria-current={slide.isActive ? "true" : "false"} 
+                aria-label={`Slide ${index + 1}`}
+              ></button>
+            ))}
           </div>
           
           <div className="carousel-inner">
-            {/* Slide 1 - Ana Hizmet */}
-            <div className="carousel-item active">
-              <div className="hero-slide orange-gold">
-                <div className="container">
-                  <div className="row align-items-center min-vh-75">
-                    <div className="col-lg-6">
-                      <h1 className="display-3 fw-bold mb-4 text-white">
-                        Sağlam Delme & Patlatma
-                      </h1>
-                      <p className="lead mb-4 text-white">
-                        1997'den beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. 
-                        Her projede güvenlik önceliğimizdir.
-                      </p>
-                      <div className="btn-group-custom">
-                        <button className="btn-custom btn-light-custom btn-custom--lg">
-                          Projenizi Başlatın
-                        </button>
-                        <button className="btn-custom btn-outline-custom btn-custom--lg">
-                          Hizmetlerimiz
-                        </button>
+            {carouselSlides.map((slide, index) => (
+              <div key={slide.id} className={`carousel-item ${slide.isActive ? 'active' : ''}`}>
+                <div className={`hero-slide ${slide.slideClass}`}>
+                  <div className="container">
+                    <div className="row align-items-center min-vh-75">
+                      <div className="col-lg-6">
+                        <h1 className="display-3 fw-bold mb-4 text-white">
+                          {slide.title}
+                        </h1>
+                        <p className="lead mb-4 text-white">
+                          {slide.description}
+                        </p>
+                        <div className="btn-group-custom">
+                          {slide.button1.type === 'link' ? (
+                            <Link to={slide.button1.to} className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
+                              {slide.button1.icon && <i className={slide.button1.icon}></i>}
+                              {slide.button1.text}
+                            </Link>
+                          ) : (
+                            <button className="btn-custom btn-light-custom btn-custom--lg">
+                              {slide.button1.text}
+                            </button>
+                          )}
+                          <button className="btn-custom btn-outline-custom btn-custom--lg">
+                            {slide.button2.text}
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="hero-image text-center">
-                        <i className="fas fa-hammer fa-5x mb-3 text-white"></i>
-                        <h3 className="text-white">Profesyonel Ekip</h3>
-                        <p className="text-white">Uzman kadromuzla güvenli çözümler</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 2 - Delme Hizmetleri */}
-            <div className="carousel-item">
-              <div className="hero-slide bg-gradient-primary">
-                <div className="container">
-                  <div className="row align-items-center min-vh-75">
-                    <div className="col-lg-6">
-                      <h1 className="display-3 fw-bold mb-4 text-white">
-                        Delme Hizmetleri
-                      </h1>
-                      <p className="lead mb-4 text-white">
-                        Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz. 
-                        Modern ekipmanlarımızla en zorlu projeleri başarıyla tamamlıyoruz.
-                      </p>
-                      <div className="btn-group-custom">
-                        <button className="btn-custom btn-light-custom btn-custom--lg">
-                          Delme Hizmetleri
-                        </button>
-                        <button className="btn-custom btn-outline-custom btn-custom--lg">
-                          Teknik Detaylar
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="hero-image text-center">
-                        <i className="fas fa-mountain fa-5x mb-3 text-white"></i>
-                        <h3 className="text-white">Hassas Delme</h3>
-                        <p className="text-white">Her türlü zemin koşulunda çalışma</p>
+                      <div className="col-lg-6">
+                        <div className="hero-image text-center">
+                          <i className={`${slide.icon} fa-5x mb-3 text-white`}></i>
+                          <h3 className="text-white">{slide.imageTitle}</h3>
+                          <p className="text-white">{slide.imageDescription}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Slide 3 - Patlatma Hizmetleri */}
-            <div className="carousel-item">
-              <div className="hero-slide bg-gradient-secondary">
-                <div className="container">
-                  <div className="row align-items-center min-vh-75">
-                    <div className="col-lg-6">
-                      <h1 className="display-3 fw-bold mb-4 text-white">
-                        Patlatma Hizmetleri
-                      </h1>
-                      <p className="lead mb-4 text-white">
-                        Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz. 
-                        En sıkı güvenlik protokolleri ile çalışıyoruz.
-                      </p>
-                      <div className="btn-group-custom">
-                        <button className="btn-custom btn-light-custom btn-custom--lg">
-                          Patlatma Hizmetleri
-                        </button>
-                        <button className="btn-custom btn-outline-custom btn-custom--lg">
-                          Güvenlik Protokolleri
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="hero-image text-center">
-                        <i className="fas fa-bomb fa-5x mb-3 text-white"></i>
-                        <h3 className="text-white">Kontrollü Patlatma</h3>
-                        <p className="text-white">Güvenli ve profesyonel patlatma</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 4 - Danışmanlık */}
-            <div className="carousel-item">
-              <div className="hero-slide bg-gradient-tertiary">
-                <div className="container">
-                  <div className="row align-items-center min-vh-75">
-                    <div className="col-lg-6">
-                      <h1 className="display-3 fw-bold mb-4 text-white">
-                        Teknik Danışmanlık
-                      </h1>
-                      <p className="lead mb-4 text-white">
-                        Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. 
-                        Her aşamada yanınızdayız.
-                      </p>
-                      <div className="btn-group-custom">
-                        <Link to="/danismanlik" className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
-                          <i className="fas fa-user-tie"></i>
-                          Danışmanlık
-                        </Link>
-                        <button className="btn-custom btn-outline-custom btn-custom--lg">
-                          Teknik Destek
-                        </button>
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="hero-image text-center">
-                        <i className="fas fa-user-tie fa-5x mb-3 text-white"></i>
-                        <h3 className="text-white">Uzman Danışmanlık</h3>
-                        <p className="text-white">Projelerinizde rehberlik</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Navigation Buttons */}
@@ -201,27 +229,15 @@ function HomePage() {
             </div>
           </div>
           <div className="grid grid--3">
-            <div className="feature-card-custom">
-              <div className="feature-card-custom__icon">
-                <i className="fas fa-shield-alt"></i>
+            {safetyFeatures.map((feature) => (
+              <div key={feature.id} className="feature-card-custom">
+                <div className="feature-card-custom__icon">
+                  <i className={feature.icon}></i>
+                </div>
+                <h4 className="feature-card-custom__title">{feature.title}</h4>
+                <p className="feature-card-custom__text">{feature.description}</p>
               </div>
-              <h4 className="feature-card-custom__title">Güvenlik Protokolleri</h4>
-              <p className="feature-card-custom__text">Her proje için özel güvenlik planları geliştiriyoruz.</p>
-            </div>
-            <div className="feature-card-custom">
-              <div className="feature-card-custom__icon">
-                <i className="fas fa-certificate"></i>
-              </div>
-              <h4 className="feature-card-custom__title">Uzman Ekip</h4>
-              <p className="feature-card-custom__text">Yüksek eğitimli ve sertifikalı personelimiz.</p>
-            </div>
-            <div className="feature-card-custom">
-              <div className="feature-card-custom__icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <h4 className="feature-card-custom__title">7/24 Hizmet</h4>
-              <p className="feature-card-custom__text">Acil durumlar için her zaman hazırız.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -236,78 +252,22 @@ function HomePage() {
             </div>
           </div>
           <div className="card-grid-custom">
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-mountain"></i>
+            {services.map((service) => (
+              <div key={service.id} className="card-custom service-card-custom">
+                <div className="card-custom__body">
+                  <div className="service-card-custom__icon">
+                    <i className={service.icon}></i>
+                  </div>
+                  <h5 className="service-card-custom__title">{service.title}</h5>
+                  <p className="service-card-custom__text">{service.description}</p>
+                  {service.link.type === 'link' ? (
+                    <Link to={service.link.to} className="btn-custom btn-secondary-custom">{service.link.text}</Link>
+                  ) : (
+                    <button className="btn-custom btn-secondary-custom">{service.link.text}</button>
+                  )}
                 </div>
-                <h5 className="service-card-custom__title">Delme Hizmetleri</h5>
-                <p className="service-card-custom__text">
-                  Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz.
-                </p>
-                <a href="#" className="btn-custom btn-secondary-custom">Detaylar</a>
               </div>
-            </div>
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-bomb"></i>
-                </div>
-                <h5 className="service-card-custom__title">Patlatma Hizmetleri</h5>
-                <p className="service-card-custom__text">
-                  Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz.
-                </p>
-                <Link to="/patlatma-hizmetleri" className="btn-custom btn-secondary-custom">Detaylar</Link>
-              </div>
-            </div>
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-cogs"></i>
-                </div>
-                <h5 className="service-card-custom__title">Proje Yönetimi</h5>
-                <p className="service-card-custom__text">
-                  Uzman ekibimizle projelerinizi planlama aşamasından teslim aşamasına kadar yönetiyoruz.
-                </p>
-                <a href="#" className="btn-custom btn-secondary-custom">Detaylar</a>
-              </div>
-            </div>
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-user-tie"></i>
-                </div>
-                <h5 className="service-card-custom__title">Danışmanlık</h5>
-                <p className="service-card-custom__text">
-                  Uzman ekibimizle projeleriniz için teknik danışmanlık ve rehberlik hizmetleri sunuyoruz.
-                </p>
-                <Link to="/danismanlik" className="btn-custom btn-secondary-custom">Detaylar</Link>
-              </div>
-            </div>
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-water"></i>
-                </div>
-                <h5 className="service-card-custom__title">Su Altı İşleri</h5>
-                <p className="service-card-custom__text">
-                  Sertifikalı dalgıç ekibimizle su altı delme ve patlatma hizmetleri.
-                </p>
-                <a href="#" className="btn-custom btn-secondary-custom">Detaylar</a>
-              </div>
-            </div>
-            <div className="card-custom service-card-custom">
-              <div className="card-custom__body">
-                <div className="service-card-custom__icon">
-                  <i className="fas fa-building"></i>
-                </div>
-                <h5 className="service-card-custom__title">Yıkım İşleri</h5>
-                <p className="service-card-custom__text">
-                  Binalar, köprüler ve beton yapılar için güvenli yıkım hizmetleri.
-                </p>
-                <a href="#" className="btn-custom btn-secondary-custom">Detaylar</a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

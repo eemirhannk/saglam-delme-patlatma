@@ -4,6 +4,29 @@ import hakkimizdaImage from '@public/images/hakkimizda.jpeg';
 import nedenbizImage from '@public/images/nedenbiz.jpeg';
 
 function AboutPage() {
+  const advantages = [
+    {
+      id: 1,
+      title: "Uzman Kadro",
+      description: "Yüksek deneyime sahip mühendis ve operatörler"
+    },
+    {
+      id: 2,
+      title: "Modern Ekipman",
+      description: "Son teknoloji sondaj ve patlatma sistemleri"
+    },
+    {
+      id: 3,
+      title: "Güvenlik",
+      description: "Tüm işlerimiz, yerel ve uluslararası güvenlik standartlarına uygun olarak yürütülür."
+    },
+    {
+      id: 4,
+      title: "Çevre Duyarlılığı",
+      description: "Çevresel etkiyi en aza indiren yöntemler kullanıyoruz"
+    }
+  ];
+
   return (
     <div className="about-page">
       {/* Main Content - Hakkımızda */}
@@ -78,25 +101,12 @@ function AboutPage() {
           {/* Right Side - Advantages List */}
           <div className="neden-biz-right">
             <div className="advantages-list">
-              <div className="advantage-item">
-                <h3 className="advantage-title">Uzman Kadro</h3>
-                <p className="advantage-text">Yüksek deneyime sahip mühendis ve operatörler</p>
-              </div>
-              
-              <div className="advantage-item">
-                <h3 className="advantage-title">Modern Ekipman</h3>
-                <p className="advantage-text">Son teknoloji sondaj ve patlatma sistemleri</p>
-              </div>
-              
-              <div className="advantage-item">
-                <h3 className="advantage-title">Güvenlik</h3>
-                <p className="advantage-text">Tüm işlerimiz, yerel ve uluslararası güvenlik standartlarına uygun olarak yürütülür.</p>
-              </div>
-              
-              <div className="advantage-item">
-                <h3 className="advantage-title">Çevre Duyarlılığı</h3>
-                <p className="advantage-text">Çevresel etkiyi en aza indiren yöntemler kullanıyoruz</p>
-              </div>
+              {advantages.map((advantage) => (
+                <div key={advantage.id} className="advantage-item">
+                  <h3 className="advantage-title">{advantage.title}</h3>
+                  <p className="advantage-text">{advantage.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 

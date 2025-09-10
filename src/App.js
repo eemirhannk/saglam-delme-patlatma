@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ConsultingPage from './pages/ConsultingPage';
 import BlastingPage from './pages/BlastingPage';
+import DrillingPage from './pages/DrillingPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/hakkimizda" element={<AboutPage />} />
           <Route path="/iletisim" element={<ContactPage />} />
           <Route path="/danismanlik" element={<ConsultingPage />} />
+          <Route path="/delme-hizmetleri" element={<DrillingPage />} />
           <Route path="/patlatma-hizmetleri" element={<BlastingPage />} />
         </Routes>
       </Layout>
