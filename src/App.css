@@ -1,0 +1,30 @@
+/* App Specific Styles */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--soft-white);
+}
+
+main {
+  flex: 1;
+  background-color: var(--soft-white);
+  padding-top: 80px;
+}
+
+/* Section Backgrounds */
+.bg-light-custom {
+  background-color: var(--light-gray) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    min-height: 100vh;
+  }
+}

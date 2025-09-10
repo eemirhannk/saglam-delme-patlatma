@@ -1,0 +1,56 @@
+/* Layout Base Styles */
+
+
+/* Container */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--padding-lg);
+}
+
+
+/* Grid System */
+.grid--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-lg);
+}
+
+/* Flex Utilities */
+.flex--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--primary-color); }
+.text-white { color: white; }
+
+.text-lg { font-size: var(--font-size-lg); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 var(--padding-md);
+  }
+  
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+  
+}

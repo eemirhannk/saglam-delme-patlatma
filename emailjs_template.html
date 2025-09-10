@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Template - Sağlam Delme & Patlatma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid #dee2e6;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #ff6b35;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #ff6b35;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            color: #333;
+            font-size: 16px;
+        }
+        .message-section {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .message-label {
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .message-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .reply-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .reply-button:hover {
+            background: #e55a2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📧 Yeni İletişim Talebi</h1>
+        <p>Sağlam Delme & Patlatma Web Sitesi</p>
+    </div>
+    
+    <div class="content">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">👤 Gönderen</div>
+                <div class="info-value">{{from_name}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">📧 E-posta</div>
+                <div class="info-value">{{from_email}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">📱 Telefon</div>
+                <div class="info-value">{{phone}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">🏢 Müşteri Tipi</div>
+                <div class="info-value">{{company_type}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">🔧 Hizmet Türü</div>
+                <div class="info-value">{{service_type}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">📋 Konu</div>
+                <div class="info-value">{{subject}}</div>
+            </div>
+        </div>
+        
+        <div class="message-section">
+            <div class="message-label">💬 Mesaj İçeriği</div>
+            <div class="message-content">{{message}}</div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 25px; padding: 15px; background: #e9ecef; border-radius: 6px;">
+            <p style="margin: 0; color: #6c757d; font-size: 14px;">
+                <strong>Sağlam Delme & Patlatma</strong><br>
+                Bu e-posta web sitesi iletişim formundan otomatik olarak gönderilmiştir.
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p><strong>Sağlam Delme & Patlatma</strong></p>
+        <p>📞 +90 (XXX) XXX XX XX | 📧 emirhank5466@gmail.com</p>
+        <p>📍 Tığcılar Mahallesi Pamuklar Sokak No: 14 İç Kapı No: 302, Adapazarı/SAKARYA</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Contact Page Styles */
+.contact-page {
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 80px 0;
+}
+
+.contact-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border: 1px solid var(--text-border);
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--orange-gold);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  border: 2px solid var(--text-border);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .contact-form-wrapper {
+    padding: 24px;
+    margin: 0 16px;
+  }
+  
+  .form-title {
+    font-size: 28px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .contact-form-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .contact-form-wrapper {
+    padding: 20px;
+    margin: 0 8px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+/* Alert Messages */
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert i {
+  font-size: 18px;
+}

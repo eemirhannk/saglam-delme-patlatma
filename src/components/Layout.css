@@ -1,0 +1,19 @@
+/* Layout Styles */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--soft-white);
+}
+
+main {
+  flex: 1;
+  background-color: var(--soft-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding-top: 65px; /* Mobile navbar için daha az padding */
+  }
+}

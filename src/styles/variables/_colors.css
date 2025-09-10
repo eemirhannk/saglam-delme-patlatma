@@ -1,0 +1,36 @@
+/* Renk Paleti */
+:root {
+  /* Ana Renkler */
+  --primary-color: #9ACD32; /* Lime Green - Ana renk */
+  --primary-dark: #7BA428; /* Koyu lime green */
+  
+  --white: #FFFFFF;
+  --black: #000000;
+  /* Yan Renkler */
+  --soft-white: #FDFDFE; /* Daha yumuşak beyaz */
+  --light-gray: #F1F3F4; /* Daha yumuşak açık gri */
+  --medium-gray: #6C757D; /* Orta gri */
+  --dark-gray: #495057; /* Koyu gri */
+  --neden-biz-bg: #BFBFBF; /* NEDEN BİZ arka plan rengi */
+  
+  /* Logo Renkleri */
+  --logo-sag-color: #9E9E9E; /* Light gray */
+  --orange-gold: #FF8C00; /* Orange-gold */
+  --logo-tagline-color: #333; /* Dark gray */
+
+  /* Text Renkleri */
+  --text-dark: #333; /* Dark text */
+  --text-light: #999; /* Light text */
+  --text-border: #e0e0e0; /* Light border */
+
+  /* Gradient Renkleri */
+  --gradient-green: #2E8B57; /* Sea green */
+  
+  /* Gradient Renkler */
+  --gradient-main: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+/* Custom Orange Gold Class */
+.orange-gold {
+  color: var(--orange-gold) !important;
+}

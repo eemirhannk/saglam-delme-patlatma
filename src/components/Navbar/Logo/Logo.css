@@ -1,0 +1,28 @@
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    height: 40px;
+    max-width: 120px;
+  }
+}

@@ -1,0 +1,119 @@
+/* Custom Button Components */
+
+/* Base Button */
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-sm) var(--padding-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(154, 205, 50, 0.25);
+}
+
+.btn-custom:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.btn-custom--lg {
+  padding: var(--padding-md) var(--padding-xl);
+  font-size: var(--font-size-lg);
+  border-radius: 30px;
+}
+
+
+/* Secondary Button */
+.btn-secondary-custom {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-custom:active {
+  transform: translateY(0);
+}
+
+/* Outline Button */
+.btn-outline-custom {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.btn-outline-custom:hover {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom:active {
+  transform: translateY(0);
+}
+
+/* Light Button */
+.btn-light-custom {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-color);
+}
+
+.btn-light-custom:hover {
+  background-color: var(--light-gray);
+  border-color: var(--light-gray);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-light-custom:active {
+  transform: translateY(0);
+}
+
+
+/* Button with Icon */
+.btn-custom--icon {
+  gap: var(--gap-sm);
+}
+
+.btn-custom--icon i {
+  font-size: 1.1em;
+}
+
+
+/* Button Group */
+.btn-group-custom {
+  display: flex;
+  gap: var(--gap-md);
+}
+
+@media (max-width: 768px) {
+  .btn-group-custom {
+    flex-direction: column;
+  }
+  
+  .btn-group-custom .btn-custom {
+    width: 100%;
+  }
+}

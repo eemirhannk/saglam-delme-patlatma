@@ -1,0 +1,9 @@
+/* Shadow Variables */
+:root {
+  /* Box Shadows */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Custom Shadows */
+  --shadow-primary: 0 2px 15px rgba(154, 205, 50, 0.1);
+  --shadow-primary-hover: 0 8px 25px rgba(154, 205, 50, 0.2);
+}
