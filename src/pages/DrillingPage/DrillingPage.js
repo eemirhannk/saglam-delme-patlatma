@@ -1,47 +1,49 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './DrillingPage.css';
 
 function DrillingPage() {
+  const { t } = useTranslation();
   const applications = [
     {
       id: 1,
-      title: "Jeolojik Modelleme",
-      description: "Kaya sertliği, çatlaklılık ve su zonları MWD verileriyle belirlenir."
+      title: t('drilling.applications.geological'),
+      description: t('drilling.applications.geologicalDesc')
     },
     {
       id: 2,
-      title: "Tahkimat Tasarımı",
-      description: "Kaya bulonu, püskürtme beton veya çelik hasır ihtiyacı önceden belirlenir."
+      title: t('drilling.applications.support'),
+      description: t('drilling.applications.supportDesc')
     },
     {
       id: 3,
-      title: "Verimlilik",
-      description: "Delme parametrelerinin optimizasyonu ile daha hızlı ilerleme sağlanır."
+      title: t('drilling.applications.efficiency'),
+      description: t('drilling.applications.efficiencyDesc')
     },
     {
       id: 4,
-      title: "Çevresel Fayda",
-      description: "Kontrollü patlatma sayesinde titreşim ve çevresel etkiler azaltılır."
+      title: t('drilling.applications.environmental'),
+      description: t('drilling.applications.environmentalDesc')
     },
     {
       id: 5,
-      title: "Cevher – Yan Kaya Ayrımı",
-      description: "Altın, bakır ve diğer değerli cevherlerin damarları daha doğru belirlenir, kayıplar minimize edilir."
+      title: t('drilling.applications.ore'),
+      description: t('drilling.applications.oreDesc')
     },
     {
       id: 6,
-      title: "Patlatma Optimizasyonu",
-      description: "Daha kontrollü kırılma, düşük patlayıcı tüketimi ve yüksek cevher kazanımı sağlanır."
+      title: t('drilling.applications.blasting'),
+      description: t('drilling.applications.blastingDesc')
     },
     {
       id: 7,
-      title: "Güvenlik",
-      description: "Su girişi, boşluk veya zayıf zonlar önceden tespit edilerek iş güvenliği artırılır."
+      title: t('drilling.applications.safety'),
+      description: t('drilling.applications.safetyDesc')
     },
     {
       id: 8,
-      title: "Ekonomik Verimlilik",
-      description: "Daha az kırma–nakliye maliyeti ve daha hızlı üretim."
+      title: t('drilling.applications.economic'),
+      description: t('drilling.applications.economicDesc')
     }
   ];
 
@@ -51,19 +53,16 @@ function DrillingPage() {
         <div className="drilling-hero">
           <div className="drilling-content">
               <div className="drilling-acronym">
-                <h1>MWD</h1>
+                <h1>{t('drilling.mwd.title')}</h1>
                 <div className="drilling-subtitle">
-                  <span>Delme Esnasında Ölçüm</span>
+                  <span>{t('drilling.mwd.subtitle')}</span>
                 </div>
             </div>
             
             <div className="drilling-right-content">
               <div className="drilling-description">
                 <p>
-                  MWD, sondaj sırasında penetrasyon hızı, tork, basınç ve yön gibi parametreleri 
-                  anlık olarak kaydeden ve yüzeye aktaran bir teknolojidir. Bu sayede maden ve 
-                  tünel projelerinde jeolojik belirsizlikler azaltılır, güvenlik artırılır ve 
-                  operasyon verimliliği yükseltilir.
+                  {t('drilling.mwd.description')}
                 </p>
               </div>
 

@@ -1,32 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './ConsultingPage.css';
 
 function ConsultingPage() {
+  const { t } = useTranslation();
   const services = [
     {
       id: 1,
       icon: "fas fa-file-alt",
-      title: "Ruhsat Süreçleri",
-      description: "Delme ve patlatma projeleri için gerekli tüm ruhsat süreçlerinde teknik danışmanlık ve rehberlik hizmeti sunuyoruz."
+      title: t('consulting.services.permit'),
+      description: t('consulting.services.permitDesc')
     },
     {
       id: 2,
       icon: "fas fa-cogs",
-      title: "Patlayıcı Dizayn",
-      description: "Proje özelliklerine uygun patlayıcı dizayn çalışmaları ve güvenlik analizleri gerçekleştiriyoruz."
+      title: t('consulting.services.design'),
+      description: t('consulting.services.designDesc')
     },
     {
       id: 3,
       icon: "fas fa-chart-line",
-      title: "Teknik Optimizasyon",
-      description: "MWD verilerine dayalı teknik optimizasyon çalışmaları ile proje verimliliğini artırıyoruz."
+      title: t('consulting.services.optimization'),
+      description: t('consulting.services.optimizationDesc')
     },
     {
       id: 4,
       icon: "fas fa-users",
-      title: "Teknik Refakat",
-      description: "Deneyimli mühendis kadromuzla projelerinize her aşamada teknik refakat sağlıyoruz."
+      title: t('consulting.services.support'),
+      description: t('consulting.services.supportDesc')
     }
   ];
 
@@ -34,26 +36,26 @@ function ConsultingPage() {
     {
       id: 1,
       number: "1",
-      title: "Proje Analizi",
-      description: "Projenizin teknik gereksinimlerini detaylı olarak analiz ediyoruz."
+      title: t('consulting.process.analysis'),
+      description: t('consulting.process.analysisDesc')
     },
     {
       id: 2,
       number: "2",
-      title: "Çözüm Tasarımı",
-      description: "Size özel güvenli ve verimli çözümler tasarlıyoruz."
+      title: t('consulting.process.solution'),
+      description: t('consulting.process.solutionDesc')
     },
     {
       id: 3,
       number: "3",
-      title: "Uygulama Desteği",
-      description: "Projenizin her aşamasında teknik destek sağlıyoruz."
+      title: t('consulting.process.implementation'),
+      description: t('consulting.process.implementationDesc')
     },
     {
       id: 4,
       number: "4",
-      title: "Sonuç Değerlendirme",
-      description: "Proje sonuçlarını değerlendirip optimizasyon önerileri sunuyoruz."
+      title: t('consulting.process.evaluation'),
+      description: t('consulting.process.evaluationDesc')
     }
   ];
 
@@ -64,13 +66,9 @@ function ConsultingPage() {
         <div className="container-custom">
           <div className="consulting-hero-content">
             <div className="consulting-hero-text">
-              <h1 className="consulting-title">Danışmanlık</h1>
+              <h1 className="consulting-title">{t('consulting.title')}</h1>
               <p className="consulting-subtitle">
-                Sağlam Delme Patlatma Ltd. Şti., delme-patlatma uygulamalarının yanı sıra 
-                ruhsat süreçleri, patlayıcı dizayn çalışmaları ve MWD verilerine dayalı 
-                teknik optimizasyon konularında danışmanlık hizmeti sunar. Deneyimli mühendis 
-                kadrosu ile projelere her aşamada teknik refakat ederek güvenli, verimli ve 
-                çevreye duyarlı çözümler üretir.
+                {t('consulting.hero.description')}
               </p>
             </div>
           </div>
@@ -97,7 +95,7 @@ function ConsultingPage() {
       {/* Process Section */}
       <section className="consulting-process">
         <div className="container-custom">
-          <h2 className="section-title">Çalışma Sürecimiz</h2>
+          <h2 className="section-title">{t('consulting.process.title')}</h2>
           <div className="process-steps">
             {processSteps.map((step) => (
               <div key={step.id} className="process-step">
@@ -114,11 +112,11 @@ function ConsultingPage() {
       <section className="consulting-cta">
         <div className="container-custom">
           <div className="cta-content">
-            <h2 className="cta-title">Danışmanlık Hizmetlerimizden Yararlanın</h2>
+            <h2 className="cta-title">{t('consulting.cta.title')}</h2>
             <p className="cta-description">
-              Uzman ekibimizle projelerinize değer katacak danışmanlık hizmetleri sunuyoruz.
+              {t('consulting.cta.description')}
             </p>
-            <Link to="/iletisim" className="btn-consulting">İletişime Geçin</Link>
+            <Link to="/contact" className="btn-consulting">{t('consulting.cta.button')}</Link>
           </div>
         </div>
       </section>

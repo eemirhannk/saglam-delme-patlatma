@@ -1,29 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './AboutPage.css';
 import hakkimizdaImage from '@public/images/hakkimizda.jpeg';
 import nedenbizImage from '@public/images/nedenbiz.jpeg';
 
 function AboutPage() {
+  const { t } = useTranslation();
   const advantages = [
     {
       id: 1,
-      title: "Uzman Kadro",
-      description: "Yüksek deneyime sahip mühendis ve operatörler"
+      title: t('about.whyUs.expert'),
+      description: t('about.whyUs.expertDesc')
     },
     {
       id: 2,
-      title: "Modern Ekipman",
-      description: "Son teknoloji sondaj ve patlatma sistemleri"
+      title: t('about.whyUs.equipment'),
+      description: t('about.whyUs.equipmentDesc')
     },
     {
       id: 3,
-      title: "Güvenlik",
-      description: "Tüm işlerimiz, yerel ve uluslararası güvenlik standartlarına uygun olarak yürütülür."
+      title: t('about.whyUs.safety'),
+      description: t('about.whyUs.safetyDesc')
     },
     {
       id: 4,
-      title: "Çevre Duyarlılığı",
-      description: "Çevresel etkiyi en aza indiren yöntemler kullanıyoruz"
+      title: t('about.whyUs.environment'),
+      description: t('about.whyUs.environmentDesc')
     }
   ];
 
@@ -41,32 +43,24 @@ function AboutPage() {
         {/* Right Side - Content */}
         <div className="about-right">
           <div className="about-content">
-            <h1 className="about-title">Hakkımızda</h1>
-            <h2 className="about-subtitle">Neler Yapıyoruz?</h2>
+            <h1 className="about-title">{t('about.title')}</h1>
+            <h2 className="about-subtitle">{t('about.subtitle')}</h2>
             
             <div className="about-text">
               <p>
-                Sağlam, delme ve patlatma alanında uzun yıllara dayanan tecrübenin, 
-                güçlü saha pratiğinin ve mühendislik disiplininin bir araya gelmesiyle kurulmuştur.
+                {t('about.content.paragraph1')}
               </p>
               
               <p>
-                Firmamızın kurucusu, yıllar boyunca; sualtı ve offshore patlatmalardan, 
-                tünel, metro, otoyol projelerine; taş ocaklarından büyük altyapı ve kanal 
-                çalışmalarına kadar sektörün hemen her alanında aktif olarak görev almıştır.
+                {t('about.content.paragraph2')}
               </p>
               
               <p>
-                Bu birikim doğrultusunda Sağlam Delme & Patlatma hem açık saha hem de tünel 
-                uygulamalarında; güvenli, verimli ve kontrollü delme-patlatma çözümleri sunar. 
-                Amacımız; her projeye mühendislik temelli yaklaşarak, yüksek iş güvenliği 
-                standartlarına bağlı, çevresel etkileri minimuma indiren ve işverene maksimum 
-                fayda sağlayan uygulamalar gerçekleştirmektir.
+                {t('about.content.paragraph3')}
               </p>
               
               <p>
-                Sahip olduğumuz tecrübe, ekipman altyapısı ve çözüm odaklı yaklaşım sayesinde, 
-                sektörde güvenilir bir çözüm ortağı olmayı hedefliyoruz.
+                {t('about.content.paragraph4')}
               </p>
             </div>
             
@@ -89,12 +83,12 @@ function AboutPage() {
               <img src={nedenbizImage} alt="Neden Sağlam Delme & Patlatma - Uzman kadro ve modern ekipmanlar" className="neden-biz-img" />
             </div>
             <div className="advantages-boxes">
-              <div className="advantage-box">BAZI ARTILARIMIZ</div>
-              <div className="advantage-box">VAR !</div>
+              <div className="advantage-box">{t('about.whyUs.advantages')}</div>
+              <div className="advantage-box">{t('about.whyUs.advantages2')}</div>
             </div>
             <div className="advantage-description">
-              <p>Profesyonel işlerin güvenilir ortağı.</p>
-              <p>Her detayda kalite, her aşamada özen.</p>
+              <p>{t('about.whyUs.tagline1')}</p>
+              <p>{t('about.whyUs.tagline2')}</p>
             </div>
           </div>
 

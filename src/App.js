@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/main.css';
 import './App.css';
+import './i18n/i18n';
 import Layout from './components/Layout';
-import ScrollToTop from './helpers/ScrollToTop';
+import ScrollToTop from './components/UI/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -18,11 +19,13 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/hakkimizda" element={<AboutPage />} />
-          <Route path="/iletisim" element={<ContactPage />} />
-          <Route path="/danismanlik" element={<ConsultingPage />} />
-          <Route path="/delme-hizmetleri" element={<DrillingPage />} />
-          <Route path="/patlatma-hizmetleri" element={<BlastingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/consulting" element={<ConsultingPage />} />
+          <Route path="/drilling-services" element={<DrillingPage />} />
+          <Route path="/blasting-services" element={<BlastingPage />} />
+          <Route path="/project-management" element={<ConsultingPage />} />
+          <Route path="/projects" element={<AboutPage />} />
         </Routes>
       </Layout>
     </Router>

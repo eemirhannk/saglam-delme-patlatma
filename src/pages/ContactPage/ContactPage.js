@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import './ContactPage.css';
 
 function ContactPage() {
+  const { t } = useTranslation();
   const [companyType, setCompanyType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
@@ -70,20 +72,20 @@ function ContactPage() {
         <div className="container-custom">
           <div className="contact-form-container">
             <div className="contact-form-wrapper">
-              <h2 className="form-title">Bize Ulaşın</h2>
+              <h2 className="form-title">{t('contact.title')}</h2>
               
               {/* Başarı/Hata Mesajları */}
               {submitStatus === 'success' && (
                 <div className="alert alert-success">
                   <i className="fas fa-check-circle"></i>
-                  Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                  {t('contact.form.success')}
                 </div>
               )}
               
               {submitStatus === 'error' && (
                 <div className="alert alert-error">
                   <i className="fas fa-exclamation-circle"></i>
-                  Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin veya telefon ile iletişime geçin.
+                  {t('contact.form.error')}
                 </div>
               )}
               
@@ -91,7 +93,7 @@ function ContactPage() {
                         {/* En üstte - Müşteri Tipi ve Hizmet Türü */}
                         <div className="form-row">
                           <div className="form-group">
-                            <label htmlFor="companyType" className="form-label">Müşteri Tipi</label>
+                            <label htmlFor="companyType" className="form-label">{t('contact.form.companyType')}</label>
                             <select
                               id="companyType"
                               name="companyType"
@@ -100,24 +102,24 @@ function ContactPage() {
                               onChange={handleCompanyTypeChange}
                               required
                             >
-                              <option value="">Seçiniz</option>
-                              <option value="individual">Şahıs</option>
-                              <option value="company">Firma</option>
+                              <option value="">{t('contact.form.selectOption')}</option>
+                              <option value="individual">{t('contact.form.individual')}</option>
+                              <option value="company">{t('contact.form.company')}</option>
                             </select>
                           </div>
                           <div className="form-group">
-                            <label htmlFor="serviceType" className="form-label">Hizmet Türü</label>
+                            <label htmlFor="serviceType" className="form-label">{t('contact.form.serviceType')}</label>
                             <select
                               id="serviceType"
                               name="serviceType"
                               className="form-input"
                               required
                             >
-                              <option value="">Seçiniz</option>
-                              <option value="drilling">Delme Hizmetleri</option>
-                              <option value="blasting">Patlatma Hizmetleri</option>
-                              <option value="consulting">Danışmanlık</option>
-                              <option value="other">Diğer</option>
+                              <option value="">{t('contact.form.selectOption')}</option>
+                              <option value="drilling">{t('contact.form.drilling')}</option>
+                              <option value="blasting">{t('contact.form.blasting')}</option>
+                              <option value="consulting">{t('contact.form.consulting')}</option>
+                              <option value="other">{t('contact.form.other')}</option>
                             </select>
                           </div>
                         </div>
@@ -126,25 +128,25 @@ function ContactPage() {
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="name" className="form-label">
-                              {companyType === 'company' ? 'Şirket Adı' : 'Ad Soyad'}
+                              {companyType === 'company' ? t('contact.form.companyName') : t('contact.form.name')}
                             </label>
                             <input
                               type="text"
                               id="name"
                               name="name"
                               className="form-input"
-                              placeholder={companyType === 'company' ? 'Şirket adınızı girin' : 'Adınızı ve soyadınızı girin'}
+                              placeholder={companyType === 'company' ? t('contact.form.companyPlaceholder') : t('contact.form.namePlaceholder')}
                               required
                             />
                           </div>
                           <div className="form-group">
-                            <label htmlFor="email" className="form-label">E-posta</label>
+                            <label htmlFor="email" className="form-label">{t('contact.form.email')}</label>
                             <input
                               type="email"
                               id="email"
                               name="email"
                               className="form-input"
-                              placeholder="E-posta adresinizi girin"
+                              placeholder={t('contact.form.emailPlaceholder')}
                               required
                             />
                           </div>
@@ -153,37 +155,37 @@ function ContactPage() {
                         {/* Üçüncü sıra - Telefon ve Konu */}
                         <div className="form-row">
                           <div className="form-group">
-                            <label htmlFor="phone" className="form-label">Telefon</label>
+                            <label htmlFor="phone" className="form-label">{t('contact.form.phone')}</label>
                             <input
                               type="tel"
                               id="phone"
                               name="phone"
                               className="form-input"
-                              placeholder="Telefon numaranızı girin"
+                              placeholder={t('contact.form.phonePlaceholder')}
                               required
                             />
                           </div>
                           <div className="form-group">
-                            <label htmlFor="subject" className="form-label">Konu</label>
+                            <label htmlFor="subject" className="form-label">{t('contact.form.subject')}</label>
                             <input
                               type="text"
                               id="subject"
                               name="subject"
                               className="form-input"
-                              placeholder="Mesaj konusunu girin"
+                              placeholder={t('contact.form.subjectPlaceholder')}
                               required
                             />
                           </div>
                         </div>
 
                         <div className="form-group">
-                          <label htmlFor="message" className="form-label">Mesaj</label>
+                          <label htmlFor="message" className="form-label">{t('contact.form.message')}</label>
                           <textarea 
                             id="message" 
                             name="message" 
                             className="form-textarea" 
                             rows="5" 
-                            placeholder="Mesajınızı buraya yazın" 
+                            placeholder={t('contact.form.messagePlaceholder')} 
                             required
                           ></textarea>
                         </div>
@@ -197,12 +199,12 @@ function ContactPage() {
                             {isSubmitting ? (
                               <>
                                 <i className="fas fa-spinner fa-spin"></i>
-                                Gönderiliyor...
+                                {t('contact.form.submitting')}
                               </>
                             ) : (
                               <>
                                 <i className="fas fa-paper-plane"></i>
-                                Mesaj Gönder
+                                {t('contact.form.submit')}
                               </>
                             )}
                           </button>

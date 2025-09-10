@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './BlastingPage.css';
 import quarryImage from '@public/images/quarry-blasting.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
@@ -6,78 +7,79 @@ import urbanImage2 from '@public/images/sehiricipatlatma2.jpeg';
 import underwaterImage from '@public/images/sualti4.jpeg';
 
 function BlastingPage() {
+  const { t } = useTranslation();
   const standards = [
     {
       id: 1,
-      title: "USBM Normları",
-      description: "Patlatma titreşimlerinin yapılara etkisini sınırlar ve güvenlik sınırlarını belirler."
+      title: t('blasting.standards.usbm'),
+      description: t('blasting.standards.usbmDesc')
     },
     {
       id: 2,
-      title: "DIN 4150 / 4250 Normları",
-      description: "Alman standartları olup hem insan konforu hem de yapı güvenliği için titreşim sınırlarını belirler."
+      title: t('blasting.standards.din'),
+      description: t('blasting.standards.dinDesc')
     }
   ];
 
   const principles = [
     {
       id: 1,
-      title: "Titreşim Kontrolü",
-      description: "Patlatma tasarımı, çevredeki yapı ve binalara zarar vermeyecek şekilde hesaplanır."
+      title: t('blasting.principles.vibration'),
+      description: t('blasting.principles.vibrationDesc')
     },
     {
       id: 2,
-      title: "Patlayıcı Yükleme",
-      description: "Delik başına maksimum patlayıcı miktarı sınırlandırılır."
+      title: t('blasting.principles.loading'),
+      description: t('blasting.principles.loadingDesc')
     },
     {
       id: 3,
-      title: "Zaman Gecikmeleri",
-      description: "Elektronik fünye ile kontrollü gecikmeler kullanılarak titreşim ve gürültü azaltılır."
+      title: t('blasting.principles.timing'),
+      description: t('blasting.principles.timingDesc')
     },
     {
       id: 4,
-      title: "Taş Fırlaması Önlemleri",
-      description: "Delik ağzı sıkıca tıkanır ve güvenlik mesafeleri gözetilir."
+      title: t('blasting.principles.flyrock'),
+      description: t('blasting.principles.flyrockDesc')
     }
   ];
 
   const benefits = [
-    "Çevredeki yapıların korunması",
-    "Gürültü ve titreşim değerlerinin yasal sınırların altında tutulması",
-    "İş güvenliği ve çevre güvenliğinin sağlanması",
-    "Proje süresince şeffaf raporlama (titreşim ölçüm cihazları ile kayıt)"
+    t('blasting.benefits.building'),
+    t('blasting.benefits.noise'),
+    t('blasting.benefits.safety'),
+    t('blasting.benefits.reporting')
   ];
 
   const underwaterApplications = [
     {
       id: 1,
-      title: "Liman ve Rıhtım İnşaatları",
-      description: "Deniz tabanında güvenli kazı ve temel hazırlığı için kontrollü patlatma"
+      title: t('blasting.underwaterApplications.port'),
+      description: t('blasting.underwaterApplications.portDesc')
     },
     {
       id: 2,
-      title: "Baraj ve Hidroelektrik Projeleri",
-      description: "Su altında kaya kazısı ve tünel açma işlemleri"
+      title: t('blasting.underwaterApplications.dam'),
+      description: t('blasting.underwaterApplications.damDesc')
     },
     {
       id: 3,
-      title: "Köprü Ayakları ve Viyadükler",
-      description: "Nehir ve göl tabanında temel kazısı ve kaya temizliği"
+      title: t('blasting.underwaterApplications.bridge'),
+      description: t('blasting.underwaterApplications.bridgeDesc')
     },
     {
       id: 4,
-      title: "Deniz Tüneli Projeleri",
-      description: "Su altı geçişlerinde güvenli kazı ve açma işlemleri"
+      title: t('blasting.underwaterApplications.tunnel'),
+      description: t('blasting.underwaterApplications.tunnelDesc')
     }
   ];
 
   const underwaterBenefits = [
-    "Çevresel etkiyi minimize eden kontrollü patlatma",
-    "Su canlılarının korunması için özel önlemler",
-    "Yüksek su basıncına dayanıklı patlayıcı sistemler",
-    "Su altı görüntüleme ve izleme teknolojileri",
-    "Dalga ve akıntı koşullarına uygun operasyon planlaması"
+    t('blasting.underwaterBenefits.environmental'),
+    t('blasting.underwaterBenefits.marine'),
+    t('blasting.underwaterBenefits.pressure'),
+    t('blasting.underwaterBenefits.monitoring'),
+    t('blasting.underwaterBenefits.planning')
   ];
 
   const urbanImages = [
@@ -102,33 +104,24 @@ function BlastingPage() {
           <div className="image-overlay-content">
             <div className="overlay-text">
               <h2 className="blasting-title orange-gold">
-                TAŞ OCAĞI
+                {t('blasting.quarry.title')}
               </h2>
               
               <div className="blasting-description">
                 <p>
-                  Taş ocaklarında patlatmanın temel amacı, kayaçları ekonomik ve güvenli bir şekilde 
-                  kırma-eleme tesislerine uygun boyutlarda parçalara ayırmaktır.
+                  {t('blasting.quarry.description')}
                 </p>
                 
                 <p>
-                  Delme ve patlatma operasyonlarımızda, kaya yapısına uygun delik desenleri ve 
-                  patlayıcı yükleri ile yüksek verimlilik sağlıyoruz. Patlatma tasarımlarımız, 
-                  parçalanma verimliliğini artırarak ikincil kırma ihtiyacını azaltacak şekilde optimize edilmiştir.
+                  {t('blasting.quarry.paragraph1')}
                 </p>
                 
                 <p>
-                  Operasyonlarımız USBM ve DIN 4150 standartlarına uygun olarak yürütülür. 
-                  Yerleşim alanlarına yakınlık durumuna göre tasarlanan patlatmalar ile titreşim 
-                  ve gürültü kontrolü sağlanarak çevredeki yerleşimler, altyapı tesisleri ve 
-                  doğal çevre korunur. Geoteknik parametreler dikkate alınarak şev stabilitesi, 
-                  güvenli kazı ve optimal parça boyutu sağlanır.
+                  {t('blasting.quarry.paragraph2')}
                 </p>
                 
                 <p>
-                  İş güvenliği tüm operasyonlarımızın merkezinde yer alır. Kontrollü patlatma 
-                  sistemleri, güvenlik protokollerine uygun saha düzenlemeleri ve sürekli 
-                  izleme ile hem çalışanlarımızın hem de çevrenin güvenliği sağlanır.
+                  {t('blasting.quarry.paragraph3')}
                 </p>
               </div>
             </div>
@@ -141,19 +134,17 @@ function BlastingPage() {
           <div className="urban-blasting-content">
             <div className="urban-blasting-text">
               <h2 className="urban-blasting-title">
-                ŞEHİR İÇİ <span className="orange-gold">PATLAMALAR</span>
+                {t('blasting.urban.title')} <span className="orange-gold">{t('blasting.urban.subtitle')}</span>
               </h2>
               
               <div className="urban-blasting-intro">
                 <p>
-                  Şehir içi patlatmalar, hassas çevre koşulları nedeniyle yüksek dikkat ve kontrol gerektirir. 
-                  Planlı patlatma ile USBM ve DIN 4250 normlarına uygun olarak titreşim, gürültü ve taş fırlaması 
-                  minimize edilerek çevredeki yapılar, altyapı tesisleri ve insanlar korunur.
+                  {t('blasting.urban.description')}
                 </p>
               </div>
 
               <div className="standards-section">
-                <h3 className="section-subtitle">Kullanılan Standartlar</h3>
+                <h3 className="section-subtitle">{t('blasting.standards.title')}</h3>
                 <div className="standards-list">
                   {standards.map((standard) => (
                     <div key={standard.id} className="standard-item">
@@ -165,7 +156,7 @@ function BlastingPage() {
               </div>
 
               <div className="principles-section">
-                <h3 className="section-subtitle">Uygulama Esasları</h3>
+                <h3 className="section-subtitle">{t('blasting.principles.title')}</h3>
                 <div className="principles-list">
                   {principles.map((principle) => (
                     <div key={principle.id} className="principle-item">
@@ -185,7 +176,7 @@ function BlastingPage() {
               ))}
               
               <div className="benefits-box">
-                <h3 className="benefits-title">Çevresel ve Teknik Faydalar</h3>
+                <h3 className="benefits-title">{t('blasting.benefits.title')}</h3>
                 <ul className="benefits-list">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="benefit-item">{benefit}</li>
@@ -206,26 +197,20 @@ function BlastingPage() {
           <div className="image-overlay-content">
             <div className="overlay-text">
               <h2 className="blasting-title orange-gold">
-                KONTROLLÜ SUALTI PATLATMALARI
+                {t('blasting.underwater.title')} {t('blasting.underwater.subtitle')}
               </h2>
               
               <div className="blasting-description">
                 <p>
-                  Deniz, göl veya nehir tabanında yapılan kazı ve inşaat çalışmalarında (liman, rıhtım, baraj, köprü ayakları vb.) 
-                  kullanılan su altı patlatmaları, çevreye ve canlı yaşama zarar vermeden, kontrollü bir şekilde kaya ve beton 
-                  yapıların parçalanmasını sağlar.
+                  {t('blasting.underwater.description')}
                 </p>
                 
                 <p>
-                  Su altı patlatma operasyonlarımızda, yüksek su basıncına dayanıklı özel patlayıcı sistemler ve 
-                  su geçirmez fünye teknolojileri kullanılmaktadır. Operasyonlar sırasında su canlılarının korunması 
-                  için özel önlemler alınır ve çevresel etki minimize edilir.
+                  {t('blasting.underwater.paragraph1')}
                 </p>
                 
                 <p>
-                  Dalga ve akıntı koşullarına uygun operasyon planlaması ile güvenli ve verimli kazı işlemleri 
-                  gerçekleştirilir. Su altı görüntüleme ve izleme teknolojileri ile sürekli kontrol sağlanarak 
-                  proje hedeflerine ulaşılır.
+                  {t('blasting.underwater.paragraph2')}
                 </p>
               </div>
             </div>
@@ -235,7 +220,7 @@ function BlastingPage() {
         <div className="container-custom">
           <div className="underwater-content">
             <div className="underwater-applications">
-              <h3 className="section-subtitle">Uygulama Alanları</h3>
+              <h3 className="section-subtitle">{t('blasting.underwaterApplications.title')}</h3>
               <div className="applications-grid">
                 {underwaterApplications.map((application) => (
                   <div key={application.id} className="application-card">
@@ -247,7 +232,7 @@ function BlastingPage() {
             </div>
 
             <div className="underwater-benefits">
-              <h3 className="section-subtitle">Teknik Özellikler</h3>
+              <h3 className="section-subtitle">{t('blasting.underwaterBenefits.title')}</h3>
               <ul className="benefits-list">
                 {underwaterBenefits.map((benefit, index) => (
                   <li key={index} className="benefit-item">{benefit}</li>

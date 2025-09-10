@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="footer-custom py-4">
       <div className="container-custom">
         <div className="footer-content">
           <div className="footer-section footer-contact-section">
-            <h6 className="footer-subtitle">İletişim</h6>
+            <h6 className="footer-subtitle">{t('footer.contact')}</h6>
             <div className="footer-contact">
               <p className="footer-contact-item">
                 <i className="fas fa-phone"></i>
@@ -29,7 +31,7 @@ function Footer() {
         
         <div className="footer-bottom">
           <div className="footer-copyright">
-            <p>&copy; 2025 Sağlam Delme & Patlatma. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 Sağlam Delme & Patlatma. {t('footer.copyright')}</p>
           </div>
         </div>
       </div>

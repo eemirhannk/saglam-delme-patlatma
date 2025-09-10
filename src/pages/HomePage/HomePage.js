@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './HomePage.css';
 
 function HomePage() {
+  const { t } = useTranslation();
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -10,46 +12,46 @@ function HomePage() {
     {
       id: 1,
       isActive: true,
-      title: "Sağlam Delme & Patlatma",
-      description: "2025'ten beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
-      button1: { text: "Projenizi Başlatın", type: "button" },
-      button2: { text: "Hizmetlerimiz", type: "button" },
+      title: t('homepage.hero.title'),
+      description: t('homepage.hero.description'),
+      button1: { text: t('homepage.hero.button1'), type: "button" },
+      button2: { text: t('homepage.hero.button2'), type: "button" },
       icon: "fas fa-hammer",
-      imageTitle: "Profesyonel Ekip",
-      imageDescription: "Uzman kadromuzla güvenli çözümler"
+      imageTitle: t('homepage.carousel.slide1.imageTitle'),
+      imageDescription: t('homepage.carousel.slide1.imageDescription')
     },
     {
       id: 2,
       isActive: false,
-      title: "Delme Hizmetleri",
-      description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz. Modern ekipmanlarımızla en zorlu projeleri başarıyla tamamlıyoruz.",
-      button1: { text: "Delme Hizmetleri", type: "link", to: "/delme-hizmetleri" },
-      button2: { text: "Teknik Detaylar", type: "button" },
+      title: t('homepage.carousel.slide2.title'),
+      description: t('homepage.carousel.slide2.description'),
+      button1: { text: t('homepage.carousel.slide2.button1'), type: "link", to: "/delme-hizmetleri" },
+      button2: { text: t('homepage.carousel.slide2.button2'), type: "button" },
       icon: "fas fa-mountain",
-      imageTitle: "Hassas Delme",
-      imageDescription: "Her türlü zemin koşulunda çalışma"
+      imageTitle: t('homepage.carousel.slide2.imageTitle'),
+      imageDescription: t('homepage.carousel.slide2.imageDescription')
     },
     {
       id: 3,
       isActive: false,
-      title: "Patlatma Hizmetleri",
-      description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz. En sıkı güvenlik protokolleri ile çalışıyoruz.",
-      button1: { text: "Patlatma Hizmetleri", type: "button" },
-      button2: { text: "Güvenlik Protokolleri", type: "button" },
+      title: t('homepage.carousel.slide3.title'),
+      description: t('homepage.carousel.slide3.description'),
+      button1: { text: t('homepage.carousel.slide3.button1'), type: "button" },
+      button2: { text: t('homepage.carousel.slide3.button2'), type: "button" },
       icon: "fas fa-bomb",
-      imageTitle: "Kontrollü Patlatma",
-      imageDescription: "Güvenli ve profesyonel patlatma"
+      imageTitle: t('homepage.carousel.slide3.imageTitle'),
+      imageDescription: t('homepage.carousel.slide3.imageDescription')
     },
     {
       id: 4,
       isActive: false,
-      title: "Teknik Danışmanlık",
-      description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
-      button1: { text: "Danışmanlık", type: "link", to: "/danismanlik", icon: "fas fa-user-tie" },
-      button2: { text: "Teknik Destek", type: "button" },
+      title: t('homepage.carousel.slide4.title'),
+      description: t('homepage.carousel.slide4.description'),
+      button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/danismanlik", icon: "fas fa-user-tie" },
+      button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
       icon: "fas fa-user-tie",
-      imageTitle: "Uzman Danışmanlık",
-      imageDescription: "Projelerinizde rehberlik"
+      imageTitle: t('homepage.carousel.slide4.imageTitle'),
+      imageDescription: t('homepage.carousel.slide4.imageDescription')
     }
   ];
 
@@ -57,20 +59,20 @@ function HomePage() {
     {
       id: 1,
       icon: "fas fa-shield-alt",
-      title: "Güvenlik Protokolleri",
-      description: "Her proje için özel güvenlik planları geliştiriyoruz."
+      title: t('safetyFeatures.experience.title'),
+      description: t('safetyFeatures.experience.description')
     },
     {
       id: 2,
-      icon: "fas fa-certificate",
-      title: "Uzman Ekip",
-      description: "Yüksek eğitimli ve sertifikalı personelimiz."
+      icon: "fas fa-cogs",
+      title: t('safetyFeatures.technology.title'),
+      description: t('safetyFeatures.technology.description')
     },
     {
       id: 3,
-      icon: "fas fa-clock",
-      title: "7/24 Hizmet",
-      description: "Acil durumlar için her zaman hazırız."
+      icon: "fas fa-user-shield",
+      title: t('safetyFeatures.safety.title'),
+      description: t('safetyFeatures.safety.description')
     }
   ];
 
@@ -78,44 +80,44 @@ function HomePage() {
     {
       id: 1,
       icon: "fas fa-mountain",
-      title: "Delme Hizmetleri",
-      description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz.",
-      link: { text: "Detaylar", type: "link", to: "/delme-hizmetleri" }
+      title: t('services.drilling.title'),
+      description: t('services.drilling.description'),
+      link: { text: t('common.details'), type: "link", to: "/delme-hizmetleri" }
     },
     {
       id: 2,
       icon: "fas fa-bomb",
-      title: "Patlatma Hizmetleri",
-      description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz.",
-      link: { text: "Detaylar", type: "link", to: "/patlatma-hizmetleri" }
+      title: t('services.blasting.title'),
+      description: t('services.blasting.description'),
+      link: { text: t('common.details'), type: "link", to: "/patlatma-hizmetleri" }
     },
     {
       id: 3,
       icon: "fas fa-cogs",
-      title: "Proje Yönetimi",
-      description: "Uzman ekibimizle projelerinizi planlama aşamasından teslim aşamasına kadar yönetiyoruz.",
-      link: { text: "Detaylar", type: "button" }
+      title: t('homepage.services.projectManagement.title'),
+      description: t('homepage.services.projectManagement.description'),
+      link: { text: t('common.details'), type: "button" }
     },
     {
       id: 4,
       icon: "fas fa-user-tie",
-      title: "Danışmanlık",
-      description: "Uzman ekibimizle projeleriniz için teknik danışmanlık ve rehberlik hizmetleri sunuyoruz.",
-      link: { text: "Detaylar", type: "link", to: "/danismanlik" }
+      title: t('services.consulting.title'),
+      description: t('services.consulting.description'),
+      link: { text: t('common.details'), type: "link", to: "/danismanlik" }
     },
     {
       id: 5,
       icon: "fas fa-water",
-      title: "Su Altı İşleri",
-      description: "Sertifikalı dalgıç ekibimizle su altı delme ve patlatma hizmetleri.",
-      link: { text: "Detaylar", type: "link", to: "/patlatma-hizmetleri#underwater-blasting" }
+      title: t('services.underwater.title'),
+      description: t('services.underwater.description'),
+      link: { text: t('common.details'), type: "link", to: "/patlatma-hizmetleri#underwater-blasting" }
     },
     {
       id: 6,
       icon: "fas fa-building",
-      title: "Yıkım İşleri",
-      description: "Binalar, köprüler ve beton yapılar için güvenli yıkım hizmetleri.",
-      link: { text: "Detaylar", type: "button" }
+      title: t('services.demolition.title'),
+      description: t('services.demolition.description'),
+      link: { text: t('common.details'), type: "button" }
     }
   ];
 
@@ -206,11 +208,11 @@ function HomePage() {
           {/* Navigation Buttons */}
           <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Önceki</span>
+            <span className="visually-hidden">{t('homepage.carousel.navigation.previous')}</span>
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Sonraki</span>
+            <span className="visually-hidden">{t('homepage.carousel.navigation.next')}</span>
           </button>
         </div>
       </section>
@@ -220,8 +222,8 @@ function HomePage() {
         <div className="container-custom">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold orange-gold">Güvenlik Önceliğimiz</h2>
-              <p className="text-lg">Her kararımız, halkın, ortaklarımızın ve çalışanlarımızın güvenliği üzerine kuruludur.</p>
+              <h2 className="text-3xl font-bold orange-gold">{t('homepage.safety.title')}</h2>
+              <p className="text-lg">{t('homepage.safety.description')}</p>
             </div>
           </div>
           <div className="grid grid--3">
@@ -243,8 +245,8 @@ function HomePage() {
         <div className="container-custom">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold orange-gold">Hizmetlerimiz</h2>
-              <p className="text-lg">Geniş hizmet yelpazemizle her türlü projeye çözüm sunuyoruz</p>
+              <h2 className="text-3xl font-bold orange-gold">{t('homepage.services.title')}</h2>
+              <p className="text-lg">{t('homepage.services.description')}</p>
             </div>
           </div>
           <div className="card-grid-custom">
@@ -273,15 +275,15 @@ function HomePage() {
         <div className="container-custom">
           <div className="flex flex--center flex--between">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-3">Projenizi Başlatmaya Hazır mısınız?</h2>
+              <h2 className="text-2xl font-bold mb-3">{t('homepage.cta.title')}</h2>
               <p className="text-lg mb-0">
-                Uzman ekibimizle güvenli ve profesyonel delme & patlatma hizmetleri için hemen iletişime geçin.
+                {t('homepage.cta.description')}
               </p>
             </div>
             <div className="text-right">
-              <Link to="/iletisim" className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
+              <Link to="/contact" className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
                 <i className="fas fa-envelope"></i>
-                Bize Ulaşın
+{t('homepage.cta.button')}
               </Link>
             </div>
           </div>

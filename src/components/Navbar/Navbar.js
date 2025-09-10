@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 import Logo from './Logo';
+import LanguageSwitcher from '../UI/LanguageSwitcher/LanguageSwitcher';
 
 function Navbar() {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -92,23 +95,26 @@ function Navbar() {
                 data-bs-toggle="dropdown" 
                 aria-expanded="false"
               >
-                Hizmetlerimiz
+                {t('navbar.services')}
               </a>
               <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li><Link className="dropdown-item" to="/danismanlik">Danışmanlık</Link></li>
-                <li><Link className="dropdown-item" to="/delme-hizmetleri">Delme Hizmetleri</Link></li>
-                <li><Link className="dropdown-item" to="/patlatma-hizmetleri">Patlatma Hizmetleri</Link></li>
-                <li><Link className="dropdown-item" to="/proje-yonetimi">Proje Yönetimi</Link></li>
+                <li><Link className="dropdown-item" to="/consulting">{t('navbar.consulting')}</Link></li>
+                <li><Link className="dropdown-item" to="/drilling-services">{t('navbar.drilling')}</Link></li>
+                <li><Link className="dropdown-item" to="/blasting-services">{t('navbar.blasting')}</Link></li>
+                <li><Link className="dropdown-item" to="/project-management">{t('navbar.projectManagement')}</Link></li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/hakkimizda">Hakkımızda</Link>
+              <Link className="nav-link" to="/about">{t('navbar.about')}</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projelerimiz">Projelerimiz</Link>
+              <Link className="nav-link" to="/projects">{t('navbar.projects')}</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/iletisim">İletişim</Link>
+              <Link className="nav-link" to="/contact">{t('navbar.contact')}</Link>
+            </li>
+            <li className="nav-item">
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>
