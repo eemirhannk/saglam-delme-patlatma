@@ -1,5 +1,7 @@
 import React from 'react';
 import './AboutPage.css';
+import hakkimizdaImage from '../../public/images/hakkimizda.jpeg';
+import nedenbizImage from '../../public/images/nedenbiz.jpeg';
 
 function AboutPage() {
   return (
@@ -9,7 +11,7 @@ function AboutPage() {
         {/* Left Side - Image */}
         <div className="about-left">
           <div className="about-image">
-            <img src="/images/hakkimizda.jpeg" alt="Hakkımızda" className="about-img" />
+            <img src={hakkimizdaImage} alt="Hakkımızda" className="about-img" />
           </div>
         </div>
 
@@ -61,7 +63,7 @@ function AboutPage() {
           {/* Left Side - Visual */}
           <div className="neden-biz-left">
             <div className="neden-biz-image">
-              <img src="/images/nedenbiz.jpeg" alt="Neden Biz" className="neden-biz-img" />
+              <img src={nedenbizImage} alt="Neden Biz" className="neden-biz-img" />
             </div>
             <div className="advantages-boxes">
               <div className="advantage-box">BAZI ARTILARIMIZ</div>

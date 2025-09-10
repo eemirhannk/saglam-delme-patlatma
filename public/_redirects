@@ -1,2 +1,7 @@
+# Handle client-side routing
 /*    /index.html   200
+
+# Handle static assets
 /images/*    /images/:splat    200
+/js/*        /js/:splat        200
+/css/*       /css/:splat       200
