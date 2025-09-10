@@ -143,34 +143,34 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Slide 4 - Acil Müdahale */}
+            {/* Slide 4 - Danışmanlık */}
             <div className="carousel-item">
               <div className="hero-slide bg-gradient-tertiary">
                 <div className="container">
                   <div className="row align-items-center min-vh-75">
                     <div className="col-lg-6">
                       <h1 className="display-3 fw-bold mb-4 text-white">
-                        7/24 Acil Müdahale
+                        Teknik Danışmanlık
                       </h1>
                       <p className="lead mb-4 text-white">
-                        Acil durumlar için her zaman hazırız. 365 gün 24 saat hizmet veriyoruz. 
-                        Hızlı müdahale ekibimizle sorunlarınızı çözüyoruz.
+                        Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. 
+                        Her aşamada yanınızdayız.
                       </p>
                       <div className="btn-group-custom">
-                        <button className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
-                          <i className="fas fa-phone"></i>
-                          Hemen Arayın
-                        </button>
+                        <Link to="/danismanlik" className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
+                          <i className="fas fa-user-tie"></i>
+                          Danışmanlık
+                        </Link>
                         <button className="btn-custom btn-outline-custom btn-custom--lg">
-                          Acil Müdahale
+                          Teknik Destek
                         </button>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="hero-image text-center">
-                        <i className="fas fa-exclamation-triangle fa-5x mb-3 text-white"></i>
-                        <h3 className="text-white">Acil Müdahale</h3>
-                        <p className="text-white">Her zaman yanınızdayız</p>
+                        <i className="fas fa-user-tie fa-5x mb-3 text-white"></i>
+                        <h3 className="text-white">Uzman Danışmanlık</h3>
+                        <p className="text-white">Projelerinizde rehberlik</p>
                       </div>
                     </div>
                   </div>
@@ -275,13 +275,13 @@ function HomePage() {
             <div className="card-custom service-card-custom">
               <div className="card-custom__body">
                 <div className="service-card-custom__icon">
-                  <i className="fas fa-exclamation-triangle"></i>
+                  <i className="fas fa-user-tie"></i>
                 </div>
-                <h5 className="service-card-custom__title">Acil Müdahale</h5>
+                <h5 className="service-card-custom__title">Danışmanlık</h5>
                 <p className="service-card-custom__text">
-                  7/24 acil durum müdahale hizmetleri ile her zaman yanınızdayız.
+                  Uzman ekibimizle projeleriniz için teknik danışmanlık ve rehberlik hizmetleri sunuyoruz.
                 </p>
-                <a href="#" className="btn-custom btn-secondary-custom">Detaylar</a>
+                <Link to="/danismanlik" className="btn-custom btn-secondary-custom">Detaylar</Link>
               </div>
             </div>
             <div className="card-custom service-card-custom">
