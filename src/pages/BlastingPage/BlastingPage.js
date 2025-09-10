@@ -1,11 +1,13 @@
 import React from 'react';
 import './BlastingPage.css';
+import quarryImage from '@public/images/quarry-blasting.jpeg';
+import urbanImage from '@public/images/sehiricipatlatma.jpeg';
 
 function BlastingPage() {
   return (
     <div className="blasting-page">
         <section className="quarry-image-container">
-          <img src="/images/quarry-blasting.jpeg" alt="Taş Ocağı Patlatma" className="quarry-image" />
+          <img src={quarryImage} alt="Taş Ocağı Patlatma" className="quarry-image" />
           
           {/* Overlay Content */}
           <div className="image-overlay-content">
