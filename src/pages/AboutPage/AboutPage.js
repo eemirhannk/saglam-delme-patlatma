@@ -34,7 +34,7 @@ function AboutPage() {
         {/* Left Side - Image */}
         <div className="about-left">
           <div className="about-image">
-            <img src={hakkimizdaImage} alt="Sağlam Delme & Patlatma ekibi - 1997'den beri güvenli hizmet" className="about-img" />
+            <img src={hakkimizdaImage} alt="Sağlam Delme & Patlatma ekibi - 2025'ten beri güvenli hizmet" className="about-img" />
           </div>
         </div>
 

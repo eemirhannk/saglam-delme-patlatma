@@ -11,7 +11,7 @@ function HomePage() {
       id: 1,
       isActive: true,
       title: "Sağlam Delme & Patlatma",
-      description: "1997'den beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
+      description: "2025'ten beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
       button1: { text: "Projenizi Başlatın", type: "button" },
       button2: { text: "Hizmetlerimiz", type: "button" },
       icon: "fas fa-hammer",
