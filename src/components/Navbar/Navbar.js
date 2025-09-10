@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 import Logo from './Logo';
-import LanguageSwitcher from '../UI/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher';
 
 function Navbar() {
   const { t } = useTranslation();
@@ -20,32 +20,32 @@ function Navbar() {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
   useEffect(() => {
-    // Mobile dropdown toggle functionality
+    // Mobil dropdown toggle işlevselliği
     const handleDropdownClick = (e) => {
       if (window.innerWidth <= 1199.98) {
         e.preventDefault();
         const dropdown = e.target.closest('.dropdown');
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         
-        // Close other dropdowns
+        // Diğer dropdown'ları kapat
         document.querySelectorAll('.dropdown').forEach(d => {
           if (d !== dropdown) {
             d.classList.remove('show');
           }
         });
         
-        // Toggle current dropdown
+        // Mevcut dropdown'ı toggle et
         dropdown.classList.toggle('show');
       }
     };
 
-    // Add click listeners to dropdown toggles
+    // Dropdown toggle'lara click listener'ları ekle
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', handleDropdownClick);
     });
 
-    // Close dropdowns when clicking outside
+    // Dışarı tıklandığında dropdown'ları kapat
     const handleOutsideClick = (e) => {
       if (!e.target.closest('.dropdown')) {
         document.querySelectorAll('.dropdown').forEach(dropdown => {

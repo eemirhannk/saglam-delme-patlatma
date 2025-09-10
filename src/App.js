@@ -4,7 +4,7 @@ import './styles/main.css';
 import './App.css';
 import './i18n/i18n';
 import Layout from './components/Layout';
-import ScrollToTop from './components/UI/ScrollToTop';
+import ScrollToTop from './helpers/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
