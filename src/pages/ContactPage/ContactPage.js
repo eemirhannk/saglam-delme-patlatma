@@ -74,7 +74,7 @@ function ContactPage() {
             <div className="contact-form-wrapper">
               <h2 className="form-title">{t('contact.title')}</h2>
               
-              {/* Success/Error Messages */}
+              {/* Başarı/Hata Mesajları */}
               {submitStatus === 'success' && (
                 <div className="alert alert-success">
                   <i className="fas fa-check-circle"></i>
@@ -90,7 +90,7 @@ function ContactPage() {
               )}
               
               <form className="contact-form" onSubmit={handleSubmit}>
-                        {/* Top - Customer Type and Service Type */}
+                        {/* En üstte - Müşteri Tipi ve Hizmet Türü */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="companyType" className="form-label">{t('contact.form.companyType')}</label>
@@ -124,7 +124,7 @@ function ContactPage() {
                           </div>
                         </div>
 
-                        {/* Second row - Name and Email */}
+                        {/* İkinci sıra - Ad Soyad ve E-posta */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="name" className="form-label">
@@ -152,7 +152,7 @@ function ContactPage() {
                           </div>
                         </div>
 
-                        {/* Third row - Phone and Subject */}
+                        {/* Üçüncü sıra - Telefon ve Konu */}
                         <div className="form-row">
                           <div className="form-group">
                             <label htmlFor="phone" className="form-label">{t('contact.form.phone')}</label>
