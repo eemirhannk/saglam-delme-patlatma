@@ -34,7 +34,7 @@ function AboutPage() {
         {/* Left Side - Image */}
         <div className="about-left">
           <div className="about-image">
-            <img src={hakkimizdaImage} alt="Hakkımızda" className="about-img" />
+            <img src={hakkimizdaImage} alt="Sağlam Delme & Patlatma ekibi - 1997'den beri güvenli hizmet" className="about-img" />
           </div>
         </div>
 
@@ -71,7 +71,7 @@ function AboutPage() {
             </div>
             
             <div className="about-logo">
-              <img src="/images/logo.jpeg" alt="Sağlam Delme & Patlatma" className="about-logo-img" />
+              <img src="/images/logo.jpeg" alt="Sağlam Delme & Patlatma logosu - Güvenli sondaj ve patlatma hizmetleri" className="about-logo-img" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ function AboutPage() {
           {/* Left Side - Visual */}
           <div className="neden-biz-left">
             <div className="neden-biz-image">
-              <img src={nedenbizImage} alt="Neden Biz" className="neden-biz-img" />
+              <img src={nedenbizImage} alt="Neden Sağlam Delme & Patlatma - Uzman kadro ve modern ekipmanlar" className="neden-biz-img" />
             </div>
             <div className="advantages-boxes">
               <div className="advantage-box">BAZI ARTILARIMIZ</div>
