@@ -6,7 +6,9 @@
 
 .quarry-image-container {
   width: 100%;
+  height: 60vh;
   position: relative;
+  overflow: hidden;
 }
 
 .quarry-image {
@@ -320,6 +322,10 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   
+  .quarry-image-container {
+    height: 50vh;
+  }
+  
   .overlay-text {
     max-width: 500px;
     padding: 30px;
@@ -350,6 +356,10 @@
 }
 
 @media (max-width: 768px) {
+  
+  .quarry-image-container {
+    height: 40vh;
+  }
   
   .overlay-text {
     max-width: 100%;
@@ -435,6 +445,10 @@
 }
 
 @media (max-width: 480px) {
+  
+  .quarry-image-container {
+    height: 35vh;
+  }
   
   .overlay-text {
     padding: 15px;
