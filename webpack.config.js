@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].chunk.js',
     clean: true,
   },
   module: {
@@ -51,6 +52,38 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       '@public': path.resolve(__dirname, 'public'),
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          priority: 10,
+        },
+        bootstrap: {
+          test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
+          name: 'bootstrap',
+          chunks: 'all',
+          priority: 20,
+        },
+        i18n: {
+          test: /[\\/]node_modules[\\/](i18next|react-i18next)[\\/]/,
+          name: 'i18n',
+          chunks: 'all',
+          priority: 15,
+        },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'all',
+          priority: 5,
+          reuseExistingChunk: true,
+        },
+      },
     },
   },
 };

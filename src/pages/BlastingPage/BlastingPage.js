@@ -95,9 +95,22 @@ function BlastingPage() {
     }
   ];
 
+  const quarryParagraphs = [
+    t('blasting.quarry.description'),
+    t('blasting.quarry.paragraph1'),
+    t('blasting.quarry.paragraph2'),
+    t('blasting.quarry.paragraph3')
+  ];
+
+  const underwaterParagraphs = [
+    t('blasting.underwater.description'),
+    t('blasting.underwater.paragraph1'),
+    t('blasting.underwater.paragraph2')
+  ];
+
   return (
     <div className="blasting-page">
-        <section className="quarry-image-container">
+        <section id="quarry-blasting" className="quarry-image-container">
           <img src={quarryImage} alt={t('images.quarry')} className="quarry-image" />
           
           {/* Overlay Content */}
@@ -108,28 +121,18 @@ function BlastingPage() {
               </h2>
               
               <div className="blasting-description">
-                <p>
-                  {t('blasting.quarry.description')}
-                </p>
-                
-                <p>
-                  {t('blasting.quarry.paragraph1')}
-                </p>
-                
-                <p>
-                  {t('blasting.quarry.paragraph2')}
-                </p>
-                
-                <p>
-                  {t('blasting.quarry.paragraph3')}
-                </p>
+                {quarryParagraphs.map((paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
       {/* Urban Blasting Section */}
-      <section className="urban-blasting-section">
+      <section id="urban-blasting" className="urban-blasting-section">
         <div className="container-custom">
           <div className="urban-blasting-content">
             <div className="urban-blasting-text">
@@ -201,17 +204,11 @@ function BlastingPage() {
               </h2>
               
               <div className="blasting-description">
-                <p>
-                  {t('blasting.underwater.description')}
-                </p>
-                
-                <p>
-                  {t('blasting.underwater.paragraph1')}
-                </p>
-                
-                <p>
-                  {t('blasting.underwater.paragraph2')}
-                </p>
+                {underwaterParagraphs.map((paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

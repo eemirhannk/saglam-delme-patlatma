@@ -30,6 +30,23 @@ function AboutPage() {
     }
   ];
 
+  const aboutParagraphs = [
+    t('about.content.paragraph1'),
+    t('about.content.paragraph2'),
+    t('about.content.paragraph3'),
+    t('about.content.paragraph4')
+  ];
+
+  const advantageBoxes = [
+    t('about.whyUs.advantages'),
+    t('about.whyUs.advantages2')
+  ];
+
+  const advantageTaglines = [
+    t('about.whyUs.tagline1'),
+    t('about.whyUs.tagline2')
+  ];
+
   return (
     <div className="about-page">
       {/* Main Content - Hakkımızda */}
@@ -48,21 +65,11 @@ function AboutPage() {
             <h2 className="about-subtitle">{t('about.subtitle')}</h2>
             
             <div className="about-text">
-              <p>
-                {t('about.content.paragraph1')}
-              </p>
-              
-              <p>
-                {t('about.content.paragraph2')}
-              </p>
-              
-              <p>
-                {t('about.content.paragraph3')}
-              </p>
-              
-              <p>
-                {t('about.content.paragraph4')}
-              </p>
+              {aboutParagraphs.map((paragraph, index) => (
+                <p key={index}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
             
             <div className="about-logo">
@@ -84,12 +91,14 @@ function AboutPage() {
               <img src={nedenbizImage} alt={t('images.whyUs')} className="neden-biz-img" />
             </div>
             <div className="advantages-boxes">
-              <div className="advantage-box">{t('about.whyUs.advantages')}</div>
-              <div className="advantage-box">{t('about.whyUs.advantages2')}</div>
+              {advantageBoxes.map((box, index) => (
+                <div key={index} className="advantage-box">{box}</div>
+              ))}
             </div>
             <div className="advantage-description">
-              <p>{t('about.whyUs.tagline1')}</p>
-              <p>{t('about.whyUs.tagline2')}</p>
+              {advantageTaglines.map((tagline, index) => (
+                <p key={index}>{tagline}</p>
+              ))}
             </div>
           </div>
 

@@ -65,7 +65,7 @@
 .btn-outline-custom:hover {
   background-color: white;
   border-color: white;
-  color: var(--primary-color);
+  color: var(--parliament-blue);
   transform: translateY(-2px);
 }
 

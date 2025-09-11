@@ -9,7 +9,7 @@ function Logo() {
     <div className="logo-container">
       <img src={logoImage} alt={t('images.companyLogo')} className="logo-img" />
       <div className="logo-tagline">
-        {t('navbar.tagline')}
+      "{t('navbar.tagline')}"
       </div>
     </div>
   );

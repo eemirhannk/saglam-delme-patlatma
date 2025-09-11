@@ -12,12 +12,10 @@ function Footer() {
             <h6 className="footer-subtitle">{t('footer.contact')}</h6>
             <div className="footer-contact">
               <p className="footer-contact-item">
-                <i className="fas fa-phone"></i>
-                +90 (XXX) XXX XX XX
-              </p>
-              <p className="footer-contact-item">
                 <i className="fas fa-envelope"></i>
-                info@saglamdelme.com
+                <a href="mailto:saglamtrcom@gmail.com" className="footer-email-link">
+                  saglamtrcom@gmail.com
+                </a>
               </p>
               <p className="footer-contact-item">
                 <i className="fas fa-map-marker-alt"></i>

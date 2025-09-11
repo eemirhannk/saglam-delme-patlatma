@@ -94,10 +94,6 @@
   object-fit: contain;
 }
 
-.about-logo .logo-tagline {
-  font-size: 14px;
-  margin-top: 6px;
-}
 
 /* Right Green Bar */
 .green-bar {
@@ -149,9 +145,6 @@
 }
 
 @media (max-width: 480px) {
-  .about-main {
-    padding: 40px 0;
-  }
   
   .about-title {
     font-size: 28px;
@@ -170,10 +163,6 @@
     max-height: 200px;
   }
   
-  .about-logo .logo-img {
-    height: 60px;
-    max-width: 200px;
-  }
 }
 
 .neden-biz-container {

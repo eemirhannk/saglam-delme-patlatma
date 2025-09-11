@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import drillingImage from '@public/images/delme-hizmetleri.jpeg';
+import mwdImage from '@public/images/mwd-hizmetleri.jpg';
+import tunnelDrillingImage from '@public/images/tunel-delme-hizmetleri.jpeg';
+import openFieldDrillingImage from '@public/images/acik-saha-delme-hizmetleri.jpeg';
+import quarryBlastingImage from '@public/images/quarry-blasting2.jpeg';
 import blastingImage from '@public/images/tasocagi-patlatma.jpeg';
-import urbanBlastingImage from '@public/images/sa.jpg';
+import urbanBlastingImage from '@public/images/urban-blasting.jpg';
+import underwaterBlastingImage from '@public/images/sualti3.jpeg';
 import consultingImage from '@public/images/consulting3.jpeg';
 import './HomePage.css';
 
@@ -12,132 +17,221 @@ function HomePage() {
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  const carouselSlides = [
+  const carouselSlideData = [
     {
       id: 1,
       isActive: true,
-      title: t('homepage.carousel.slide2.title'),
-      description: t('homepage.carousel.slide2.description'),
-      button1: { text: t('homepage.carousel.slide2.button1'), type: "link", to: "/drilling-services" },
-      button2: { text: t('homepage.carousel.slide2.button2'), type: "button" },
-      backgroundImage: drillingImage,
-      icon: "fas fa-mountain",
-      imageTitle: t('homepage.carousel.slide2.imageTitle'),
-      imageDescription: t('homepage.carousel.slide2.imageDescription')
+      slideKey: 'slide2',
+      button: { type: "link", to: "/drilling-services" },
+      backgroundImage: mwdImage,
+      icon: "fas fa-chart-line"
     },
     {
       id: 2,
       isActive: false,
-      title: t('homepage.carousel.slide3.title'),
-      description: t('homepage.carousel.slide3.description'),
-      button1: { text: t('homepage.carousel.slide3.button1'), type: "link", to: "/blasting-services" },
-      button2: { text: t('homepage.carousel.slide3.button2'), type: "button" },
-      backgroundImage: blastingImage,
-      icon: "fas fa-mountain",
-      imageTitle: t('homepage.carousel.slide3.imageTitle'),
-      imageDescription: t('homepage.carousel.slide3.imageDescription')
+      slideKey: 'slide2_5',
+      button: { type: "link", to: "/drilling-services" },
+      backgroundImage: tunnelDrillingImage,
+      icon: "fas fa-road"
     },
     {
       id: 3,
       isActive: false,
-      title: t('homepage.carousel.slide4.title'),
-      description: t('homepage.carousel.slide4.description'),
-      button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/blasting-services" },
-      button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
-      backgroundImage: urbanBlastingImage,
-      icon: "fas fa-city",
-      imageTitle: t('homepage.carousel.slide4.imageTitle'),
-      imageDescription: t('homepage.carousel.slide4.imageDescription')
+      slideKey: 'slide2_6',
+      button: { type: "link", to: "/drilling-services" },
+      backgroundImage: openFieldDrillingImage,
+      icon: "fas fa-mountain"
     },
     {
       id: 4,
       isActive: false,
-      title: t('homepage.carousel.slide5.title'),
-      description: t('homepage.carousel.slide5.description'),
-      button1: { text: t('homepage.carousel.slide5.button1'), type: "link", to: "/blasting-services" },
-      button2: { text: t('homepage.carousel.slide5.button2'), type: "button" },
-      icon: "fas fa-water",
-      imageTitle: t('homepage.carousel.slide5.imageTitle'),
-      imageDescription: t('homepage.carousel.slide5.imageDescription')
+      slideKey: 'slide3',
+      button: { type: "link", to: "/blasting-services#quarry-blasting" },
+      backgroundImage: quarryBlastingImage,
+      icon: "fas fa-mountain"
     },
     {
       id: 5,
       isActive: false,
-      title: t('homepage.carousel.slide6.title'),
-      description: t('homepage.carousel.slide6.description'),
-      button1: { text: t('homepage.carousel.slide6.button1'), type: "link", to: "/consulting" },
-      button2: { text: t('homepage.carousel.slide6.button2'), type: "button" },
-      icon: "fas fa-user-tie",
-      imageTitle: t('homepage.carousel.slide6.imageTitle'),
-      imageDescription: t('homepage.carousel.slide6.imageDescription')
+      slideKey: 'slide4',
+      button: { type: "link", to: "/blasting-services#urban-blasting" },
+      backgroundImage: urbanBlastingImage,
+      icon: "fas fa-city"
     },
+    {
+      id: 6,
+      isActive: false,
+      slideKey: 'slide5',
+      button: { type: "link", to: "/blasting-services#underwater-blasting" },
+      backgroundImage: underwaterBlastingImage,
+      icon: "fas fa-water"
+    }
   ];
 
-  const safetyFeatures = [
+  const carouselSlides = carouselSlideData.map(slide => ({
+    ...slide,
+    title: t(`homepage.carousel.${slide.slideKey}.title`),
+    description: t(`homepage.carousel.${slide.slideKey}.description`),
+    button: {
+      ...slide.button,
+      text: t(`homepage.carousel.${slide.slideKey}.button`)
+    },
+    imageTitle: t(`homepage.carousel.${slide.slideKey}.imageTitle`),
+    imageDescription: t(`homepage.carousel.${slide.slideKey}.imageDescription`)
+  }));
+
+  const safetyFeatureData = [
     {
       id: 1,
       icon: "fas fa-shield-alt",
-      title: t('safetyFeatures.experience.title'),
-      description: t('safetyFeatures.experience.description')
+      featureKey: 'experience'
     },
     {
       id: 2,
       icon: "fas fa-cogs",
-      title: t('safetyFeatures.technology.title'),
-      description: t('safetyFeatures.technology.description')
+      featureKey: 'technology'
     },
     {
       id: 3,
       icon: "fas fa-user-shield",
-      title: t('safetyFeatures.safety.title'),
-      description: t('safetyFeatures.safety.description')
+      featureKey: 'safety'
     }
   ];
 
-  const services = [
+  const safetyFeatures = safetyFeatureData.map(feature => ({
+    ...feature,
+    title: t(`safetyFeatures.${feature.featureKey}.title`),
+    description: t(`safetyFeatures.${feature.featureKey}.description`)
+  }));
+
+  const serviceData = [
     {
       id: 1,
       icon: "fas fa-mountain",
-      title: t('services.drilling.title'),
-      description: t('services.drilling.description'),
-      link: { text: t('common.details'), type: "link", to: "/drilling-services" }
+      serviceKey: 'drilling',
+      link: { type: "link", to: "/drilling-services" }
     },
     {
       id: 2,
-      icon: "fas fa-bomb",
-      title: t('services.blasting.title'),
-      description: t('services.blasting.description'),
-      link: { text: t('common.details'), type: "link", to: "/blasting-services" }
+      icon: "fas fa-road",
+      serviceKey: 'tunnelDrilling',
+      link: { type: "link", to: "/drilling-services" }
     },
     {
       id: 3,
-      icon: "fas fa-cogs",
-      title: t('homepage.services.projectManagement.title'),
-      description: t('homepage.services.projectManagement.description'),
-      link: { text: t('common.details'), type: "button" }
+      icon: "fas fa-mountain",
+      serviceKey: 'openFieldDrilling',
+      link: { type: "link", to: "/drilling-services" }
     },
     {
       id: 4,
-      icon: "fas fa-user-tie",
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
-      link: { text: t('common.details'), type: "link", to: "/consulting" }
+      icon: "fas fa-bomb",
+      serviceKey: 'blasting',
+      link: { type: "link", to: "/blasting-services" }
     },
     {
       id: 5,
-      icon: "fas fa-water",
-      title: t('services.underwater.title'),
-      description: t('services.underwater.description'),
-      link: { text: t('common.details'), type: "link", to: "/blasting-services#underwater-blasting" }
+      icon: "fas fa-cogs",
+      serviceKey: 'projectManagement',
+      link: { type: "button" }
     },
     {
       id: 6,
+      icon: "fas fa-user-tie",
+      serviceKey: 'consulting',
+      link: { type: "link", to: "/consulting" }
+    },
+    {
+      id: 7,
+      icon: "fas fa-water",
+      serviceKey: 'underwater',
+      link: { type: "link", to: "/blasting-services#underwater-blasting" }
+    },
+    {
+      id: 8,
       icon: "fas fa-building",
-      title: t('services.demolition.title'),
-      description: t('services.demolition.description'),
-      link: { text: t('common.details'), type: "button" }
+      serviceKey: 'demolition',
+      link: { type: "button" }
     }
   ];
+
+  const services = serviceData.map(service => ({
+    ...service,
+    title: service.serviceKey === 'projectManagement' 
+      ? t(`homepage.services.${service.serviceKey}.title`)
+      : t(`services.${service.serviceKey}.title`),
+    description: service.serviceKey === 'projectManagement'
+      ? t(`homepage.services.${service.serviceKey}.description`)
+      : t(`services.${service.serviceKey}.description`),
+    link: {
+      ...service.link,
+      text: t('common.details')
+    }
+  }));
+
+  const sectionData = [
+    {
+      id: 'safety',
+      className: 'py-5 bg-light-custom',
+      titleKey: 'homepage.safety.title',
+      descriptionKey: 'homepage.safety.description',
+      items: safetyFeatures,
+      renderItem: (feature) => (
+        <div key={feature.id} className="feature-card-custom">
+          <div className="feature-card-custom__icon">
+            <i className={feature.icon}></i>
+          </div>
+          <h4 className="feature-card-custom__title">{feature.title}</h4>
+          <p className="feature-card-custom__text">{feature.description}</p>
+        </div>
+      ),
+      gridClass: 'grid grid--3'
+    },
+    {
+      id: 'services',
+      className: `py-5 services-lazy-loading ${isServicesVisible ? 'services-visible' : ''}`,
+      titleKey: 'homepage.services.title',
+      descriptionKey: 'homepage.services.description',
+      items: services,
+      renderItem: (service) => (
+        <div key={service.id} className="card-custom service-card-custom">
+          <div className="card-custom__body">
+            <div className="service-card-custom__icon">
+              <i className={service.icon}></i>
+            </div>
+            <h5 className="service-card-custom__title">{service.title}</h5>
+            <p className="service-card-custom__text">{service.description}</p>
+            {service.link.type === 'link' ? (
+              <Link to={service.link.to} className="btn-custom btn-secondary-custom">{service.link.text}</Link>
+            ) : (
+              <button className="btn-custom btn-secondary-custom">{service.link.text}</button>
+            )}
+          </div>
+        </div>
+      ),
+      gridClass: 'card-grid-custom'
+    }
+  ];
+
+  const renderSection = (section) => (
+    <section 
+      key={section.id} 
+      className={section.className}
+      id={section.id === 'services' ? 'services-section' : undefined}
+    >
+      <div className="container-custom">
+        <div className="row">
+          <div className="col-12 text-center mb-5">
+            <h2 className="text-3xl font-bold parliament-blue">{t(section.titleKey)}</h2>
+            <p className="text-lg">{t(section.descriptionKey)}</p>
+          </div>
+        </div>
+        <div className={section.gridClass}>
+          {section.items.map(section.renderItem)}
+        </div>
+      </div>
+    </section>
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -194,26 +288,16 @@ function HomePage() {
                           {slide.description}
                         </p>
                         <div className="btn-group-custom">
-                          {slide.button1.type === 'link' ? (
-                            <Link to={slide.button1.to} className="btn-custom btn-light-custom btn-custom--lg btn-custom--icon">
-                              {slide.button1.icon && <i className={slide.button1.icon}></i>}
-                              {slide.button1.text}
+                          {slide.button.type === 'link' ? (
+                            <Link to={slide.button.to} className="btn-custom btn-outline-custom btn-custom--lg">
+                              {slide.button.icon && <i className={slide.button.icon}></i>}
+                              {slide.button.text}
                             </Link>
                           ) : (
-                            <button className="btn-custom btn-light-custom btn-custom--lg">
-                              {slide.button1.text}
+                            <button className="btn-custom btn-outline-custom btn-custom--lg">
+                              {slide.button.text}
                             </button>
                           )}
-                          <button className="btn-custom btn-outline-custom btn-custom--lg">
-                            {slide.button2.text}
-                          </button>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="hero-image text-center">
-                          <i className={`${slide.icon} fa-5x mb-3 text-white`}></i>
-                          <h3 className="text-white">{slide.imageTitle}</h3>
-                          <p className="text-white">{slide.imageDescription}</p>
                         </div>
                       </div>
                     </div>
@@ -235,58 +319,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Safety Section */}
-      <section className="py-5 bg-light-custom">
-        <div className="container-custom">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold parliament-blue">{t('homepage.safety.title')}</h2>
-              <p className="text-lg">{t('homepage.safety.description')}</p>
-            </div>
-          </div>
-          <div className="grid grid--3">
-            {safetyFeatures.map((feature) => (
-              <div key={feature.id} className="feature-card-custom">
-                <div className="feature-card-custom__icon">
-                  <i className={feature.icon}></i>
-                </div>
-                <h4 className="feature-card-custom__title">{feature.title}</h4>
-                <p className="feature-card-custom__text">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services-section" className={`py-5 services-lazy-loading ${isServicesVisible ? 'services-visible' : ''}`}>
-        <div className="container-custom">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold parliament-blue">{t('homepage.services.title')}</h2>
-              <p className="text-lg">{t('homepage.services.description')}</p>
-            </div>
-          </div>
-          <div className="card-grid-custom">
-            {services.map((service) => (
-              <div key={service.id} className="card-custom service-card-custom">
-                <div className="card-custom__body">
-                  <div className="service-card-custom__icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <h5 className="service-card-custom__title">{service.title}</h5>
-                  <p className="service-card-custom__text">{service.description}</p>
-                  {service.link.type === 'link' ? (
-                    <Link to={service.link.to} className="btn-custom btn-secondary-custom">{service.link.text}</Link>
-                  ) : (
-                    <button className="btn-custom btn-secondary-custom">{service.link.text}</button>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Dinamik Sections */}
+      {sectionData.map(renderSection)}
 
       {/* CTA Section */}
       <section className="py-5 bg-primary-custom text-white">

@@ -24,8 +24,7 @@ const tr = {
       hero: {
         title: "Sağlam Delme & Patlatma",
         description: "2025'ten beri güvenli ve profesyonel delme ve patlatma hizmetleri sunuyoruz. Her projede güvenlik önceliğimizdir.",
-        button1: "Projenizi Başlatın",
-        button2: "Hizmetlerimiz"
+        button: "Daha Fazla Bilgi"
       },
       carousel: {
         slide1: {
@@ -33,42 +32,51 @@ const tr = {
           imageDescription: "Uzman kadromuzla güvenli çözümler"
         },
         slide2: {
-          title: "Delme Hizmetleri",
-          description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz. Modern ekipmanlarımızla en zorlu projeleri başarıyla tamamlıyoruz.",
-          button1: "Delme Hizmetleri",
-          button2: "Teknik Detaylar",
-          imageTitle: "Hassas Delme",
-          imageDescription: "Her türlü zemin koşulunda çalışma"
+          title: "MWD Hizmetleri",
+          description: "Measurement While Drilling (MWD) teknolojisi ile delme sırasında gerçek zamanlı veri toplama ve analiz hizmetleri sunuyoruz. Modern sondaj teknolojileri ile projelerinizi optimize ediyoruz.",
+          button: "Daha Fazla Bilgi",
+          imageTitle: "MWD Teknolojisi",
+          imageDescription: "Gerçek zamanlı delme verisi toplama"
+        },
+        slide2_5: {
+          title: "Tünel Delme Hizmetleri",
+          description: "Metro, karayolu tünelleri ve altyapı projeleri için özel tünel delme teknikleri. Modern ekipmanlarımız ve uzman ekibimizle güvenli ve verimli tünel açma hizmetleri sunuyoruz.",
+          button: "Daha Fazla Bilgi",
+          imageTitle: "Tünel Delme",
+          imageDescription: "Metro ve karayolu tüneli projeleri"
+        },
+        slide2_6: {
+          title: "Açık Saha Delme Hizmetleri",
+          description: "Madencilik, inşaat ve altyapı projeleri için açık saha delme operasyonları. Modern sondaj ekipmanlarımız ve uzman ekibimizle güvenli ve verimli delme hizmetleri sunuyoruz.",
+          button: "Daha Fazla Bilgi",
+          imageTitle: "Açık Saha Delme",
+          imageDescription: "Madencilik ve inşaat projeleri"
         },
         slide3: {
           title: "Taş Ocağı Patlatma Hizmetleri",
           description: "Taş ocaklarında güvenli ve verimli patlatma operasyonları gerçekleştiriyoruz. USBM ve DIN standartlarına uygun çalışıyoruz.",
-          button1: "Taş Ocağı Patlatma",
-          button2: "Detayları Gör",
+          button: "Daha Fazla Bilgi",
           imageTitle: "Taş Ocağı Patlatma",
           imageDescription: "Güvenli ve verimli taş ocağı operasyonları"
         },
         slide4: {
           title: "Şehir İçi Patlatma Hizmetleri",
           description: "Şehir merkezlerinde hassas ve kontrollü patlatma teknikleri ile güvenli operasyonlar yürütüyoruz. Çevre koruma önceliğimizdir.",
-          button1: "Şehir İçi Patlatma",
-          button2: "Güvenlik Standartları",
+          button: "Daha Fazla Bilgi",
           imageTitle: "Şehir İçi Patlatma",
           imageDescription: "Hassas ve kontrollü şehir içi operasyonlar"
         },
         slide5: {
           title: "Su Altı Patlatma Hizmetleri",
           description: "Deniz, göl ve nehir tabanında güvenli su altı patlatma operasyonları gerçekleştiriyoruz. Çevre dostu teknolojiler kullanıyoruz.",
-          button1: "Su Altı Patlatma",
-          button2: "Teknik Detaylar",
+          button: "Daha Fazla Bilgi",
           imageTitle: "Su Altı Patlatma",
           imageDescription: "Güvenli ve çevre dostu su altı operasyonlar"
         },
         slide6: {
           title: "Teknik Danışmanlık",
           description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
-          button1: "Danışmanlık",
-          button2: "Teknik Destek",
+          button: "Daha Fazla Bilgi",
           imageTitle: "Uzman Danışmanlık",
           imageDescription: "Projelerinizde rehberlik"
         },
@@ -147,11 +155,11 @@ const tr = {
     team: {
       title: "Ekibimiz",
       subtitle: "Uzman Kadromuz",
-      description: "Deneyimli ve uzman ekibimizle her projede mükemmellik hedefliyoruz.",
+      description: "Deneyimli ve uzman ekibimizle çalışın, \"İşinizi Sağlama Alın\".",
       member: {
         name: "Rıza Sağlam",
         position: "Kurucu & Genel Müdür",
-        experience: "20+ Yıl Deneyim",
+        experience: "10+ Yıl Deneyim",
         education: "Jeoloji Mühendisliği",
         education2: "Patlayıcı Mühendisliği Yüksek Lisans",
         expertise: "Patlayıcı Mühendisi & Patlatma Uzmanı",
@@ -170,14 +178,6 @@ const tr = {
             "Güney Amerika Uruguay'da deniz altı patlatma işlerinde uzmanlık"
           ]
         },
-        achievements: [
-          "20+ Yıl Sektör Deneyimi",
-          "Uluslararası Proje Yönetimi",
-          "Sualtı Patlatma Uzmanı",
-          "Şehir İçi Patlatma Uzmanı",
-          "Tünel Projeleri Uzmanı",
-          "Patlayıcı Mühendisliği Yüksek Lisans"
-        ]
       }
     },
     
@@ -413,6 +413,14 @@ const tr = {
         title: "Delme Hizmetleri",
         description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz."
       },
+      tunnelDrilling: {
+        title: "Tünel Delme Hizmetleri",
+        description: "Metro, karayolu tünelleri ve altyapı projeleri için özel tünel delme teknikleri."
+      },
+      openFieldDrilling: {
+        title: "Açık Saha Delme Hizmetleri",
+        description: "Madencilik, inşaat ve altyapı projeleri için açık saha delme operasyonları."
+      },
       blasting: {
         title: "Patlatma Hizmetleri",
         description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz."
@@ -438,7 +446,7 @@ const tr = {
     // Safety Features
     safetyFeatures: {
       experience: {
-        title: "25+ Yıl Deneyim",
+        title: "10+ Yıl Deneyim",
         description: "Sektörde uzun yıllara dayanan tecrübemizle güvenilir hizmet sunuyoruz."
       },
       technology: {
@@ -486,8 +494,7 @@ const en = {
       hero: {
         title: "Sağlam Drilling & Blasting",
         description: "Since 2025, we have been providing safe and professional drilling and blasting services. Safety is our priority in every project.",
-        button1: "Start Your Project",
-        button2: "Our Services"
+        button: "Learn More"
       },
       carousel: {
         slide1: {
@@ -495,42 +502,51 @@ const en = {
           imageDescription: "Safe solutions with our expert staff"
         },
         slide2: {
-          title: "Drilling Services",
-          description: "We work in all kinds of materials and ground conditions with precise drilling techniques. We successfully complete the most challenging projects with our modern equipment.",
-          button1: "Drilling Services",
-          button2: "Technical Details",
-          imageTitle: "Precise Drilling",
-          imageDescription: "Working in all ground conditions"
+          title: "MWD Services",
+          description: "We provide real-time data collection and analysis services during drilling with Measurement While Drilling (MWD) technology. We optimize your projects with modern drilling technologies.",
+          button: "Learn More",
+          imageTitle: "MWD Technology",
+          imageDescription: "Real-time drilling data collection"
+        },
+        slide2_5: {
+          title: "Tunnel Drilling Services",
+          description: "Special tunnel drilling techniques for metro, highway tunnels and infrastructure projects. We provide safe and efficient tunnel opening services with our modern equipment and expert team.",
+          button: "Learn More",
+          imageTitle: "Tunnel Drilling",
+          imageDescription: "Metro and highway tunnel projects"
+        },
+        slide2_6: {
+          title: "Open Field Drilling Services",
+          description: "Open field drilling operations for mining, construction and infrastructure projects. We provide safe and efficient drilling services with our modern drilling equipment and expert team.",
+          button: "Learn More",
+          imageTitle: "Open Field Drilling",
+          imageDescription: "Mining and construction projects"
         },
         slide3: {
           title: "Quarry Blasting Services",
           description: "We carry out safe and efficient blasting operations in quarries. We work in accordance with USBM and DIN standards.",
-          button1: "Quarry Blasting",
-          button2: "View Details",
+          button: "Learn More",
           imageTitle: "Quarry Blasting",
           imageDescription: "Safe and efficient quarry operations"
         },
         slide4: {
           title: "Urban Blasting Services",
           description: "We carry out safe operations with precise and controlled blasting techniques in city centers. Environmental protection is our priority.",
-          button1: "Urban Blasting",
-          button2: "Safety Standards",
+          button: "Learn More",
           imageTitle: "Urban Blasting",
           imageDescription: "Precise and controlled urban operations"
         },
         slide5: {
           title: "Underwater Blasting Services",
           description: "We carry out safe underwater blasting operations on seabed, lake and river beds. We use environmentally friendly technologies.",
-          button1: "Underwater Blasting",
-          button2: "Technical Details",
+          button: "Learn More",
           imageTitle: "Underwater Blasting",
           imageDescription: "Safe and environmentally friendly underwater operations"
         },
         slide6: {
           title: "Technical Consulting",
           description: "We provide comprehensive technical consulting services for your projects with our expert team. We are with you at every stage.",
-          button1: "Consulting",
-          button2: "Technical Support",
+          button: "Learn More",
           imageTitle: "Expert Consulting",
           imageDescription: "Guidance in your projects"
         },
@@ -609,11 +625,11 @@ const en = {
     team: {
       title: "Our Team",
       subtitle: "Expert Staff",
-      description: "We aim for excellence in every project with our experienced and expert team.",
+      description: "Work with our experienced and expert team, \"Secure Your Business\".",
       member: {
         name: "Rıza Sağlam",
         position: "Founder & General Manager",
-        experience: "20+ Years Experience",
+        experience: "10+ Years Experience",
         education: "Geological Engineering",
         education2: "Explosive Engineering Master's Degree",
         expertise: "Explosive Engineer & Blasting Expert",
@@ -632,14 +648,6 @@ const en = {
             "Expertise in underwater blasting works in Uruguay, South America"
           ]
         },
-        achievements: [
-          "20+ Years Industry Experience",
-          "International Project Management",
-          "Underwater Blasting Expert",
-          "Urban Blasting Expert",
-          "Tunnel Projects Expert",
-          "Explosive Engineering Master's Degree"
-        ]
       }
     },
     
@@ -874,6 +882,14 @@ const en = {
       drilling: {
         title: "Drilling Services",
         description: "We work in all kinds of materials and ground conditions with precise drilling techniques."
+      },
+      tunnelDrilling: {
+        title: "Tunnel Drilling Services",
+        description: "Special tunnel drilling techniques for metro, highway tunnels and infrastructure projects."
+      },
+      openFieldDrilling: {
+        title: "Open Field Drilling Services",
+        description: "Open field drilling operations for mining, construction and infrastructure projects."
       },
       blasting: {
         title: "Blasting Services",

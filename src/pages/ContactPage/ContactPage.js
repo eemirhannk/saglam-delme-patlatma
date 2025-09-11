@@ -14,6 +14,136 @@ function ContactPage() {
     setCompanyType(value);
   };
 
+  const formFields = [
+    {
+      id: 'companyType',
+      type: 'select',
+      label: t('contact.form.companyType'),
+      name: 'companyType',
+      required: true,
+      options: [
+        { value: '', text: t('contact.form.selectOption') },
+        { value: 'individual', text: t('contact.form.individual') },
+        { value: 'company', text: t('contact.form.company') }
+      ],
+      onChange: handleCompanyTypeChange,
+      value: companyType
+    },
+    {
+      id: 'serviceType',
+      type: 'select',
+      label: t('contact.form.serviceType'),
+      name: 'serviceType',
+      required: true,
+      options: [
+        { value: '', text: t('contact.form.selectOption') },
+        { value: 'drilling', text: t('contact.form.drilling') },
+        { value: 'blasting', text: t('contact.form.blasting') },
+        { value: 'consulting', text: t('contact.form.consulting') },
+        { value: 'other', text: t('contact.form.other') }
+      ]
+    },
+    {
+      id: 'name',
+      type: 'text',
+      label: companyType === 'company' ? t('contact.form.companyName') : t('contact.form.name'),
+      name: 'name',
+      placeholder: companyType === 'company' ? t('contact.form.companyPlaceholder') : t('contact.form.namePlaceholder'),
+      required: true
+    },
+    {
+      id: 'email',
+      type: 'email',
+      label: t('contact.form.email'),
+      name: 'email',
+      placeholder: t('contact.form.emailPlaceholder'),
+      required: true
+    },
+    {
+      id: 'phone',
+      type: 'tel',
+      label: t('contact.form.phone'),
+      name: 'phone',
+      placeholder: t('contact.form.phonePlaceholder'),
+      required: true
+    },
+    {
+      id: 'subject',
+      type: 'text',
+      label: t('contact.form.subject'),
+      name: 'subject',
+      placeholder: t('contact.form.subjectPlaceholder'),
+      required: true
+    }
+  ];
+
+  const alertMessages = [
+    {
+      type: 'success',
+      icon: 'fas fa-check-circle',
+      text: t('contact.form.success')
+    },
+    {
+      type: 'error',
+      icon: 'fas fa-exclamation-circle',
+      text: t('contact.form.error')
+    }
+  ];
+
+  const formRows = [
+    {
+      id: 1,
+      fields: ['companyType', 'serviceType']
+    },
+    {
+      id: 2,
+      fields: ['name', 'email']
+    },
+    {
+      id: 3,
+      fields: ['phone', 'subject']
+    }
+  ];
+
+  const renderFormField = (fieldId) => {
+    const field = formFields.find(f => f.id === fieldId);
+    if (!field) return null;
+
+    if (field.type === 'select') {
+      return (
+        <div className="form-group" key={field.id}>
+          <label htmlFor={field.id} className="form-label">{field.label}</label>
+          <select
+            id={field.id}
+            name={field.name}
+            className="form-input"
+            value={field.value || ''}
+            onChange={field.onChange}
+            required={field.required}
+          >
+            {field.options.map((option, index) => (
+              <option key={index} value={option.value}>{option.text}</option>
+            ))}
+          </select>
+        </div>
+      );
+    }
+
+    return (
+      <div className="form-group" key={field.id}>
+        <label htmlFor={field.id} className="form-label">{field.label}</label>
+        <input
+          type={field.type}
+          id={field.id}
+          name={field.name}
+          className="form-input"
+          placeholder={field.placeholder}
+          required={field.required}
+        />
+      </div>
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -74,109 +204,21 @@ function ContactPage() {
             <div className="contact-form-wrapper">
               <h2 className="form-title">{t('contact.title')}</h2>
               
-              {/* Başarı/Hata Mesajları */}
-              {submitStatus === 'success' && (
-                <div className="alert alert-success">
-                  <i className="fas fa-check-circle"></i>
-                  {t('contact.form.success')}
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="alert alert-error">
-                  <i className="fas fa-exclamation-circle"></i>
-                  {t('contact.form.error')}
+              {/* Dinamik Alert Mesajları */}
+              {submitStatus && (
+                <div className={`alert alert-${submitStatus}`}>
+                  <i className={alertMessages.find(msg => msg.type === submitStatus)?.icon}></i>
+                  {alertMessages.find(msg => msg.type === submitStatus)?.text}
                 </div>
               )}
               
               <form className="contact-form" onSubmit={handleSubmit}>
-                        {/* En üstte - Müşteri Tipi ve Hizmet Türü */}
-                        <div className="form-row">
-                          <div className="form-group">
-                            <label htmlFor="companyType" className="form-label">{t('contact.form.companyType')}</label>
-                            <select
-                              id="companyType"
-                              name="companyType"
-                              className="form-input"
-                              value={companyType}
-                              onChange={handleCompanyTypeChange}
-                              required
-                            >
-                              <option value="">{t('contact.form.selectOption')}</option>
-                              <option value="individual">{t('contact.form.individual')}</option>
-                              <option value="company">{t('contact.form.company')}</option>
-                            </select>
+                        {/* Dinamik Form Rows */}
+                        {formRows.map((row) => (
+                          <div key={row.id} className="form-row">
+                            {row.fields.map((fieldId) => renderFormField(fieldId))}
                           </div>
-                          <div className="form-group">
-                            <label htmlFor="serviceType" className="form-label">{t('contact.form.serviceType')}</label>
-                            <select
-                              id="serviceType"
-                              name="serviceType"
-                              className="form-input"
-                              required
-                            >
-                              <option value="">{t('contact.form.selectOption')}</option>
-                              <option value="drilling">{t('contact.form.drilling')}</option>
-                              <option value="blasting">{t('contact.form.blasting')}</option>
-                              <option value="consulting">{t('contact.form.consulting')}</option>
-                              <option value="other">{t('contact.form.other')}</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        {/* İkinci sıra - Ad Soyad ve E-posta */}
-                        <div className="form-row">
-                          <div className="form-group">
-                            <label htmlFor="name" className="form-label">
-                              {companyType === 'company' ? t('contact.form.companyName') : t('contact.form.name')}
-                            </label>
-                            <input
-                              type="text"
-                              id="name"
-                              name="name"
-                              className="form-input"
-                              placeholder={companyType === 'company' ? t('contact.form.companyPlaceholder') : t('contact.form.namePlaceholder')}
-                              required
-                            />
-                          </div>
-                          <div className="form-group">
-                            <label htmlFor="email" className="form-label">{t('contact.form.email')}</label>
-                            <input
-                              type="email"
-                              id="email"
-                              name="email"
-                              className="form-input"
-                              placeholder={t('contact.form.emailPlaceholder')}
-                              required
-                            />
-                          </div>
-                        </div>
-
-                        {/* Üçüncü sıra - Telefon ve Konu */}
-                        <div className="form-row">
-                          <div className="form-group">
-                            <label htmlFor="phone" className="form-label">{t('contact.form.phone')}</label>
-                            <input
-                              type="tel"
-                              id="phone"
-                              name="phone"
-                              className="form-input"
-                              placeholder={t('contact.form.phonePlaceholder')}
-                              required
-                            />
-                          </div>
-                          <div className="form-group">
-                            <label htmlFor="subject" className="form-label">{t('contact.form.subject')}</label>
-                            <input
-                              type="text"
-                              id="subject"
-                              name="subject"
-                              className="form-input"
-                              placeholder={t('contact.form.subjectPlaceholder')}
-                              required
-                            />
-                          </div>
-                        </div>
+                        ))}
 
                         <div className="form-group">
                           <label htmlFor="message" className="form-label">{t('contact.form.message')}</label>

@@ -6,7 +6,7 @@
 
 /* Hero Section */
 .team-hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: var(--parliament-blue);
   padding: 80px 0;
   color: white;
   text-align: center;
@@ -24,12 +24,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.team-subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
-}
 
 .team-description {
   font-size: 1.2rem;
@@ -40,7 +34,7 @@
 
 /* Team Member Section */
 .team-member-section {
-  padding: 80px 0;
+  padding: 50px 0;
   background-color: #f8f9fa;
 }
 
@@ -50,59 +44,62 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 0;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .member-image {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: var(--parliament-blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
 }
 
 .member-placeholder {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
 }
 
-.member-placeholder i {
-  font-size: 4rem;
-  color: white;
+.member-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
+
 
 .member-info {
-  padding: 40px;
+  padding: 30px;
 }
 
 .member-name {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--text-dark);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .member-position {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--parliament-blue);
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .member-details {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .detail-item {
@@ -125,14 +122,14 @@
 }
 
 .member-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text-dark);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .member-career {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .member-career h4 {
@@ -173,57 +170,7 @@
   line-height: 1.5;
 }
 
-.member-company {
-  margin-bottom: 30px;
-}
 
-.member-company h4 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 15px;
-}
-
-.company-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  margin: 0;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  border-left: 4px solid var(--primary-color);
-}
-
-.member-achievements h4 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 20px;
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.achievement-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-}
-
-.achievement-item i {
-  color: var(--primary-color);
-  font-size: 1rem;
-}
-
-.achievement-item span {
-  font-weight: 500;
-  color: var(--text-dark);
-}
 
 /* CTA Section */
 .team-cta {
@@ -271,9 +218,6 @@
     font-size: 2.2rem;
   }
   
-  .team-subtitle {
-    font-size: 1.2rem;
-  }
   
   .team-description {
     font-size: 1rem;
@@ -286,33 +230,34 @@
   }
   
   .member-image {
-    padding: 30px;
+    padding: 20px;
   }
   
   .member-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
   
-  .member-placeholder i {
-    font-size: 3rem;
+  .member-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
+  
   
   .member-info {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
   
   .member-name {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .member-position {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
   
   .cta-content h3 {
     font-size: 1.8rem;

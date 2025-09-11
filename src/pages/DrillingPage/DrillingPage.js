@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './DrillingPage.css';
+import drillingImage from '@public/images/3d-tunel-gorunumu.png';
 
 function DrillingPage() {
   const { t } = useTranslation();
@@ -48,7 +49,7 @@ function DrillingPage() {
   ];
 
   return (
-    <div className="drilling-page">
+    <div className="drilling-page" style={{backgroundImage: `url(${drillingImage})`}}>
       <div className="container">
         <div className="drilling-hero">
           <div className="drilling-content">
