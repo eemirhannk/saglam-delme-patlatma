@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import ConsultingPage from './pages/ConsultingPage';
 import BlastingPage from './pages/BlastingPage';
 import DrillingPage from './pages/DrillingPage';
+import TeamPage from './pages/TeamPage';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/drilling-services" element={<DrillingPage />} />
           <Route path="/blasting-services" element={<BlastingPage />} />
           <Route path="/project-management" element={<ConsultingPage />} />
-          <Route path="/projects" element={<AboutPage />} />
+          <Route path="/team" element={<TeamPage />} />
         </Routes>
       </Layout>
     </Router>

@@ -108,7 +108,7 @@ function Navbar() {
               <Link className="nav-link" to="/about">{t('navbar.about')}</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects">{t('navbar.projects')}</Link>
+              <Link className="nav-link" to="/team">{t('navbar.team')}</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">{t('navbar.contact')}</Link>

@@ -14,7 +14,7 @@ const tr = {
       drilling: "Delme Hizmetleri",
       blasting: "Patlatma Hizmetleri",
       projectManagement: "Proje Yönetimi",
-      projects: "Projelerimiz",
+      team: "Ekibimiz",
       contact: "İletişim",
       tagline: "İşinizi Sağlama Alın"
     },
@@ -124,6 +124,27 @@ const tr = {
         title: "Danışmanlık Hizmetlerimizden Yararlanın",
         description: "Projeleriniz için uzman danışmanlık hizmeti almak için hemen iletişime geçin.",
         button: "İletişime Geçin"
+      }
+    },
+    
+    // Team Page
+    team: {
+      title: "Ekibimiz",
+      subtitle: "Uzman Kadromuz",
+      description: "Deneyimli ve uzman ekibimizle her projede mükemmellik hedefliyoruz.",
+      member: {
+        name: "Emirhan Koç",
+        position: "Kurucu & Genel Müdür",
+        experience: "15+ Yıl Deneyim",
+        education: "Maden Mühendisliği",
+        expertise: "Delme & Patlatma Uzmanı",
+        description: "Sektörde 15 yılı aşkın deneyime sahip, delme ve patlatma alanında uzman mühendis. Su altı patlatmalardan tünel projelerine kadar geniş bir yelpazede proje yönetimi deneyimi bulunmaktadır.",
+        achievements: [
+          "100+ Başarılı Proje",
+          "Sualtı Patlatma Uzmanı",
+          "Tünel Projeleri Uzmanı",
+          "Güvenlik Sertifikaları"
+        ]
       }
     },
     
@@ -422,7 +443,7 @@ const en = {
       drilling: "Drilling Services",
       blasting: "Blasting Services",
       projectManagement: "Project Management",
-      projects: "Our Projects",
+      team: "Our Team",
       contact: "Contact",
       tagline: "Secure Your Business"
     },
@@ -532,6 +553,27 @@ const en = {
         title: "Benefit from Our Consulting Services",
         description: "Contact us immediately to get expert consulting service for your projects.",
         button: "Contact Us"
+      }
+    },
+    
+    // Team Page
+    team: {
+      title: "Our Team",
+      subtitle: "Expert Staff",
+      description: "We aim for excellence in every project with our experienced and expert team.",
+      member: {
+        name: "Emirhan Koç",
+        position: "Founder & General Manager",
+        experience: "15+ Years Experience",
+        education: "Mining Engineering",
+        expertise: "Drilling & Blasting Expert",
+        description: "An expert engineer in drilling and blasting with over 15 years of experience in the industry. Has project management experience in a wide range from underwater blasting to tunnel projects.",
+        achievements: [
+          "100+ Successful Projects",
+          "Underwater Blasting Expert",
+          "Tunnel Projects Expert",
+          "Safety Certifications"
+        ]
       }
     },
     
