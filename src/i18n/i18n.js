@@ -15,7 +15,8 @@ const tr = {
       blasting: "Patlatma Hizmetleri",
       projectManagement: "Proje Yönetimi",
       projects: "Projelerimiz",
-      contact: "İletişim"
+      contact: "İletişim",
+      tagline: "İşinizi Sağlama Alın"
     },
     
     // Homepage
@@ -422,7 +423,8 @@ const en = {
       blasting: "Blasting Services",
       projectManagement: "Project Management",
       projects: "Our Projects",
-      contact: "Contact"
+      contact: "Contact",
+      tagline: "Secure Your Business"
     },
     
     // Homepage

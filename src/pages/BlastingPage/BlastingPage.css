@@ -98,7 +98,7 @@
 .section-subtitle {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -121,7 +121,7 @@
   padding: 20px;
   background: var(--soft-white);
   border-radius: 8px;
-  border-left: 4px solid var(--orange-gold);
+  border-left: 4px solid var(--parliament-blue);
   transition: all 0.3s ease;
 }
 
@@ -135,7 +135,7 @@
 .principle-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   margin-bottom: 10px;
 }
 
@@ -166,7 +166,6 @@
 }
 
 .benefits-box {
-  background: var(--dark-gray);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -175,7 +174,7 @@
 .benefits-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: white;
+  color: var(--parliament-blue);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -187,7 +186,7 @@
 }
 
 .benefit-item {
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   font-size: 0.95rem;
   margin-bottom: 12px;
   padding-left: 20px;
@@ -196,7 +195,7 @@
 
 .benefit-item::before {
   content: "•";
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -249,7 +248,7 @@
 .application-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-left-color: var(--orange-gold);
+  border-left-color: var(--parliament-blue);
 }
 
 .application-title {
@@ -261,7 +260,7 @@
 }
 
 .application-card:hover .application-title {
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
 }
 
 .application-description {
@@ -272,14 +271,20 @@
 }
 
 .underwater-benefits {
-  background: var(--dark-gray);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.underwater-benefits:hover {
+    transform: translateY(-5px);
+    border-left-color: var(--parliament-blue);
 }
 
 .underwater-benefits .section-subtitle {
-  color: white;
+  color: var(--parliament-blue);
   text-align: center;
   margin-bottom: 25px;
 }
@@ -291,7 +296,7 @@
 }
 
 .underwater-benefits .benefit-item {
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   font-size: 0.95rem;
   margin-bottom: 15px;
   padding-left: 20px;
@@ -301,7 +306,7 @@
 
 .underwater-benefits .benefit-item::before {
   content: "•";
-  color: var(--orange-gold);
+  color: var(--parliament-blue);
   font-weight: bold;
   position: absolute;
   left: 0;

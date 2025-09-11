@@ -4,7 +4,7 @@ import './BlastingPage.css';
 import quarryImage from '@public/images/quarry-blasting.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
 import urbanImage2 from '@public/images/sehiricipatlatma2.jpeg';
-import underwaterImage from '@public/images/sualti4.jpeg';
+import underwaterImage from '@public/images/sualti3.jpeg';
 
 function BlastingPage() {
   const { t } = useTranslation();
@@ -103,7 +103,7 @@ function BlastingPage() {
           {/* Overlay Content */}
           <div className="image-overlay-content">
             <div className="overlay-text">
-              <h2 className="blasting-title orange-gold">
+              <h2 className="blasting-title light-green">
                 {t('blasting.quarry.title')}
               </h2>
               
@@ -134,7 +134,7 @@ function BlastingPage() {
           <div className="urban-blasting-content">
             <div className="urban-blasting-text">
               <h2 className="urban-blasting-title">
-                {t('blasting.urban.title')} <span className="orange-gold">{t('blasting.urban.subtitle')}</span>
+                {t('blasting.urban.title')} <span className="parliament-blue">{t('blasting.urban.subtitle')}</span>
               </h2>
               
               <div className="urban-blasting-intro">
@@ -196,7 +196,7 @@ function BlastingPage() {
           {/* Overlay Content */}
           <div className="image-overlay-content">
             <div className="overlay-text">
-              <h2 className="blasting-title orange-gold">
+              <h2 className="blasting-title light-green">
                 {t('blasting.underwater.title')} {t('blasting.underwater.subtitle')}
               </h2>
               

@@ -15,7 +15,7 @@
   
   /* Logo Renkleri */
   --logo-sag-color: #9E9E9E; /* Light gray */
-  --orange-gold: #FF8C00; /* Orange-gold */
+  --parliament-blue: #1B2645;
   --logo-tagline-color: #333; /* Dark gray */
 
   /* Text Renkleri */
@@ -31,6 +31,9 @@
 }
 
 /* Custom Orange Gold Class */
-.orange-gold {
-  color: var(--orange-gold) !important;
+.parliament-blue {
+  color: var(--parliament-blue) !important;
+}
+.light-green {
+  color: var(--primary-color) !important;
 }

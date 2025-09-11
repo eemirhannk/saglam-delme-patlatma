@@ -222,7 +222,7 @@ function HomePage() {
         <div className="container-custom">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold orange-gold">{t('homepage.safety.title')}</h2>
+              <h2 className="text-3xl font-bold parliament-blue">{t('homepage.safety.title')}</h2>
               <p className="text-lg">{t('homepage.safety.description')}</p>
             </div>
           </div>
@@ -245,7 +245,7 @@ function HomePage() {
         <div className="container-custom">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <h2 className="text-3xl font-bold orange-gold">{t('homepage.services.title')}</h2>
+              <h2 className="text-3xl font-bold parliament-blue">{t('homepage.services.title')}</h2>
               <p className="text-lg">{t('homepage.services.description')}</p>
             </div>
           </div>
