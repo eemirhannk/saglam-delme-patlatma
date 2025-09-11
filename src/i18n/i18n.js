@@ -155,7 +155,11 @@ const tr = {
         education: "Jeoloji Mühendisliği",
         education2: "Patlayıcı Mühendisliği Yüksek Lisans",
         expertise: "Patlayıcı Mühendisi & Patlatma Uzmanı",
-        description: "Sakarya doğumlu Rıza Sağlam, Karadeniz Teknik Üniversitesi Jeoloji Mühendisliği Bölümü'nden derece ile mezun olmuş, ardından Okan Üniversitesi Patlayıcı Mühendisliği Tezli Yüksek Lisans Programı'nı tamamlamıştır.",
+        description: "Sakarya'da doğan Rıza Sağlam, ilköğretim, ortaöğretim ve lise eğitimini burada tamamladıktan sonra, Karadeniz Teknik Üniversitesi Jeoloji Mühendisliği Bölümü'nden derece ile mezun olmuştur. Lisans eğitiminin ardından Okan Üniversitesi Patlayıcı Mühendisliği Tezli Yüksek Lisans Programı'na kaydolmuş ve uzmanlık alanını bu doğrultuda geliştirmiştir.",
+        company: {
+          title: "Şirket Kuruluşu",
+          description: "2025 yılında kendi soyadını taşıyan Sağlam Patlatma Ltd. Şti.'yi kurarak, Türkiye'de bilimsel tabana dayalı, uluslararası tecrübe ile desteklenmiş bir patlayıcı mühendisliği hizmeti vizyonunu hayata geçirmiştir. Firma, hem yurt içi hem de yurt dışındaki projelerde uzman mühendis kadrosu ile güvenli, ekonomik ve çevresel normlara uygun çözümler üretmeyi misyon edinmiştir."
+        },
         career: {
           title: "Kariyer Geçmişi",
           items: [
@@ -613,7 +617,11 @@ const en = {
         education: "Geological Engineering",
         education2: "Explosive Engineering Master's Degree",
         expertise: "Explosive Engineer & Blasting Expert",
-        description: "Born in Sakarya, Rıza Sağlam graduated with honors from Karadeniz Technical University Geological Engineering Department, then completed Okan University Explosive Engineering Master's Program.",
+        description: "Born in Sakarya, Rıza Sağlam completed his primary, secondary and high school education there, then graduated with honors from Karadeniz Technical University Geological Engineering Department. After his undergraduate education, he enrolled in Okan University Explosive Engineering Master's Program and developed his expertise in this field.",
+        company: {
+          title: "Company Foundation",
+          description: "In 2025, he founded Sağlam Patlatma Ltd., carrying his own surname, and realized his vision of providing explosive engineering services based on scientific foundations and supported by international experience in Turkey. The company has adopted the mission of producing safe, economical and environmentally compliant solutions with expert engineering staff in both domestic and international projects."
+        },
         career: {
           title: "Career History",
           items: [

@@ -65,6 +65,11 @@ function TeamPage() {
                 </ul>
               </div>
               
+              <div className="member-company">
+                <h4>{t('team.member.company.title')}</h4>
+                <p className="company-description">{t('team.member.company.description')}</p>
+              </div>
+              
               <div className="member-achievements">
                 <h4>Başarılar & Sertifikalar</h4>
                 <div className="achievements-grid">
