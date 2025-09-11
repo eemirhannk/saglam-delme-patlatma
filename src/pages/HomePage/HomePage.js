@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import drillingImage from '@public/images/delme-hizmetleri.jpeg';
 import blastingImage from '@public/images/blasting-image.jpeg';
-import consultingImage from '@public/images/consulting.jpg';
+import consultingImage from '@public/images/consulting2.jpeg';
 import './HomePage.css';
 
 function HomePage() {
