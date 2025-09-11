@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import drillingImage from '@public/images/delme-hizmetleri.jpeg';
-import blastingImage from '@public/images/blasting-image.jpeg';
+import blastingImage from '@public/images/tasocagi-patlatma.jpeg';
+import urbanBlastingImage from '@public/images/sa.jpg';
 import consultingImage from '@public/images/consulting3.jpeg';
 import './HomePage.css';
 
@@ -12,19 +13,8 @@ function HomePage() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const carouselSlides = [
-     {
-       id: 1,
-       isActive: true,
-       title: t('homepage.hero.title'),
-       description: t('homepage.hero.description'),
-       button1: { text: t('homepage.hero.button1'), type: "button" },
-       button2: { text: t('homepage.hero.button2'), type: "button" },
-       icon: "fas fa-hammer",
-       imageTitle: t('homepage.carousel.slide1.imageTitle'),
-       imageDescription: t('homepage.carousel.slide1.imageDescription')
-     },
     {
-      id: 2,
+      id: 1,
       isActive: true,
       title: t('homepage.carousel.slide2.title'),
       description: t('homepage.carousel.slide2.description'),
@@ -36,7 +26,7 @@ function HomePage() {
       imageDescription: t('homepage.carousel.slide2.imageDescription')
     },
     {
-      id: 3,
+      id: 2,
       isActive: false,
       title: t('homepage.carousel.slide3.title'),
       description: t('homepage.carousel.slide3.description'),
@@ -48,18 +38,19 @@ function HomePage() {
       imageDescription: t('homepage.carousel.slide3.imageDescription')
     },
     {
-      id: 4,
+      id: 3,
       isActive: false,
       title: t('homepage.carousel.slide4.title'),
       description: t('homepage.carousel.slide4.description'),
       button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/blasting-services" },
       button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
+      backgroundImage: urbanBlastingImage,
       icon: "fas fa-city",
       imageTitle: t('homepage.carousel.slide4.imageTitle'),
       imageDescription: t('homepage.carousel.slide4.imageDescription')
     },
     {
-      id: 5,
+      id: 4,
       isActive: false,
       title: t('homepage.carousel.slide5.title'),
       description: t('homepage.carousel.slide5.description'),
@@ -70,7 +61,7 @@ function HomePage() {
       imageDescription: t('homepage.carousel.slide5.imageDescription')
     },
     {
-      id: 6,
+      id: 5,
       isActive: false,
       title: t('homepage.carousel.slide6.title'),
       description: t('homepage.carousel.slide6.description'),
