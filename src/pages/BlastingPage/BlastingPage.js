@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './BlastingPage.css';
-import quarryImage from '@public/images/quarry-blasting.jpeg';
+import quarryImage from '@public/images/quarry-blasting2.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
 import urbanImage2 from '@public/images/sehiricipatlatma2.jpeg';
 import underwaterImage from '@public/images/sualti3.jpeg';
