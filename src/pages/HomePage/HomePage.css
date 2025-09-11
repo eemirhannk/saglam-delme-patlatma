@@ -12,6 +12,11 @@
   background-color: var(--black);
 }
 
+.lead{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 /* Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {

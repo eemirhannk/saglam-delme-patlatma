@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import drillingImage from '@public/images/delme-hizmetleri.jpeg';
+import blastingImage from '@public/images/blasting-image.jpeg';
+import consultingImage from '@public/images/consulting.jpg';
 import './HomePage.css';
 
 function HomePage() {
@@ -9,24 +12,25 @@ function HomePage() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const carouselSlides = [
-    {
-      id: 1,
-      isActive: true,
-      title: t('homepage.hero.title'),
-      description: t('homepage.hero.description'),
-      button1: { text: t('homepage.hero.button1'), type: "button" },
-      button2: { text: t('homepage.hero.button2'), type: "button" },
-      icon: "fas fa-hammer",
-      imageTitle: t('homepage.carousel.slide1.imageTitle'),
-      imageDescription: t('homepage.carousel.slide1.imageDescription')
-    },
+    // {
+    //   id: 1,
+    //   isActive: true,
+    //   title: t('homepage.hero.title'),
+    //   description: t('homepage.hero.description'),
+    //   button1: { text: t('homepage.hero.button1'), type: "button" },
+    //   button2: { text: t('homepage.hero.button2'), type: "button" },
+    //   icon: "fas fa-hammer",
+    //   imageTitle: t('homepage.carousel.slide1.imageTitle'),
+    //   imageDescription: t('homepage.carousel.slide1.imageDescription')
+    // },
     {
       id: 2,
-      isActive: false,
+      isActive: true,
       title: t('homepage.carousel.slide2.title'),
       description: t('homepage.carousel.slide2.description'),
       button1: { text: t('homepage.carousel.slide2.button1'), type: "link", to: "/drilling-services" },
       button2: { text: t('homepage.carousel.slide2.button2'), type: "button" },
+      backgroundImage: drillingImage,
       icon: "fas fa-mountain",
       imageTitle: t('homepage.carousel.slide2.imageTitle'),
       imageDescription: t('homepage.carousel.slide2.imageDescription')
@@ -38,6 +42,7 @@ function HomePage() {
       description: t('homepage.carousel.slide3.description'),
       button1: { text: t('homepage.carousel.slide3.button1'), type: "button" },
       button2: { text: t('homepage.carousel.slide3.button2'), type: "button" },
+      backgroundImage: blastingImage,
       icon: "fas fa-bomb",
       imageTitle: t('homepage.carousel.slide3.imageTitle'),
       imageDescription: t('homepage.carousel.slide3.imageDescription')
@@ -49,6 +54,7 @@ function HomePage() {
       description: t('homepage.carousel.slide4.description'),
       button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/consulting", icon: "fas fa-user-tie" },
       button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
+      backgroundImage: consultingImage,
       icon: "fas fa-user-tie",
       imageTitle: t('homepage.carousel.slide4.imageTitle'),
       imageDescription: t('homepage.carousel.slide4.imageDescription')
@@ -165,7 +171,7 @@ function HomePage() {
           <div className="carousel-inner">
             {carouselSlides.map((slide, index) => (
               <div key={slide.id} className={`carousel-item ${slide.isActive ? 'active' : ''}`}>
-                <div className={`hero-slide`}>
+                <div className={`hero-slide`} style={{ backgroundImage: `url(${slide.backgroundImage})` }}>
                   <div className="container">
                     <div className="row align-items-center min-vh-75">
                       <div className="col-lg-6">
