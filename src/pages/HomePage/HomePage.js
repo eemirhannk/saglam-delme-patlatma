@@ -42,6 +42,7 @@ function HomePage() {
       description: t('homepage.carousel.slide3.description'),
       button1: { text: t('homepage.carousel.slide3.button1'), type: "link", to: "/blasting-services" },
       button2: { text: t('homepage.carousel.slide3.button2'), type: "button" },
+      backgroundImage: blastingImage,
       icon: "fas fa-mountain",
       imageTitle: t('homepage.carousel.slide3.imageTitle'),
       imageDescription: t('homepage.carousel.slide3.imageDescription')
