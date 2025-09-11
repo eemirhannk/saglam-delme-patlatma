@@ -131,6 +131,48 @@
   margin-bottom: 30px;
 }
 
+.member-career {
+  margin-bottom: 30px;
+}
+
+.member-career h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.career-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.career-item:last-child {
+  border-bottom: none;
+}
+
+.career-item i {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.career-item span {
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
 .member-achievements h4 {
   font-size: 1.3rem;
   font-weight: 700;

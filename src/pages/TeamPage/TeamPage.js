@@ -42,12 +42,28 @@ function TeamPage() {
                   <span>{t('team.member.education')}</span>
                 </div>
                 <div className="detail-item">
+                  <i className="fas fa-university"></i>
+                  <span>{t('team.member.education2')}</span>
+                </div>
+                <div className="detail-item">
                   <i className="fas fa-tools"></i>
                   <span>{t('team.member.expertise')}</span>
                 </div>
               </div>
               
               <p className="member-description">{t('team.member.description')}</p>
+              
+              <div className="member-career">
+                <h4>{t('team.member.career.title')}</h4>
+                <ul className="career-list">
+                  {t('team.member.career.items', { returnObjects: true }).map((item, index) => (
+                    <li key={index} className="career-item">
+                      <i className="fas fa-arrow-right"></i>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               
               <div className="member-achievements">
                 <h4>Başarılar & Sertifikalar</h4>

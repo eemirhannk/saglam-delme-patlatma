@@ -149,17 +149,30 @@ const tr = {
       subtitle: "Uzman Kadromuz",
       description: "Deneyimli ve uzman ekibimizle her projede mükemmellik hedefliyoruz.",
       member: {
-        name: "Emirhan Koç",
+        name: "Rıza Sağlam",
         position: "Kurucu & Genel Müdür",
-        experience: "15+ Yıl Deneyim",
-        education: "Maden Mühendisliği",
-        expertise: "Delme & Patlatma Uzmanı",
-        description: "Sektörde 15 yılı aşkın deneyime sahip, delme ve patlatma alanında uzman mühendis. Su altı patlatmalardan tünel projelerine kadar geniş bir yelpazede proje yönetimi deneyimi bulunmaktadır.",
+        experience: "20+ Yıl Deneyim",
+        education: "Jeoloji Mühendisliği",
+        education2: "Patlayıcı Mühendisliği Yüksek Lisans",
+        expertise: "Patlayıcı Mühendisi & Patlatma Uzmanı",
+        description: "Sakarya doğumlu Rıza Sağlam, Karadeniz Teknik Üniversitesi Jeoloji Mühendisliği Bölümü'nden derece ile mezun olmuş, ardından Okan Üniversitesi Patlayıcı Mühendisliği Tezli Yüksek Lisans Programı'nı tamamlamıştır.",
+        career: {
+          title: "Kariyer Geçmişi",
+          items: [
+            "Türkiye'nin büyük ölçekli köprü ve otoyol projelerinde patlatma şefliği",
+            "İstanbul metro projelerinde şehir içi zorlu jeoteknik koşullarda delme-patlatma tasarımları",
+            "Afrika'daki altyapı projelerinde farklı jeolojik koşullarda deneyim",
+            "Avrupa'da yürütülen tünel projelerinde uluslararası normlara uygun patlatma yönetimi",
+            "Güney Amerika Uruguay'da deniz altı patlatma işlerinde uzmanlık"
+          ]
+        },
         achievements: [
-          "100+ Başarılı Proje",
+          "20+ Yıl Sektör Deneyimi",
+          "Uluslararası Proje Yönetimi",
           "Sualtı Patlatma Uzmanı",
+          "Şehir İçi Patlatma Uzmanı",
           "Tünel Projeleri Uzmanı",
-          "Güvenlik Sertifikaları"
+          "Patlayıcı Mühendisliği Yüksek Lisans"
         ]
       }
     },
@@ -594,17 +607,30 @@ const en = {
       subtitle: "Expert Staff",
       description: "We aim for excellence in every project with our experienced and expert team.",
       member: {
-        name: "Emirhan Koç",
+        name: "Rıza Sağlam",
         position: "Founder & General Manager",
-        experience: "15+ Years Experience",
-        education: "Mining Engineering",
-        expertise: "Drilling & Blasting Expert",
-        description: "An expert engineer in drilling and blasting with over 15 years of experience in the industry. Has project management experience in a wide range from underwater blasting to tunnel projects.",
+        experience: "20+ Years Experience",
+        education: "Geological Engineering",
+        education2: "Explosive Engineering Master's Degree",
+        expertise: "Explosive Engineer & Blasting Expert",
+        description: "Born in Sakarya, Rıza Sağlam graduated with honors from Karadeniz Technical University Geological Engineering Department, then completed Okan University Explosive Engineering Master's Program.",
+        career: {
+          title: "Career History",
+          items: [
+            "Blasting supervision in Turkey's large-scale bridge and highway projects",
+            "Drilling-blasting designs in challenging urban geotechnical conditions in Istanbul metro projects",
+            "Experience in different geological conditions in Africa's infrastructure projects",
+            "International standard blasting management in tunnel projects conducted in Europe",
+            "Expertise in underwater blasting works in Uruguay, South America"
+          ]
+        },
         achievements: [
-          "100+ Successful Projects",
+          "20+ Years Industry Experience",
+          "International Project Management",
           "Underwater Blasting Expert",
+          "Urban Blasting Expert",
           "Tunnel Projects Expert",
-          "Safety Certifications"
+          "Explosive Engineering Master's Degree"
         ]
       }
     },
