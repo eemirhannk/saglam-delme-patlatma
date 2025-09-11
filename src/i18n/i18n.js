@@ -392,7 +392,21 @@ const tr = {
     footer: {
       contact: "İletişim",
       copyright: "Tüm hakları saklıdır",
+      copyrightFull: "© 2025 Sağlam Delme & Patlatma. Tüm hakları saklıdır",
       address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
+    },
+    
+    // Error
+    error: {
+      title: "Oops! Bir hata oluştu",
+      description: "Sayfa yüklenirken bir sorun yaşandı. Lütfen sayfayı yenileyin.",
+      refreshButton: "Sayfayı Yenile"
+    },
+    
+    // Loading
+    loading: {
+      screenReader: "Yükleniyor...",
+      text: "Sayfa yükleniyor..."
     },
     
     // Images Alt Texts
@@ -862,7 +876,21 @@ const en = {
     footer: {
       contact: "Contact",
       copyright: "All rights reserved",
+      copyrightFull: "© 2025 Sağlam Delme & Patlatma. All rights reserved",
       address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
+    },
+    
+    // Error
+    error: {
+      title: "Oops! An error occurred",
+      description: "A problem occurred while loading the page. Please refresh the page.",
+      refreshButton: "Refresh Page"
+    },
+    
+    // Loading
+    loading: {
+      screenReader: "Loading...",
+      text: "Page is loading..."
     },
     
     // Images Alt Texts

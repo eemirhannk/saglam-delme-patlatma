@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import teamMemberImage from '@public/images/riza-saglam.jpeg';
 import './TeamPage.css';
 
@@ -104,8 +105,45 @@ function TeamPage() {
     </div>
   );
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": t('team.title'),
+    "description": t('team.description'),
+    "mainEntity": {
+      "@type": "Person",
+      "name": t('team.member.name'),
+      "jobTitle": t('team.member.position'),
+      "description": t('team.member.description'),
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sağlam Delme & Patlatma"
+      },
+      "alumniOf": [
+        "Karadeniz Teknik Üniversitesi",
+        "Okan Üniversitesi"
+      ],
+      "knowsAbout": [
+        "Patlayıcı Mühendisliği",
+        "Jeoloji Mühendisliği",
+        "Delme ve Patlatma",
+        "Güvenlik Standartları"
+      ]
+    }
+  };
+
   return (
     <div className="team-page">
+      <SEO
+        title={`${t('team.title')} | Sağlam Delme & Patlatma`}
+        description={t('team.description')}
+        keywords="ekibimiz, uzman kadro, patlayıcı mühendisi, jeoloji mühendisi, Rıza Sağlam, delme patlatma uzmanı, güvenli hizmet"
+        image="/images/riza-saglam.jpeg"
+        url="/team"
+        type="about"
+        structuredData={structuredData}
+      />
+      
       {sectionData.map(renderSection)}
     </div>
   );

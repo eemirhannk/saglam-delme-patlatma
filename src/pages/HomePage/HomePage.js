@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import drillingImage from '@public/images/delme-hizmetleri.jpeg';
 import mwdImage from '@public/images/mwd-hizmetleri.jpg';
 import tunnelDrillingImage from '@public/images/tunel-delme-hizmetleri.jpeg';
@@ -255,8 +256,76 @@ function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasAnimated]);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sağlam Delme & Patlatma",
+    "alternateName": "Sağlam Delme ve Patlatma",
+    "url": "https://saglam-tr.com",
+    "logo": "https://saglam-tr.com/images/logo.jpeg",
+    "description": t('homepage.hero.description'),
+    "foundingDate": "2025",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "TR",
+      "addressLocality": "Türkiye"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+90-XXX-XXX-XXXX",
+      "contactType": "customer service",
+      "availableLanguage": ["Turkish", "English"]
+    },
+    "sameAs": [
+      "https://saglam-tr.com"
+    ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Türkiye"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": t('homepage.services.title'),
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('navbar.drilling'),
+            "description": t('services.drilling.description')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('navbar.blasting'),
+            "description": t('services.blasting.description')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('navbar.consulting'),
+            "description": t('services.consulting.description')
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <>
+      <SEO
+        title={t('homepage.hero.title')}
+        description={t('homepage.hero.description')}
+        keywords="delme hizmetleri, patlatma hizmetleri, sondaj, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, MWD, danışmanlık, güvenli patlatma, kontrollü patlatma"
+        image="/images/logo.jpeg"
+        url="/"
+        structuredData={structuredData}
+      />
+      
       {/* Hero Slider Section */}
       <section className="hero-slider">
         <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">

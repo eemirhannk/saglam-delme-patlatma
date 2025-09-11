@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import './AboutPage.css';
 import hakkimizdaImage from '@public/images/hakkimizda.jpeg';
 import nedenbizImage from '@public/images/nedenbiz.jpeg';
@@ -49,6 +50,15 @@ function AboutPage() {
 
   return (
     <div className="about-page">
+      <SEO
+        title={`${t('about.title')} | Sağlam Delme & Patlatma`}
+        description={t('about.content.paragraph1')}
+        keywords="hakkımızda, delme patlatma şirketi, sondaj uzmanı, patlatma mühendisi, güvenli hizmet, profesyonel ekip"
+        image="/images/hakkimizda.jpeg"
+        url="/about"
+        type="about"
+      />
+      
       {/* Main Content - Hakkımızda */}
       <div className="about-container">
         {/* Left Side - Image */}

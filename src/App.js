@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './styles/main.css';
 import './App.css';
 import './i18n/i18n';
@@ -19,25 +20,27 @@ const TeamPage = lazy(() => import('./pages/TeamPage'));
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <ScrollToTop />
-        <Layout>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/consulting" element={<ConsultingPage />} />
-              <Route path="/drilling-services" element={<DrillingPage />} />
-              <Route path="/blasting-services" element={<BlastingPage />} />
-              <Route path="/project-management" element={<ConsultingPage />} />
-              <Route path="/team" element={<TeamPage />} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <Layout>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/consulting" element={<ConsultingPage />} />
+                <Route path="/drilling-services" element={<DrillingPage />} />
+                <Route path="/blasting-services" element={<BlastingPage />} />
+                <Route path="/project-management" element={<ConsultingPage />} />
+                <Route path="/team" element={<TeamPage />} />
+              </Routes>
+            </Suspense>
+          </Layout>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

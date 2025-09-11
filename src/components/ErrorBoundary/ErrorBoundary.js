@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from '../../i18n/i18n';
 import './ErrorBoundary.css';
 
 class ErrorBoundary extends React.Component {
@@ -20,13 +21,13 @@ class ErrorBoundary extends React.Component {
       return (
         <div className="error-boundary">
           <div className="error-content">
-            <h2>Oops! Bir hata oluştu</h2>
-            <p>Sayfa yüklenirken bir sorun yaşandı. Lütfen sayfayı yenileyin.</p>
+            <h2>{i18n.t('error.title')}</h2>
+            <p>{i18n.t('error.description')}</p>
             <button 
               className="btn btn-primary"
               onClick={() => window.location.reload()}
             >
-              Sayfayı Yenile
+              {i18n.t('error.refreshButton')}
             </button>
           </div>
         </div>

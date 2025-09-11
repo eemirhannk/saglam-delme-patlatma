@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import './BlastingPage.css';
 import quarryImage from '@public/images/quarry-blasting2.jpeg';
 import urbanImage from '@public/images/sehiricipatlatma.jpeg';
@@ -108,9 +109,62 @@ function BlastingPage() {
     t('blasting.underwater.paragraph2')
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": t('navbar.blasting'),
+    "description": t('services.blasting.description'),
+    "provider": {
+      "@type": "Organization",
+      "name": "Sağlam Delme & Patlatma"
+    },
+    "serviceType": "Blasting Services",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Patlatma Hizmetleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('blasting.quarry.title'),
+            "description": t('blasting.quarry.description')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('blasting.urban.title'),
+            "description": t('blasting.urban.description')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('blasting.underwater.title'),
+            "description": t('blasting.underwater.description')
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="blasting-page">
-        <section id="quarry-blasting" className="quarry-image-container">
+      <SEO
+        title={`${t('navbar.blasting')} | Sağlam Delme & Patlatma`}
+        description={t('services.blasting.description')}
+        keywords="patlatma hizmetleri, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, kontrollü patlatma, güvenli patlatma, USBM standartları, DIN standartları"
+        image="/images/quarry-blasting2.jpeg"
+        url="/blasting-services"
+        type="service"
+        structuredData={structuredData}
+      />
+      
+      <section id="quarry-blasting" className="quarry-image-container">
           <img src={quarryImage} alt={t('images.quarry')} className="quarry-image" />
           
           {/* Overlay Content */}

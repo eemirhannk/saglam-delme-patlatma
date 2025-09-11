@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import './DrillingPage.css';
 import drillingImage from '@public/images/3d-tunel-gorunumu.png';
 
@@ -48,8 +49,61 @@ function DrillingPage() {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": t('navbar.drilling'),
+    "description": t('services.drilling.description'),
+    "provider": {
+      "@type": "Organization",
+      "name": "Sağlam Delme & Patlatma"
+    },
+    "serviceType": "Drilling Services",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Delme Hizmetleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MWD Hizmetleri",
+            "description": t('drilling.mwd.description')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tünel Delme Hizmetleri",
+            "description": "Metro, karayolu tünelleri ve altyapı projeleri için özel tünel delme teknikleri"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Açık Saha Delme Hizmetleri",
+            "description": "Madencilik, inşaat ve altyapı projeleri için açık saha delme operasyonları"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="drilling-page" style={{backgroundImage: `url(${drillingImage})`}}>
+      <SEO
+        title={`${t('navbar.drilling')} | Sağlam Delme & Patlatma`}
+        description={t('services.drilling.description')}
+        keywords="delme hizmetleri, MWD, measurement while drilling, sondaj, tünel delme, açık saha delme, jeolojik modelleme, tahkimat tasarımı"
+        image="/images/3d-tunel-gorunumu.png"
+        url="/drilling-services"
+        type="service"
+        structuredData={structuredData}
+      />
+      
       <div className="container">
         <div className="drilling-hero">
           <div className="drilling-content">

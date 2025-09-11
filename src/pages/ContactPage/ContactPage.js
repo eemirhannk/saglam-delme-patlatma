@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import SEO from '../../components/SEO';
 import './ContactPage.css';
 
 function ContactPage() {
@@ -193,9 +194,40 @@ function ContactPage() {
       setIsSubmitting(false);
     }
   };
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": t('contact.title'),
+    "description": "Sağlam Delme & Patlatma ile iletişime geçin. Delme, patlatma ve danışmanlık hizmetleri için bizimle iletişime geçin.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sağlam Delme & Patlatma",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["Turkish", "English"],
+        "areaServed": "TR"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR",
+        "addressLocality": "Türkiye"
+      }
+    }
+  };
+
   return (
     <div className="contact-page">
-
+      <SEO
+        title={`${t('contact.title')} | Sağlam Delme & Patlatma`}
+        description="Sağlam Delme & Patlatma ile iletişime geçin. Delme, patlatma ve danışmanlık hizmetleri için bizimle iletişime geçin."
+        keywords="iletişim, delme patlatma iletişim, sondaj hizmetleri iletişim, patlatma danışmanlığı, teknik destek, proje danışmanlığı"
+        image="/images/logo.jpeg"
+        url="/contact"
+        type="contact"
+        structuredData={structuredData}
+      />
 
       {/* Contact Form Section */}
       <div className="contact-form-section">

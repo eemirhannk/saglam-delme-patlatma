@@ -27,7 +27,7 @@ function Footer() {
         
         <div className="footer-bottom">
           <div className="footer-copyright">
-            <p>&copy; 2025 Sağlam Delme & Patlatma. {t('footer.copyright')}</p>
+            <p>{t('footer.copyrightFull')}</p>
           </div>
         </div>
       </div>

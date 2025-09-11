@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../../components/SEO';
 import './ConsultingPage.css';
 
 function ConsultingPage() {
@@ -59,8 +60,68 @@ function ConsultingPage() {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": t('navbar.consulting'),
+    "description": t('services.consulting.description'),
+    "provider": {
+      "@type": "Organization",
+      "name": "Sağlam Delme & Patlatma"
+    },
+    "serviceType": "Consulting Services",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Danışmanlık Hizmetleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('consulting.process.analysis'),
+            "description": t('consulting.process.analysisDesc')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('consulting.process.planning'),
+            "description": t('consulting.process.planningDesc')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('consulting.process.implementation'),
+            "description": t('consulting.process.implementationDesc')
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t('consulting.process.evaluation'),
+            "description": t('consulting.process.evaluationDesc')
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="consulting-page">
+      <SEO
+        title={`${t('navbar.consulting')} | Sağlam Delme & Patlatma`}
+        description={t('services.consulting.description')}
+        keywords="danışmanlık hizmetleri, teknik danışmanlık, proje danışmanlığı, delme patlatma danışmanlığı, mühendislik danışmanlığı, güvenlik danışmanlığı"
+        image="/images/consulting3.jpeg"
+        url="/consulting"
+        type="service"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="consulting-hero">
         <div className="container-custom">
