@@ -16,7 +16,8 @@
 .logo-tagline {
   font-size: 12px;
   font-weight: 600;
-  color: var(--orange-gold);
+  font-style: italic;
+  color: var(--parliament-blue);
   text-align: center;
   margin-top: 4px;
   line-height: 1.2;

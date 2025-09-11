@@ -87,11 +87,21 @@
   align-items: center;
 }
 
-.about-logo-img {
+.about-logo .logo-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-logo .logo-img {
   height: 80px;
   width: auto;
   max-width: 250px;
   object-fit: contain;
+}
+
+.about-logo .logo-tagline {
+  font-size: 14px;
+  margin-top: 6px;
 }
 
 /* Right Green Bar */
@@ -165,7 +175,7 @@
     max-height: 200px;
   }
   
-  .about-logo-img {
+  .about-logo .logo-img {
     height: 60px;
     max-width: 200px;
   }

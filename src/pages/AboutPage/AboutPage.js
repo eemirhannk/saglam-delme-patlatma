@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './AboutPage.css';
 import hakkimizdaImage from '@public/images/hakkimizda.jpeg';
 import nedenbizImage from '@public/images/nedenbiz.jpeg';
+import Logo from '../../components/Navbar/Logo';
 
 function AboutPage() {
   const { t } = useTranslation();
@@ -65,7 +66,7 @@ function AboutPage() {
             </div>
             
             <div className="about-logo">
-              <img src="/images/logo.jpeg" alt={t('images.logo')} className="about-logo-img" />
+              <Logo />
             </div>
           </div>
         </div>
