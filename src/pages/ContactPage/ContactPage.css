@@ -68,6 +68,34 @@
   border-color: var(--primary-color);
 }
 
+/* Select box styling */
+.form-input select,
+select.form-input {
+  color: var(--text-dark);
+  background-color: white;
+}
+
+.form-input option,
+select.form-input option {
+  color: var(--text-dark);
+  background-color: white;
+}
+
+/* Mobile select styling */
+@media (max-width: 768px) {
+  .form-input select,
+  select.form-input {
+    color: var(--orange-gold) !important;
+    background-color: white;
+  }
+  
+  .form-input option,
+  select.form-input option {
+    color: var(--orange-gold) !important;
+    background-color: white;
+  }
+}
+
 .form-textarea {
   resize: vertical;
   min-height: 120px;
