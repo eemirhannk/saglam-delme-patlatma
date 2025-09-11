@@ -41,14 +41,30 @@ const tr = {
           imageDescription: "Her türlü zemin koşulunda çalışma"
         },
         slide3: {
-          title: "Patlatma Hizmetleri",
-          description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz. En sıkı güvenlik protokolleri ile çalışıyoruz.",
-          button1: "Patlatma Hizmetleri",
-          button2: "Güvenlik Protokolleri",
-          imageTitle: "Kontrollü Patlatma",
-          imageDescription: "Güvenli ve profesyonel patlatma"
+          title: "Taş Ocağı Patlatma Hizmetleri",
+          description: "Taş ocaklarında güvenli ve verimli patlatma operasyonları gerçekleştiriyoruz. USBM ve DIN standartlarına uygun çalışıyoruz.",
+          button1: "Taş Ocağı Patlatma",
+          button2: "Detayları Gör",
+          imageTitle: "Taş Ocağı Patlatma",
+          imageDescription: "Güvenli ve verimli taş ocağı operasyonları"
         },
         slide4: {
+          title: "Şehir İçi Patlatma Hizmetleri",
+          description: "Şehir merkezlerinde hassas ve kontrollü patlatma teknikleri ile güvenli operasyonlar yürütüyoruz. Çevre koruma önceliğimizdir.",
+          button1: "Şehir İçi Patlatma",
+          button2: "Güvenlik Standartları",
+          imageTitle: "Şehir İçi Patlatma",
+          imageDescription: "Hassas ve kontrollü şehir içi operasyonlar"
+        },
+        slide5: {
+          title: "Su Altı Patlatma Hizmetleri",
+          description: "Deniz, göl ve nehir tabanında güvenli su altı patlatma operasyonları gerçekleştiriyoruz. Çevre dostu teknolojiler kullanıyoruz.",
+          button1: "Su Altı Patlatma",
+          button2: "Teknik Detaylar",
+          imageTitle: "Su Altı Patlatma",
+          imageDescription: "Güvenli ve çevre dostu su altı operasyonlar"
+        },
+        slide6: {
           title: "Teknik Danışmanlık",
           description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
           button1: "Danışmanlık",
@@ -470,14 +486,30 @@ const en = {
           imageDescription: "Working in all ground conditions"
         },
         slide3: {
-          title: "Blasting Services",
-          description: "We carry out large-scale projects with safe and controlled blasting techniques. We work with the strictest safety protocols.",
-          button1: "Blasting Services",
-          button2: "Safety Protocols",
-          imageTitle: "Controlled Blasting",
-          imageDescription: "Safe and professional blasting"
+          title: "Quarry Blasting Services",
+          description: "We carry out safe and efficient blasting operations in quarries. We work in accordance with USBM and DIN standards.",
+          button1: "Quarry Blasting",
+          button2: "View Details",
+          imageTitle: "Quarry Blasting",
+          imageDescription: "Safe and efficient quarry operations"
         },
         slide4: {
+          title: "Urban Blasting Services",
+          description: "We carry out safe operations with precise and controlled blasting techniques in city centers. Environmental protection is our priority.",
+          button1: "Urban Blasting",
+          button2: "Safety Standards",
+          imageTitle: "Urban Blasting",
+          imageDescription: "Precise and controlled urban operations"
+        },
+        slide5: {
+          title: "Underwater Blasting Services",
+          description: "We carry out safe underwater blasting operations on seabed, lake and river beds. We use environmentally friendly technologies.",
+          button1: "Underwater Blasting",
+          button2: "Technical Details",
+          imageTitle: "Underwater Blasting",
+          imageDescription: "Safe and environmentally friendly underwater operations"
+        },
+        slide6: {
           title: "Technical Consulting",
           description: "We provide comprehensive technical consulting services for your projects with our expert team. We are with you at every stage.",
           button1: "Consulting",

@@ -40,12 +40,44 @@ function HomePage() {
       isActive: false,
       title: t('homepage.carousel.slide3.title'),
       description: t('homepage.carousel.slide3.description'),
-      button1: { text: t('homepage.carousel.slide3.button1'), type: "button" },
+      button1: { text: t('homepage.carousel.slide3.button1'), type: "link", to: "/blasting-services" },
       button2: { text: t('homepage.carousel.slide3.button2'), type: "button" },
-      backgroundImage: blastingImage,
-      icon: "fas fa-bomb",
+      icon: "fas fa-mountain",
       imageTitle: t('homepage.carousel.slide3.imageTitle'),
       imageDescription: t('homepage.carousel.slide3.imageDescription')
+    },
+    {
+      id: 4,
+      isActive: false,
+      title: t('homepage.carousel.slide4.title'),
+      description: t('homepage.carousel.slide4.description'),
+      button1: { text: t('homepage.carousel.slide4.button1'), type: "link", to: "/blasting-services" },
+      button2: { text: t('homepage.carousel.slide4.button2'), type: "button" },
+      icon: "fas fa-city",
+      imageTitle: t('homepage.carousel.slide4.imageTitle'),
+      imageDescription: t('homepage.carousel.slide4.imageDescription')
+    },
+    {
+      id: 5,
+      isActive: false,
+      title: t('homepage.carousel.slide5.title'),
+      description: t('homepage.carousel.slide5.description'),
+      button1: { text: t('homepage.carousel.slide5.button1'), type: "link", to: "/blasting-services" },
+      button2: { text: t('homepage.carousel.slide5.button2'), type: "button" },
+      icon: "fas fa-water",
+      imageTitle: t('homepage.carousel.slide5.imageTitle'),
+      imageDescription: t('homepage.carousel.slide5.imageDescription')
+    },
+    {
+      id: 6,
+      isActive: false,
+      title: t('homepage.carousel.slide6.title'),
+      description: t('homepage.carousel.slide6.description'),
+      button1: { text: t('homepage.carousel.slide6.button1'), type: "link", to: "/consulting" },
+      button2: { text: t('homepage.carousel.slide6.button2'), type: "button" },
+      icon: "fas fa-user-tie",
+      imageTitle: t('homepage.carousel.slide6.imageTitle'),
+      imageDescription: t('homepage.carousel.slide6.imageDescription')
     },
   ];
 
