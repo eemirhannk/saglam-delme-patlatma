@@ -17,6 +17,7 @@ function NotFoundPage() {
             className="not-found-img"
           />
         </div>
+        <div className="not-found-overlay"></div>
         <div className="not-found-text">
           <h1 className="not-found-title">404</h1>
           <h2 className="not-found-subtitle">{t('notFound.title')}</h2>

@@ -355,7 +355,7 @@ const tr = {
     // Not Found Page
     notFound: {
       title: "Sayfa Bulunamadı",
-      description: "Aradığınız sayfa mevcut değil veya taşınmış olabilir. Ana sayfaya dönmek için aşağıdaki butonları kullanabilirsiniz.",
+      description: "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
       homeButton: "Ana Sayfaya Dön",
       contactButton: "İletişime Geç",
       imageAlt: "Patlatma sonrası görünüm"
@@ -860,7 +860,7 @@ const en = {
     // Not Found Page
     notFound: {
       title: "Page Not Found",
-      description: "The page you are looking for does not exist or may have been moved. You can use the buttons below to return to the home page.",
+      description: "The page you are looking for does not exist or may have been moved.",
       homeButton: "Go to Home",
       contactButton: "Contact Us",
       imageAlt: "Post-blasting view"
