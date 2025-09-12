@@ -108,36 +108,42 @@ function HomePage() {
   const serviceData = [
     {
       id: 1,
+      icon: "fas fa-chart-line",
+      serviceKey: 'mwdServices',
+      link: { type: "link", to: "/drilling-services#mwd-services" }
+    },
+    {
+      id: 2,
       icon: "fas fa-road",
       serviceKey: 'tunnelDrilling',
       link: { type: "link", to: "/drilling-services" }
     },
     {
-      id: 2,
+      id: 3,
       icon: "fas fa-mountain",
       serviceKey: 'openFieldDrilling',
       link: { type: "link", to: "/drilling-services" }
     },
     {
-      id: 3,
+      id: 4,
       icon: "fas fa-mountain",
       serviceKey: 'quarryBlasting',
       link: { type: "link", to: "/blasting-services#quarry-blasting" }
     },
     {
-      id: 4,
+      id: 5,
       icon: "fas fa-city",
       serviceKey: 'urbanBlasting',
       link: { type: "link", to: "/blasting-services#urban-blasting" }
     },
     {
-      id: 5,
+      id: 6,
       icon: "fas fa-water",
       serviceKey: 'underwaterBlasting',
       link: { type: "link", to: "/blasting-services#underwater-blasting" }
     },
     {
-      id: 6,
+      id: 7,
       icon: "fas fa-user-tie",
       serviceKey: 'consulting',
       link: { type: "link", to: "/consulting" }

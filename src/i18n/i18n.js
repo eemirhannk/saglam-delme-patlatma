@@ -423,6 +423,10 @@ const tr = {
         title: "Delme Hizmetleri",
         description: "Hassas delme teknikleri ile her türlü malzeme ve zemin koşulunda çalışıyoruz."
       },
+      mwdServices: {
+        title: "MWD Hizmetleri",
+        description: "Delme esnasında ölçüm teknolojisi ile jeolojik veri toplama ve analiz hizmetleri."
+      },
       tunnelDrilling: {
         title: "Tünel Delme Hizmetleri",
         description: "Metro, karayolu tünelleri ve altyapı projeleri için özel tünel delme teknikleri."
@@ -914,6 +918,10 @@ const en = {
       drilling: {
         title: "Drilling Services",
         description: "We work in all kinds of materials and ground conditions with precise drilling techniques."
+      },
+      mwdServices: {
+        title: "MWD Services",
+        description: "Geological data collection and analysis services with measurement while drilling technology."
       },
       tunnelDrilling: {
         title: "Tunnel Drilling Services",
