@@ -39,18 +39,34 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'public/sitemap.xml',
-          to: 'sitemap.xml',
-        },
-        {
-          from: 'public/robots.txt',
-          to: 'robots.txt',
-        },
-      ],
-    }),
+new CopyWebpackPlugin({
+  patterns: [
+    {
+      from: 'public/sitemap.xml',
+      to: 'sitemap.xml',
+    },
+    {
+      from: 'public/robots.txt',
+      to: 'robots.txt',
+    },
+    {
+      from: 'public/favicon.ico',
+      to: 'favicon.ico',
+    },
+    {
+      from: 'public/favicon-16x16.png',
+      to: 'favicon-16x16.png',
+    },
+    {
+      from: 'public/favicon-32x32.png',
+      to: 'favicon-32x32.png',
+    },
+    {
+      from: 'public/apple-touch-icon.png',
+      to: 'apple-touch-icon.png',
+    },
+  ],
+}),
   ],
   devServer: {
     static: {
