@@ -16,13 +16,6 @@
   margin-bottom: 0;
 }
 
-.footer-subtitle {
-  color: white;
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: 1rem;
-}
-
 .footer-contact {
   margin: 0;
 }
@@ -89,9 +82,5 @@
 @media (max-width: 576px) {
   .footer-custom {
     padding: 2rem 0;
-  }
-  
-  .footer-subtitle {
-    font-size: var(--font-size-base);
   }
 }

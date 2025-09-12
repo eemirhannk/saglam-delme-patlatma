@@ -9,7 +9,6 @@ function Footer() {
       <div className="container-custom">
         <div className="footer-content">
           <div className="footer-section footer-contact-section">
-            <h6 className="footer-subtitle">{t('footer.contact')}</h6>
             <div className="footer-contact">
               <p className="footer-contact-item">
                 <i className="fas fa-envelope"></i>
