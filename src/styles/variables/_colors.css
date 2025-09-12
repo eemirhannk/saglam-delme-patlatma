@@ -1,7 +1,7 @@
 /* Renk Paleti */
 :root {
   /* Ana Renkler */
-  --primary-color: #9ACD32; /* Lime Green - Ana renk */
+  --light-green: #9ACD32; /* Lime Green - Ana renk */
   --primary-dark: #7BA428; /* Koyu lime green */
   
   --white: #FFFFFF;
@@ -29,7 +29,7 @@
   --gradient-green: #2E8B57; /* Sea green */
   
   /* Gradient Renkler */
-  --gradient-main: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  --gradient-main: linear-gradient(135deg, var(--light-green) 0%, var(--primary-dark) 100%);
 }
 
 /* Custom Orange Gold Class */
@@ -37,5 +37,5 @@
   color: var(--parliament-blue) !important;
 }
 .light-green {
-  color: var(--primary-color) !important;
+  color: var(--light-green) !important;
 }

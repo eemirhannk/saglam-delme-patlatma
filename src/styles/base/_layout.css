@@ -34,7 +34,7 @@
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
-.text-primary { color: var(--primary-color); }
+.text-primary { color: var(--light-green); }
 .text-white { color: white; }
 
 .text-lg { font-size: var(--font-size-lg); }

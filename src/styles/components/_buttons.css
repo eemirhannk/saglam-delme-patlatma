@@ -40,13 +40,13 @@
 /* Secondary Button */
 .btn-secondary-custom {
   background-color: transparent;
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: var(--parliament-blue);
+  color: var(--parliament-blue);
 }
 
 .btn-secondary-custom:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--parliament-blue);
+  border-color: var(--parliament-blue);
   color: white;
   transform: translateY(-2px);
 }
@@ -77,7 +77,7 @@
 .btn-light-custom {
   background-color: white;
   border-color: white;
-  color: var(--primary-color);
+  color: var(--light-green);
 }
 
 .btn-light-custom:hover {

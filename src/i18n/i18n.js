@@ -15,6 +15,7 @@ const tr = {
       blasting: "Patlatma Hizmetleri",
       projectManagement: "Proje Yönetimi",
       team: "Ekibimiz",
+      faq: "S.S.S.",
       contact: "İletişim",
       tagline: "İşinizi Sağlama Alın"
     },
@@ -494,6 +495,99 @@ const tr = {
       }
     },
     
+    // FAQ Page
+    faq: {
+      seo: {
+        title: "Sıkça Sorulan Sorular | Sağlam Delme & Patlatma",
+        description: "Delme ve patlatma hizmetlerimiz hakkında en çok sorulan sorular ve cevapları. Müşterilerimizin merak ettiği konular hakkında detaylı bilgiler.",
+        keywords: "sıkça sorulan sorular, FAQ, delme hizmetleri, patlatma hizmetleri, MWD, su altı patlatma, şehir içi patlatma, güvenlik, çevre"
+      },
+      hero: {
+        title: "Sıkça Sorulan Sorular",
+        subtitle: "Delme ve patlatma hizmetlerimiz hakkında merak ettiğiniz her şey"
+      },
+      categories: {
+        general: "Genel Hizmetler",
+        technical: "Teknik Hizmetler",
+        team: "Ekip ve Deneyim",
+        environment: "Çevre ve Güvenlik",
+        process: "İletişim ve Proje Süreci",
+        cost: "Maliyet ve Süre",
+        emergency: "Acil Durumlar"
+      },
+      questions: {
+        services: {
+          question: "Sağlam Delme & Patlatma hangi hizmetleri sunuyor?",
+          answer: "Delme hizmetleri (MWD, tünel delme, açık saha delme), patlatma hizmetleri (taş ocağı, şehir içi, su altı) ve danışmanlık ile proje yönetimi hizmetleri sunuyoruz."
+        },
+        sectors: {
+          question: "Hangi sektörlerde çalışıyorsunuz?",
+          answer: "Madencilik, inşaat ve altyapı projelerinde çalışıyoruz. Metro, köprü, tünel, baraj, liman gibi büyük ölçekli projelerde uzmanız."
+        },
+        founded: {
+          question: "Şirketiniz ne zaman kuruldu?",
+          answer: "Sağlam Delme & Patlatma 2025 yılında kurulmuştur. Kurucumuz Rıza Sağlam'ın 10+ yıllık deneyimi ile güçlü bir temel üzerine inşa edilmiştir."
+        },
+        mwd: {
+          question: "MWD (Delme Esnasında Ölçüm) teknolojisi nedir?",
+          answer: "MWD, sondaj sırasında penetrasyon hızı, tork, basınç ve yön gibi parametreleri anlık olarak kaydeden ve yüzeye aktaran bir teknolojidir. Bu sayede maden ve tünel projelerinde jeolojik belirsizlikler azaltılır, güvenlik artırılır ve operasyon verimliliği yükseltilir."
+        },
+        underwater: {
+          question: "Su altı patlatma hizmetleriniz hangi projelerde kullanılır?",
+          answer: "Liman ve rıhtım inşaatları, baraj ve hidroelektrik projeleri, köprü ayakları ve viyadükler, deniz tüneli projeleri gibi su altı altyapı projelerinde kontrollü patlatma hizmetleri sunuyoruz."
+        },
+        urbanSafety: {
+          question: "Şehir içi patlatmalarda güvenlik önlemleriniz nelerdir?",
+          answer: "Çevredeki yapıların korunması, gürültü ve titreşim değerlerinin yasal sınırların altında tutulması, iş güvenliği ve çevre güvenliğinin sağlanması, proje süresince şeffaf raporlama (titreşim ölçüm cihazları ile kayıt) gibi kapsamlı güvenlik önlemleri alıyoruz."
+        },
+        leader: {
+          question: "Ekip liderinizin deneyimi nedir?",
+          answer: "Rıza Sağlam, 10+ yıl deneyime sahip Jeoloji Mühendisi ve Patlayıcı Mühendisliği Yüksek Lisans mezunudur. Türkiye, Afrika, Avrupa ve Güney Amerika'da büyük ölçekli projelerde çalışmıştır."
+        },
+        certifications: {
+          question: "Hangi sertifikalara sahipsiniz?",
+          answer: "Patlayıcı Mühendisi sertifikası, sertifikalı dalgıç ekibi ve uluslararası güvenlik standartları uyumluluğu sertifikalarımız bulunmaktadır. Tüm çalışmalarımız yerel ve uluslararası standartlara uygun olarak yürütülür."
+        },
+        environmentalImpact: {
+          question: "Çevresel etkiyi nasıl minimize ediyorsunuz?",
+          answer: "Çevre dostu kontrollü patlatma yöntemleri, su canlılarının korunması için özel önlemler, çevresel etkiyi minimize eden teknolojiler kullanıyoruz. Tüm projelerimizde çevre duyarlılığı önceliğimizdir."
+        },
+        safetyStandards: {
+          question: "Güvenlik standartlarınız nelerdir?",
+          answer: "Yerel ve uluslararası güvenlik standartlarına tam uyumluluk, her projede güvenlik önceliği, sürekli güvenlik eğitimleri ve denetimler, modern güvenlik ekipmanları kullanımı ile en yüksek güvenlik standartlarını sağlıyoruz."
+        },
+        workflow: {
+          question: "Proje süreciniz nasıl işliyor?",
+          answer: "1) Analiz ve değerlendirme, 2) Çözüm tasarımı, 3) Uygulama, 4) Değerlendirme ve raporlama aşamalarından oluşan sistematik bir süreç izliyoruz. Her aşamada müşteri ile şeffaf iletişim kuruyoruz."
+        },
+        regions: {
+          question: "Hangi bölgelerde hizmet veriyorsunuz?",
+          answer: "Türkiye genelinde hizmet veriyoruz. Ayrıca uluslararası projelerde de çalışıyoruz (Afrika, Avrupa, Güney Amerika). Proje lokasyonuna göre mobil ekiplerimizle hizmet sunuyoruz."
+        },
+        quote: {
+          question: "Proje teklifi nasıl alabilirim?",
+          answer: "İletişim sayfamızdaki formu doldurarak, telefon ile direkt iletişim kurarak veya e-posta ile detaylı bilgi talebinde bulunarak proje teklifi alabilirsiniz. Proje detaylarınızı aldıktan sonra 24-48 saat içinde kapsamlı teklif hazırlıyoruz."
+        },
+        pricing: {
+          question: "Proje maliyetleri nasıl belirleniyor?",
+          answer: "Proje kapsamı, karmaşıklığı, lokasyonu ve süresine göre değişkenlik gösterir. Detaylı analiz sonrası şeffaf fiyatlandırma politikamızla teklif hazırlıyoruz. Her proje için özel değerlendirme yapıyoruz."
+        },
+        duration: {
+          question: "Proje süreleri ne kadar?",
+          answer: "Proje büyüklüğüne ve karmaşıklığına göre değişkenlik gösterir. Küçük projeler birkaç gün, büyük ölçekli projeler ise aylar sürebilir. Ön analiz sonrası net süre belirlenir ve müşteriye bildirilir."
+        },
+        emergencyResponse: {
+          question: "Acil müdahale hizmetiniz var mı?",
+          answer: "Evet, acil durumlar için 7/24 hazır ekibimiz bulunmaktadır. Hızlı müdahale ve çözüm üretme kapasitesi ile acil durumlarda anında destek sağlıyoruz."
+        }
+      },
+      cta: {
+        title: "Sorunuzun Cevabını Bulamadınız mı?",
+        description: "Uzman ekibimizle iletişime geçin, size özel çözümler sunalım.",
+        button: "İletişime Geçin"
+      }
+    },
+
     // Common
     common: {
       details: "Detaylar",
@@ -520,6 +614,7 @@ const en = {
       blasting: "Blasting Services",
       projectManagement: "Project Management",
       team: "Our Team",
+      faq: "FAQ",
       contact: "Contact",
       tagline: "Secure Your Business"
     },
@@ -999,6 +1094,99 @@ const en = {
       }
     },
     
+    // FAQ Page
+    faq: {
+      seo: {
+        title: "Frequently Asked Questions | Sağlam Drilling & Blasting",
+        description: "Most frequently asked questions and answers about our drilling and blasting services. Detailed information about topics our customers are curious about.",
+        keywords: "frequently asked questions, FAQ, drilling services, blasting services, MWD, underwater blasting, urban blasting, safety, environment"
+      },
+      hero: {
+        title: "Frequently Asked Questions",
+        subtitle: "Everything you want to know about our drilling and blasting services"
+      },
+      categories: {
+        general: "General Services",
+        technical: "Technical Services",
+        team: "Team and Experience",
+        environment: "Environment and Safety",
+        process: "Communication and Project Process",
+        cost: "Cost and Duration",
+        emergency: "Emergency Situations"
+      },
+      questions: {
+        services: {
+          question: "What services does Sağlam Drilling & Blasting offer?",
+          answer: "We offer drilling services (MWD, tunnel drilling, open field drilling), blasting services (quarry, urban, underwater) and consulting with project management services."
+        },
+        sectors: {
+          question: "Which sectors do you work in?",
+          answer: "We work in mining, construction and infrastructure projects. We are experts in large-scale projects such as metro, bridge, tunnel, dam, port."
+        },
+        founded: {
+          question: "When was your company founded?",
+          answer: "Sağlam Drilling & Blasting was founded in 2025. It was built on a strong foundation with the 10+ years of experience of our founder Rıza Sağlam."
+        },
+        mwd: {
+          question: "What is MWD (Measurement While Drilling) technology?",
+          answer: "MWD is a technology that records and transmits to the surface parameters such as penetration rate, torque, pressure and direction during drilling in real time. This reduces geological uncertainties in mining and tunnel projects, increases safety and improves operational efficiency."
+        },
+        underwater: {
+          question: "In which projects are your underwater blasting services used?",
+          answer: "We provide controlled blasting services in underwater infrastructure projects such as port and wharf construction, dam and hydroelectric projects, bridge piers and viaducts, undersea tunnel projects."
+        },
+        urbanSafety: {
+          question: "What are your safety measures in urban blasting?",
+          answer: "We take comprehensive safety measures such as protection of surrounding structures, keeping noise and vibration values below legal limits, ensuring work safety and environmental safety, transparent reporting throughout the project (recording with vibration measurement devices)."
+        },
+        leader: {
+          question: "What is the experience of your team leader?",
+          answer: "Rıza Sağlam is a Geological Engineer with 10+ years of experience and a Master's degree in Explosive Engineering. He has worked on large-scale projects in Turkey, Africa, Europe and South America."
+        },
+        certifications: {
+          question: "What certifications do you have?",
+          answer: "We have Explosive Engineer certification, certified diving team and international safety standards compliance certificates. All our work is carried out in accordance with local and international standards."
+        },
+        environmentalImpact: {
+          question: "How do you minimize environmental impact?",
+          answer: "We use environmentally friendly controlled blasting methods, special measures for protection of marine life, and technologies that minimize environmental impact. Environmental sensitivity is our priority in all our projects."
+        },
+        safetyStandards: {
+          question: "What are your safety standards?",
+          answer: "We ensure the highest safety standards with full compliance with local and international safety standards, safety priority in every project, continuous safety training and inspections, and use of modern safety equipment."
+        },
+        workflow: {
+          question: "How does your project process work?",
+          answer: "We follow a systematic process consisting of 1) Analysis and evaluation, 2) Solution design, 3) Implementation, 4) Evaluation and reporting. We maintain transparent communication with the customer at every stage."
+        },
+        regions: {
+          question: "In which regions do you provide services?",
+          answer: "We provide services throughout Turkey. We also work on international projects (Africa, Europe, South America). We provide services with our mobile teams according to project location."
+        },
+        quote: {
+          question: "How can I get a project quote?",
+          answer: "You can get a project quote by filling out the form on our contact page, contacting us directly by phone, or requesting detailed information by email. After receiving your project details, we prepare a comprehensive quote within 24-48 hours."
+        },
+        pricing: {
+          question: "How are project costs determined?",
+          answer: "It varies according to project scope, complexity, location and duration. We prepare quotes with our transparent pricing policy after detailed analysis. We make special evaluations for each project."
+        },
+        duration: {
+          question: "How long are project durations?",
+          answer: "It varies according to project size and complexity. Small projects can take a few days, while large-scale projects can take months. The exact duration is determined after preliminary analysis and communicated to the customer."
+        },
+        emergencyResponse: {
+          question: "Do you have emergency response service?",
+          answer: "Yes, we have a 24/7 ready team for emergencies. We provide immediate support in emergency situations with our rapid response and solution generation capacity."
+        }
+      },
+      cta: {
+        title: "Couldn't Find the Answer to Your Question?",
+        description: "Contact our expert team, let us offer you special solutions.",
+        button: "Contact Us"
+      }
+    },
+
     // Common
     common: {
       details: "Details",

@@ -19,7 +19,7 @@ main {
 }
 
 .bg-primary-custom {
-  background-color: var(--primary-color) !important;
+  background-color: var(--light-green) !important;
 }
 
 /* Responsive Design */

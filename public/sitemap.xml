@@ -56,4 +56,12 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/team" />
     <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/team?lang=en" />
   </url>
+  <url>
+    <loc>https://saglam-tr.com/faq</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/faq?lang=en" />
+  </url>
 </urlset>

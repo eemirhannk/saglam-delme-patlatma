@@ -45,7 +45,7 @@
 }
 
 .drilling-subtitle {
-  background: var(--primary-color);
+  background: var(--light-green);
   color: white;
   padding: 5px 10px;
   display: inline-block;
@@ -100,7 +100,7 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--light-green);
   padding-bottom: 10px;
 }
 

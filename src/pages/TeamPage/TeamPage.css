@@ -111,7 +111,7 @@
 }
 
 .detail-item i {
-  color: var(--primary-color);
+  color: var(--light-green);
   font-size: 1.2rem;
   width: 20px;
 }
@@ -158,7 +158,7 @@
 }
 
 .career-item i {
-  color: var(--primary-color);
+  color: var(--light-green);
   font-size: 0.9rem;
   margin-top: 4px;
   flex-shrink: 0;
@@ -174,7 +174,7 @@
 
 /* CTA Section */
 .team-cta {
-  background: var(--primary-color);
+  background: var(--light-green);
   padding: 60px 0;
   text-align: center;
   color: white;

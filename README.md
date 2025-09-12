@@ -11,6 +11,9 @@ Bu proje, Sağlam Delme & Patlatma şirketi için React ve Bootstrap kullanılar
 - 🚀 Hot Module Replacement (HMR)
 - 🏗️ Delme & Patlatma hizmetleri tanıtımı
 - 📱 Responsive tasarım
+- 🌐 Çoklu dil desteği (Türkçe/İngilizce)
+- ❓ Sıkça Sorulan Sorular (FAQ) sayfası
+- 🔍 SEO optimizasyonu
 
 ## Kurulum
 
@@ -56,6 +59,18 @@ public/
 - **Delme Hizmetleri**: Hassas delme teknikleri
 - **Patlatma Hizmetleri**: Güvenli ve kontrollü patlatma
 - **Proje Yönetimi**: Uzman ekip ile proje yönetimi
+- **MWD Teknolojisi**: Delme esnasında ölçüm
+- **Su Altı Patlatma**: Kontrollü su altı operasyonları
+- **Şehir İçi Patlatma**: Hassas çevre koşullarında patlatma
+
+## Sayfalar
+
+- **Ana Sayfa**: Hizmet tanıtımları ve genel bilgiler
+- **Hakkımızda**: Şirket bilgileri ve misyon
+- **Hizmetler**: Delme, patlatma ve danışmanlık hizmetleri
+- **Ekip**: Uzman kadro tanıtımı
+- **S.S.S.**: Sıkça sorulan sorular ve cevapları
+- **İletişim**: İletişim formu ve bilgileri
 
 ## Geliştirme
 

@@ -5,15 +5,15 @@
   background-color: white;
   border: 2px solid transparent;
   border-radius: 10px;
-  box-shadow: var(--shadow-primary);
+  box-shadow: var(--shadow-parliament-blue);
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .card-custom:hover {
   transform: translateY(-8px);
-  border-color: var(--primary-color);
-  box-shadow: var(--shadow-primary-hover);
+  border-color: var(--parliament-blue);
+  box-shadow: var(--shadow-parliament-blue-hover);
 }
 
 /* Card Body */
@@ -40,18 +40,18 @@
 
 .service-card-custom__icon i {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--parliament-blue);
 }
 
 .service-card-custom__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  color: var(--primary-dark);
+  color: var(--parliament-blue);
   margin-bottom: var(--margin-md);
 }
 
 .service-card-custom__text {
-  color: var(--dark-gray);
+  color: var(--parliament-blue);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--margin-lg);
 }
@@ -65,7 +65,7 @@
 .feature-card-custom__icon {
   width: 80px;
   height: 80px;
-  background-color: var(--primary-color);
+  background-color: var(--light-green);
   color: white;
   border-radius: 50%;
   display: inline-flex;
@@ -86,7 +86,7 @@
 .feature-card-custom__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  color: var(--primary-dark);
+  color: var(--light-green);
   margin-bottom: var(--margin-md);
 }
 

@@ -171,6 +171,10 @@
   }
 }
 
+#services-section .text-3xl{
+  color: var(--parliament-blue) !important;
+}
+
 /* Services Lazy Loading Animation */
 .services-lazy-loading {
   opacity: 0;
