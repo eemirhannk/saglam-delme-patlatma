@@ -4,19 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://saglam-tr.com/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
-
 # Disallow specific paths (if any)
 # Disallow: /admin/
 # Disallow: /private/
-
-# Allow all search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
