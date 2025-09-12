@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://saglam-tr.com/sitemap.xml
-
-# Disallow specific paths (if any)
-# Disallow: /admin/
-# Disallow: /private/
