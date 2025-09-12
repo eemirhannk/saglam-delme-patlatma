@@ -26,7 +26,6 @@ function LanguageSwitcher() {
       >
         TR
       </button>
-      <span className="lang-separator">|</span>
       <button
         className={`lang-btn ${currentLanguage === 'en' ? 'active' : ''}`}
         onClick={() => changeLanguage('en')}

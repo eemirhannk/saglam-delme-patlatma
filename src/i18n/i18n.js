@@ -125,15 +125,13 @@ const tr = {
     // Blasting Page
     blasting: {
       quarry: {
-        title: "TAŞ OCAĞI"
+        title: "TAŞ OCAĞI PATLATMALARI"
       },
       urban: {
-        title: "ŞEHİR İÇİ",
-        subtitle: "PATLAMALAR"
+        title: "ŞEHİR İÇİ PATLATMALAR",
       },
       underwater: {
-        title: "KONTROLLÜ",
-        subtitle: "SUALTI PATLATMALARI"
+        title: "KONTROLLÜ SUALTI PATLATMALARI",
       }
     },
     
@@ -228,20 +226,18 @@ const tr = {
     // Blasting Page
     blasting: {
       quarry: {
-        title: "TAŞ OCAĞI",
+        title: "TAŞ OCAĞI PATLATMALARI",
         description: "Taş ocaklarında patlatmanın temel amacı, kayaçları ekonomik ve güvenli bir şekilde kırma-eleme tesislerine uygun boyutlarda parçalara ayırmaktır.",
         paragraph1: "Delme ve patlatma operasyonlarımızda, kaya yapısına uygun delik desenleri ve patlayıcı yükleri ile yüksek verimlilik sağlıyoruz. Patlatma tasarımlarımız, parçalanma verimliliğini artırarak ikincil kırma ihtiyacını azaltacak şekilde optimize edilmiştir.",
         paragraph2: "Operasyonlarımız USBM ve DIN 4150 standartlarına uygun olarak yürütülür. Yerleşim alanlarına yakınlık durumuna göre tasarlanan patlatmalar ile titreşim ve gürültü kontrolü sağlanarak çevredeki yerleşimler, altyapı tesisleri ve doğal çevre korunur. Geoteknik parametreler dikkate alınarak şev stabilitesi, güvenli kazı ve optimal parça boyutu sağlanır.",
         paragraph3: "İş güvenliği tüm operasyonlarımızın merkezinde yer alır. Kontrollü patlatma sistemleri, güvenlik protokollerine uygun saha düzenlemeleri ve sürekli izleme ile hem çalışanlarımızın hem de çevrenin güvenliği sağlanır."
       },
       urban: {
-        title: "ŞEHİR İÇİ",
-        subtitle: "PATLAMALAR",
+        title: "ŞEHİR İÇİ PATLATMALAR",
         description: "Şehir içi patlatmalar, hassas çevre koşulları nedeniyle yüksek dikkat ve kontrol gerektirir. Planlı patlatma ile USBM ve DIN 4250 normlarına uygun olarak titreşim, gürültü ve taş fırlaması minimize edilerek çevredeki yapılar, altyapı tesisleri ve insanlar korunur."
       },
       underwater: {
-        title: "KONTROLLÜ",
-        subtitle: "SUALTI PATLATMALARI",
+        title: "KONTROLLÜ SUALTI PATLATMALARI",
         description: "Deniz, göl veya nehir tabanında yapılan kazı ve inşaat çalışmalarında kullanılan su altı patlatmaları, çevreye ve canlı yaşama zarar vermeden, kontrollü bir şekilde kaya ve beton yapıların parçalanmasını sağlar.",
         paragraph1: "Su altı patlatma operasyonlarımızda, yüksek su basıncına dayanıklı özel patlayıcı sistemler ve su geçirmez fünye teknolojileri kullanılmaktadır. Operasyonlar sırasında su canlılarının korunması için özel önlemler alınır ve çevresel etki minimize edilir.",
         paragraph2: "Dalga ve akıntı koşullarına uygun operasyon planlaması ile güvenli ve verimli kazı işlemleri gerçekleştirilir. Su altı görüntüleme ve izleme teknolojileri ile sürekli kontrol sağlanarak proje hedeflerine ulaşılır."
@@ -439,6 +435,18 @@ const tr = {
         title: "Patlatma Hizmetleri",
         description: "Güvenli ve kontrollü patlatma teknikleri ile büyük ölçekli projeler gerçekleştiriyoruz."
       },
+      quarryBlasting: {
+        title: "Taş Ocağı Patlatmaları",
+        description: "Taş ocaklarında güvenli ve verimli patlatma operasyonları ile optimal parça boyutu sağlıyoruz."
+      },
+      urbanBlasting: {
+        title: "Şehir İçi Patlatmalar",
+        description: "Hassas çevre koşullarında kontrollü patlatma ile titreşim ve gürültü kontrolü sağlıyoruz."
+      },
+      underwaterBlasting: {
+        title: "Su Altı Patlatmalar",
+        description: "Deniz, göl ve nehir tabanında çevre dostu kontrollü patlatma hizmetleri sunuyoruz."
+      },
       emergency: {
         title: "Acil Müdahale",
         description: "Acil durumlar için her zaman hazırız."
@@ -609,15 +617,13 @@ const en = {
     // Blasting Page
     blasting: {
       quarry: {
-        title: "QUARRY"
+        title: "QUARRY BLASTING",
       },
       urban: {
-        title: "URBAN",
-        subtitle: "BLASTING"
+        title: "URBAN BLASTING",
       },
       underwater: {
-        title: "CONTROLLED",
-        subtitle: "UNDERWATER BLASTING"
+        title: "CONTROLLED UNDERWATER BLASTING",
       }
     },
     
@@ -712,20 +718,18 @@ const en = {
     // Blasting Page
     blasting: {
       quarry: {
-        title: "QUARRY",
+        title: "QUARRY BLASTING",
         description: "The main purpose of blasting in quarries is to break rocks into pieces of suitable sizes for crushing-screening plants economically and safely.",
         paragraph1: "In our drilling and blasting operations, we provide high efficiency with hole patterns and explosive loads suitable for rock structure. Our blasting designs are optimized to increase fragmentation efficiency and reduce secondary crushing needs.",
         paragraph2: "Our operations are carried out in accordance with USBM and DIN 4150 standards. With blasting designed according to proximity to residential areas, vibration and noise control is provided, protecting surrounding settlements, infrastructure facilities and natural environment. Considering geotechnical parameters, slope stability, safe excavation and optimal fragment size are ensured.",
         paragraph3: "Work safety is at the center of all our operations. With controlled blasting systems, site arrangements in accordance with safety protocols and continuous monitoring, the safety of both our employees and the environment is ensured."
       },
       urban: {
-        title: "URBAN",
-        subtitle: "BLASTING",
+        title: "URBAN BLASTING",
         description: "Urban blasting requires high attention and control due to sensitive environmental conditions. With planned blasting in accordance with USBM and DIN 4250 standards, vibration, noise and flyrock are minimized, protecting surrounding structures, infrastructure facilities and people."
       },
       underwater: {
-        title: "CONTROLLED",
-        subtitle: "UNDERWATER BLASTING",
+        title: "CONTROLLED UNDERWATER BLASTING",
         description: "Underwater blasting used in excavation and construction works on seabed, lakebed or riverbed ensures controlled fragmentation of rock and concrete structures without harming the environment and living organisms.",
         paragraph1: "In our underwater blasting operations, special explosive systems resistant to high water pressure and waterproof detonator technologies are used. Special measures are taken to protect marine life during operations and environmental impact is minimized.",
         paragraph2: "Safe and efficient excavation operations are carried out with operation planning suitable for wave and current conditions. Continuous control is provided with underwater imaging and monitoring technologies and project goals are achieved."
@@ -922,6 +926,18 @@ const en = {
       blasting: {
         title: "Blasting Services",
         description: "We carry out large-scale projects with safe and controlled blasting techniques."
+      },
+      quarryBlasting: {
+        title: "Quarry Blasting",
+        description: "We provide optimal fragment size with safe and efficient blasting operations in quarries."
+      },
+      urbanBlasting: {
+        title: "Urban Blasting",
+        description: "We provide vibration and noise control with controlled blasting in sensitive environmental conditions."
+      },
+      underwaterBlasting: {
+        title: "Underwater Blasting",
+        description: "We provide environmentally friendly controlled blasting services on sea, lake and river beds."
       },
       emergency: {
         title: "Emergency Response",

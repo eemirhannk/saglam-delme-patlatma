@@ -191,7 +191,7 @@ function BlastingPage() {
           <div className="urban-blasting-content">
             <div className="urban-blasting-text">
               <h2 className="urban-blasting-title">
-                {t('blasting.urban.title')} <span className="parliament-blue">{t('blasting.urban.subtitle')}</span>
+                {t('blasting.urban.title')}
               </h2>
               
               <div className="urban-blasting-intro">
@@ -254,7 +254,7 @@ function BlastingPage() {
           <div className="image-overlay-content">
             <div className="overlay-text">
               <h2 className="blasting-title light-green">
-                {t('blasting.underwater.title')} {t('blasting.underwater.subtitle')}
+                {t('blasting.underwater.title')}
               </h2>
               
               <div className="blasting-description">

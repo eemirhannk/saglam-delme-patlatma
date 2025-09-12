@@ -108,51 +108,39 @@ function HomePage() {
   const serviceData = [
     {
       id: 1,
-      icon: "fas fa-mountain",
-      serviceKey: 'drilling',
-      link: { type: "link", to: "/drilling-services" }
-    },
-    {
-      id: 2,
       icon: "fas fa-road",
       serviceKey: 'tunnelDrilling',
       link: { type: "link", to: "/drilling-services" }
     },
     {
-      id: 3,
+      id: 2,
       icon: "fas fa-mountain",
       serviceKey: 'openFieldDrilling',
       link: { type: "link", to: "/drilling-services" }
     },
     {
+      id: 3,
+      icon: "fas fa-mountain",
+      serviceKey: 'quarryBlasting',
+      link: { type: "link", to: "/blasting-services#quarry-blasting" }
+    },
+    {
       id: 4,
-      icon: "fas fa-bomb",
-      serviceKey: 'blasting',
-      link: { type: "link", to: "/blasting-services" }
+      icon: "fas fa-city",
+      serviceKey: 'urbanBlasting',
+      link: { type: "link", to: "/blasting-services#urban-blasting" }
     },
     {
       id: 5,
-      icon: "fas fa-cogs",
-      serviceKey: 'projectManagement',
-      link: { type: "button" }
+      icon: "fas fa-water",
+      serviceKey: 'underwaterBlasting',
+      link: { type: "link", to: "/blasting-services#underwater-blasting" }
     },
     {
       id: 6,
       icon: "fas fa-user-tie",
       serviceKey: 'consulting',
       link: { type: "link", to: "/consulting" }
-    },
-    {
-      id: 7,
-      icon: "fas fa-water",
-      serviceKey: 'underwater',
-      link: { type: "link", to: "/blasting-services#underwater-blasting" }
-    },
-    {
-      id: 8,
-      icon: "fas fa-building",
-      serviceKey: 'demolition',
-      link: { type: "button" }
     }
   ];
 
@@ -223,7 +211,7 @@ function HomePage() {
       <div className="container-custom">
         <div className="row">
           <div className="col-12 text-center mb-5">
-            <h2 className="text-3xl font-bold parliament-blue">{t(section.titleKey)}</h2>
+            <h2 className="text-3xl font-bold light-green">{t(section.titleKey)}</h2>
             <p className="text-lg">{t(section.descriptionKey)}</p>
           </div>
         </div>

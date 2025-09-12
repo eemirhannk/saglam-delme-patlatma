@@ -80,7 +80,7 @@ function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <i className="fas fa-bars navbar-toggler-icon"></i>
             </button>
           )}
         </div>

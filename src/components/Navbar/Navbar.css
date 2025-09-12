@@ -4,14 +4,9 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  background: white !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  background: var(--white) !important;
   padding: 0.75rem 0;
-  transition: all 0.3s ease;
 }
 
 .navbar-custom .container-custom {
@@ -36,14 +31,14 @@
 }
 
 .navbar-custom .navbar-brand:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale(1.05);
 }
 
 /* Logo styles moved to Logo.css */
 
 .navbar-custom .nav-link {
-  color: var(--dark-gray) !important;
+  color: var(--parliament-blue) !important;
   font-weight: var(--font-weight-medium);
   padding: 0.5rem 1rem !important;
   text-decoration: none;
@@ -53,15 +48,14 @@
   text-shadow: none;
   display: flex;
   align-items: center;
-  height: 100%;
   white-space: nowrap;
-  max-width: 120px;
+  height: 100%;
   text-align: center;
 }
 
 .navbar-custom .nav-link:hover {
-  color: var(--primary-color) !important;
-  background-color: rgba(154, 205, 50, 0.1);
+  color: var(--white) !important;
+  background-color: var(--parliament-blue);
 }
 
 .navbar-custom .navbar-nav {
@@ -72,24 +66,30 @@
   flex-wrap: nowrap;
 }
 
+.navbar-custom .dropdown-menu {
+  background: var(--parliament-blue);
+  border: 1px solid var(--parliament-blue);
+  transition: all 0.3s ease;
+  padding: 0;
+  border-radius: 0;
+}
+
+.navbar-custom .dropdown-item {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--white) !important;
+}
+
+.navbar-custom .dropdown-item:hover {
+  color: var(--parliament-blue) !important;
+}
+
 .navbar-custom .nav-item {
   display: flex;
   align-items: center;
 }
-
-.navbar-custom .navbar-toggler {
-  border: none;
-  padding: 0.25rem 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-custom .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(154, 205, 50, 0.25);
-}
-
 .navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2852, 80, 80, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  color: var(--parliament-blue);
 }
 
 /* Responsive Design */
@@ -119,8 +119,11 @@
   .navbar-custom .dropdown-menu {
     width: 100%;
     border: none;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--parliament-blue);
+    border: 1px solid var(--parliament-blue);
     transition: all 0.3s ease;
+    padding: 0;
+    border-radius: 0;
   }
   
   .navbar-custom .dropdown.show .dropdown-menu {
@@ -128,19 +131,12 @@
   }
   
   .navbar-custom .dropdown-item {
-    padding: 0.75rem 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
     font-size: 0.9rem;
-    color: var(--dark-gray) !important;
+    color: var(--white) !important;
   }
-  
-  .navbar-custom .dropdown-item:last-child {
-    border-bottom: none;
-  }
-  
   .navbar-custom .dropdown-item:hover {
-    background-color: rgba(154, 205, 50, 0.1);
-    color: var(--primary-color) !important;
+    color: var(--parliament-blue) !important;
   }
 }
 

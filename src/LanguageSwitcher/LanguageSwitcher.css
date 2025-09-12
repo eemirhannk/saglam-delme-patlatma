@@ -7,9 +7,9 @@
 }
 
 .lang-btn {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.9);
+  background: var(--white);
+  border: 1px solid var(--parliament-blue);
+  color: var(--parliament-blue);
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -17,28 +17,18 @@
   font-weight: 500;
   transition: all 0.3s ease;
   min-width: 35px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .lang-btn:hover {
   background: rgba(255, 255, 255, 0.2);
   color: var(--black);
-  border-color: rgba(255, 255, 255, 0.7);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .lang-btn.active {
-  background: var(--primary-color);
+  background: var(--parliament-blue);
   color: white;
-  border-color: var(--primary-color);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-1px);
-}
-
-.lang-separator {
-  display: none;
 }
 
 /* Mobile Responsive */

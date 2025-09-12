@@ -91,8 +91,7 @@
 }
 
 .feature-card-custom__text {
-  color: var(--dark-gray);
-  line-height: var(--line-height-relaxed);
+  color: var(--parliament-blue);
 }
 
 

@@ -2,8 +2,16 @@
 :root {
   /* Box Shadows */
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  
+  --shadow-parliament-blue: 0 2px 15px rgba(27, 38, 69, 0.1);
+  --shadow-parliament-blue-hover: 0 8px 25px rgba(27, 38, 69, 0.2);
+  --shadow-parliament-blue-mid: 0 2px 15px rgba(25, 77, 133, 0.1);
+  --shadow-parliament-blue-mid-hover: 0 8px 25px rgba(25, 77, 133, 0.2);
+  --shadow-parliament-blue-light: 0 2px 15px rgba(121, 202, 241, 0.1);
+  --shadow-parliament-blue-light-hover: 0 8px 25px rgba(121, 202, 241, 0.2);
+
   /* Custom Shadows */
   --shadow-primary: 0 2px 15px rgba(154, 205, 50, 0.1);
   --shadow-primary-hover: 0 8px 25px rgba(154, 205, 50, 0.2);
+
+
 }
