@@ -17,7 +17,7 @@ const ConsultingPage = lazy(() => import('./pages/ConsultingPage'));
 const BlastingPage = lazy(() => import('./pages/BlastingPage'));
 const DrillingPage = lazy(() => import('./pages/DrillingPage'));
 const TeamPage = lazy(() => import('./pages/TeamPage'));
-
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 function App() {
   return (
     <HelmetProvider>
@@ -35,6 +35,7 @@ function App() {
                 <Route path="/blasting-services" element={<BlastingPage />} />
                 <Route path="/project-management" element={<ConsultingPage />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </Layout>

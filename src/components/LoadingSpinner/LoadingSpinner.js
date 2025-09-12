@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './LoadingSpinner.css';
+import Logo from '../Navbar/Logo/Logo';
 
 function LoadingSpinner() {
   const { t } = useTranslation();
@@ -8,10 +9,10 @@ function LoadingSpinner() {
   return (
     <div className="loading-spinner-container">
       <div className="loading-spinner">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">{t('loading.screenReader')}</span>
+        <div className="logo-loading">
+          <Logo />
+          <div className="loading-pulse"></div>
         </div>
-        <p className="loading-text">{t('loading.text')}</p>
       </div>
     </div>
   );
