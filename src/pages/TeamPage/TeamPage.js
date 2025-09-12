@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import teamMemberImage from '@public/images/riza-saglam.jpeg';
 import './TeamPage.css';
+import { Link } from 'react-router-dom';
 
 function TeamPage() {
   const { t } = useTranslation();
@@ -91,7 +92,7 @@ function TeamPage() {
         <div className="cta-content">
           <h3>{ctaData.title}</h3>
           <p>{ctaData.description}</p>
-          <a href={ctaData.buttonLink} className="btn-cta">{ctaData.buttonText}</a>
+          <Link to={ctaData.buttonLink} className="btn-cta">{ctaData.buttonText}</Link>
         </div>
       )
     }

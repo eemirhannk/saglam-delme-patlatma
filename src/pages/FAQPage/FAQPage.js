@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import './FAQPage.css';
+import { Link } from 'react-router-dom';
 
 function FAQPage() {
   const { t } = useTranslation();
@@ -229,9 +230,9 @@ function FAQPage() {
               <div className="col-lg-8 text-center">
                 <h2 className="cta-title">{t('faq.cta.title')}</h2>
                 <p className="cta-description">{t('faq.cta.description')}</p>
-                <a href="/contact" className="btn btn-primary btn-lg">
+                <Link to="/contact" className="btn btn-primary btn-lg">
                   {t('faq.cta.button')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
