@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://saglam-tr.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/about</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/about</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/about?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/drilling-services</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/drilling-services</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/drilling-services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/drilling-services?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/drilling-services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/drilling-services?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/blasting-services</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/blasting-services</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/blasting-services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/blasting-services?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/blasting-services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/blasting-services?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/consulting</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/consulting</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/consulting" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/consulting?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/consulting" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/consulting?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/contact</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/contact</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/contact?lang=en" />
   </url>
   <url>
-    <loc>https://saglam-tr.com/team</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://saglam-delme-patlatma.netlify.app/team</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-tr.com/team" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-tr.com/team?lang=en" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://saglam-delme-patlatma.netlify.app/team" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saglam-delme-patlatma.netlify.app/team?lang=en" />
   </url>
 </urlset>

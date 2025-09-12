@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saglam-tr.com/sitemap.xml
+Sitemap: https://saglam-delme-patlatma.netlify.app/sitemap.xml
