@@ -167,8 +167,8 @@ function ContactPage() {
         'service_5v1epin', // EmailJS Service ID
         'template_oxnvwrt', // EmailJS Template ID
         {
-          to_email: 'emirhank5466@gmail.com',
-          to_name: 'Emirhan',
+          to_email: 'saglamtrcom@gmail.com',
+          to_name: 'Sağlam Delme & Patlatma',
           from_name: data.name,
           from_email: data.email,
           phone: data.phone,
