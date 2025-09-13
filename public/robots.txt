@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://saglam-tr.com/sitemap.xml
+
+# Crawl-delay for better indexing
+Crawl-delay: 1
