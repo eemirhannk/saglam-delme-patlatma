@@ -7,12 +7,18 @@ import './ContactPage.css';
 function ContactPage() {
   const { t } = useTranslation();
   const [companyType, setCompanyType] = useState('');
+  const [serviceType, setServiceType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
 
   const handleCompanyTypeChange = (e) => {
     const value = e.target.value;
     setCompanyType(value);
+  };
+
+  const handleServiceTypeChange = (e) => {
+    const value = e.target.value;
+    setServiceType(value);
   };
 
   const formFields = [
@@ -42,7 +48,9 @@ function ContactPage() {
         { value: 'blasting', text: t('contact.form.blasting') },
         { value: 'consulting', text: t('contact.form.consulting') },
         { value: 'other', text: t('contact.form.other') }
-      ]
+      ],
+      onChange: handleServiceTypeChange,
+      value: serviceType
     },
     {
       id: 'name',
@@ -173,7 +181,10 @@ function ContactPage() {
           from_email: data.email,
           phone: data.phone,
           company_type: data.companyType === 'individual' ? t('contact.form.individual') : t('contact.form.company'),
-          service_type: data.serviceType,
+          service_type: data.serviceType === 'drilling' ? t('contact.form.drilling') : 
+                       data.serviceType === 'blasting' ? t('contact.form.blasting') :
+                       data.serviceType === 'consulting' ? t('contact.form.consulting') :
+                       data.serviceType === 'other' ? t('contact.form.other') : data.serviceType,
           subject: data.subject,
           message: data.message
         },
@@ -184,6 +195,7 @@ function ContactPage() {
         setSubmitStatus('success');
         e.target.reset(); // Formu temizle
         setCompanyType(''); // State'i de temizle
+        setServiceType(''); // ServiceType state'ini de temizle
       } else {
         setSubmitStatus('error');
       }
