@@ -8,8 +8,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  overscroll-behavior: none;
-  height: 100%;
+  background-color: var(--soft-white);
 }
 
 body {
@@ -21,8 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--soft-white);
   color: var(--dark-gray);
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: touch;
+}
+
+.root{
+  background-color: var(--soft-white);
 }
 
 /* Remove default margins */
