@@ -13,7 +13,6 @@ const tr = {
       consulting: "Danışmanlık",
       drilling: "Delme Hizmetleri",
       blasting: "Patlatma Hizmetleri",
-      projectManagement: "Proje Yönetimi",
       team: "Ekibimiz",
       faq: "S.S.S.",
       contact: "İletişim",
@@ -92,11 +91,7 @@ const tr = {
       },
       services: {
         title: "Hizmetlerimiz",
-        description: "Geniş hizmet yelpazemizle her türlü projeye çözüm sunuyoruz",
-        projectManagement: {
-          title: "Proje Yönetimi",
-          description: "Uzman ekibimizle projelerinizi planlama aşamasından teslim aşamasına kadar yönetiyoruz."
-        }
+        description: "Geniş hizmet yelpazemizle her türlü projeye çözüm sunuyoruz"
       },
       cta: {
         title: "Projenizi Başlatmaya Hazır mısınız?",
@@ -518,7 +513,7 @@ const tr = {
       questions: {
         services: {
           question: "Sağlam Delme & Patlatma hangi hizmetleri sunuyor?",
-          answer: "Delme hizmetleri (MWD, tünel delme, açık saha delme), patlatma hizmetleri (taş ocağı, şehir içi, su altı) ve danışmanlık ile proje yönetimi hizmetleri sunuyoruz."
+          answer: "Delme hizmetleri (MWD, tünel delme, açık saha delme), patlatma hizmetleri (taş ocağı, şehir içi, su altı) ve danışmanlık hizmetleri sunuyoruz."
         },
         sectors: {
           question: "Hangi sektörlerde çalışıyorsunuz?",
@@ -612,7 +607,6 @@ const en = {
       consulting: "Consulting",
       drilling: "Drilling Services",
       blasting: "Blasting Services",
-      projectManagement: "Project Management",
       team: "Our Team",
       faq: "FAQ",
       contact: "Contact",
@@ -691,11 +685,7 @@ const en = {
       },
       services: {
         title: "Our Services",
-        description: "We provide solutions for all kinds of projects with our wide range of services",
-        projectManagement: {
-          title: "Project Management",
-          description: "We manage your projects from the planning stage to the delivery stage with our expert team."
-        }
+        description: "We provide solutions for all kinds of projects with our wide range of services"
       },
       cta: {
         title: "Ready to Start Your Project?",

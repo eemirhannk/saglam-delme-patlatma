@@ -101,7 +101,6 @@ function Navbar() {
                 <li><Link className="dropdown-item" to="/consulting">{t('navbar.consulting')}</Link></li>
                 <li><Link className="dropdown-item" to="/drilling-services">{t('navbar.drilling')}</Link></li>
                 <li><Link className="dropdown-item" to="/blasting-services">{t('navbar.blasting')}</Link></li>
-                <li><Link className="dropdown-item" to="/project-management">{t('navbar.projectManagement')}</Link></li>
               </ul>
             </li>
             <li className="nav-item">

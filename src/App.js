@@ -34,7 +34,6 @@ function App() {
                 <Route path="/consulting" element={<ConsultingPage />} />
                 <Route path="/drilling-services" element={<DrillingPage />} />
                 <Route path="/blasting-services" element={<BlastingPage />} />
-                <Route path="/project-management" element={<ConsultingPage />} />
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="*" element={<NotFoundPage />} />
