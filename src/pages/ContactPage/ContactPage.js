@@ -237,7 +237,6 @@ function ContactPage() {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('E-posta gönderme hatası:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

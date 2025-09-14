@@ -13,6 +13,7 @@ import './HomePage.css';
 function HomePage() {
   const { t } = useTranslation();
   const [isServicesVisible, setIsServicesVisible] = useState(false);
+  
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const carouselSlideData = [

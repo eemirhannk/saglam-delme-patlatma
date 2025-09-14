@@ -406,7 +406,7 @@ const tr = {
     error: {
       title: "Oops! Bir hata oluştu",
       description: "Sayfa yüklenirken bir sorun yaşandı. Lütfen sayfayı yenileyin.",
-      refreshButton: "Sayfayı Yenile"
+      refreshButton: "Sayfayı Yenile",
     },
     
     // Loading
@@ -1005,7 +1005,7 @@ const en = {
     error: {
       title: "Oops! An error occurred",
       description: "A problem occurred while loading the page. Please refresh the page.",
-      refreshButton: "Refresh Page"
+      refreshButton: "Refresh Page",
     },
     
     // Loading
