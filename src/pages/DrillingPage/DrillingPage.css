@@ -39,7 +39,7 @@
   font-size: 10rem;
   width: 59%;
   font-weight: 700;
-  color: #000;
+  color: var(--black);
   margin: 0;
   writing-mode: sideways-lr;
 }
@@ -63,14 +63,14 @@
 .drilling-description {
   background: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--gray-200);
   padding: 30px;
   border-radius: 12px;
 }
 
 .drilling-description p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--medium-gray);
   text-align: left;
   margin: 0;
 }
@@ -87,7 +87,7 @@
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--gray-200);
   transition: all 0.3s ease;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .application-item p {
-  color: #666;
+  color: var(--gray-600);
   margin: 0;
 }
 

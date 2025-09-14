@@ -26,7 +26,7 @@
 /* FAQ Content */
 .faq-content {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: var(--gray-100);
 }
 
 .faq-category {
@@ -68,7 +68,7 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .faq-item:last-child {
@@ -93,7 +93,7 @@
 }
 
 .faq-question:hover {
-  background-color: #f8f9fa;
+  background-color: var(--gray-100);
   color: var(--parliament-blue);
 }
 
@@ -117,7 +117,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background-color: #f8f9fa;
+  background-color: var(--gray-100);
 }
 
 .faq-answer.show {

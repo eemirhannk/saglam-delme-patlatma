@@ -107,7 +107,7 @@
   align-items: center;
   gap: 12px;
   padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--gray-300);
 }
 
 .detail-item i {
@@ -150,7 +150,7 @@
   align-items: flex-start;
   gap: 12px;
   padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--gray-300);
 }
 
 .career-item:last-child {

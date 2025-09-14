@@ -25,6 +25,21 @@
   --text-light: #999; /* Light text */
   --text-border: #e0e0e0; /* Light border */
 
+  /* Form & UI Renkleri */
+  --error-color: #dc3545; /* Form error red */
+  --error-bg: #f8d7da; /* Error background */
+  --error-border: #f5c6cb; /* Error border */
+  --error-text: #721c24; /* Error text */
+  --success-color: #155724; /* Success text */
+  --success-bg: #d4edda; /* Success background */
+  --success-border: #c3e6cb; /* Success border */
+  
+  /* Additional Grays */
+  --gray-100: #f8f9fa; /* Very light gray */
+  --gray-200: #e9ecef; /* Light gray */
+  --gray-300: #eee; /* Medium light gray */
+  --gray-600: #666; /* Medium gray */
+
   /* Gradient Renkleri */
   --gradient-green: #2E8B57; /* Sea green */
   
