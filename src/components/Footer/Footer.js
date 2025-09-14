@@ -25,6 +25,17 @@ function Footer() {
         </div>
         
         <div className="footer-bottom">
+          <div className="footer-social">
+            <a href="https://www.linkedin.com/in/sağlam-delme-patlatma-ltd-şti-16ba21383/" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="LinkedIn Profilimiz">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/saglamtrcom" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="Twitter Profilimiz">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/saglamtrcom/" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="Instagram Profilimiz">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
           <div className="footer-copyright">
             <p>{t('footer.copyrightFull')}</p>
           </div>

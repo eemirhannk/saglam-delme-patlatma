@@ -265,7 +265,10 @@ function HomePage() {
       "availableLanguage": ["Turkish", "English"]
     },
     "sameAs": [
-      "https://saglam-tr.com"
+      "https://saglam-tr.com",
+      "https://www.linkedin.com/in/sağlam-delme-patlatma-ltd-şti-16ba21383/",
+      "https://x.com/saglamtrcom",
+      "https://www.instagram.com/saglamtrcom/"
     ],
     "serviceArea": {
       "@type": "Country",
