@@ -86,18 +86,6 @@ function ContactPage() {
     }
   ];
 
-  const alertMessages = [
-    {
-      type: 'success',
-      icon: 'fas fa-check-circle',
-      text: t('contact.form.success')
-    },
-    {
-      type: 'error',
-      icon: 'fas fa-exclamation-circle',
-      text: t('contact.form.error')
-    }
-  ];
 
   const formRows = [
     {
@@ -251,8 +239,8 @@ function ContactPage() {
               {/* Dinamik Alert Mesajları */}
               {submitStatus && (
                 <div className={`alert alert-${submitStatus}`}>
-                  <i className={alertMessages.find(msg => msg.type === submitStatus)?.icon}></i>
-                  {alertMessages.find(msg => msg.type === submitStatus)?.text}
+                  <i className={submitStatus === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle'}></i>
+                  {submitStatus === 'success' ? t('contact.form.success') : t('contact.form.error')}
                 </div>
               )}
               

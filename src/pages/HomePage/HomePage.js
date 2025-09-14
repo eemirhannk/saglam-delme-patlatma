@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
-import drillingImage from '@public/images/delme-hizmetleri.jpeg';
 import mwdImage from '@public/images/mwd-hizmetleri.jpg';
 import tunnelDrillingImage from '@public/images/tunel-delme-hizmetleri.jpeg';
 import openFieldDrillingImage from '@public/images/acik-saha-delme-hizmetleri.jpeg';
 import quarryBlastingImage from '@public/images/quarry-blasting2.jpeg';
-import blastingImage from '@public/images/tasocagi-patlatma.jpeg';
 import urbanBlastingImage from '@public/images/urban-blasting.jpg';
 import underwaterBlastingImage from '@public/images/sualti3.jpeg';
-import consultingImage from '@public/images/consulting3.jpeg';
 import './HomePage.css';
 
 function HomePage() {
@@ -152,12 +149,8 @@ function HomePage() {
 
   const services = serviceData.map(service => ({
     ...service,
-    title: service.serviceKey === 'projectManagement' 
-      ? t(`homepage.services.${service.serviceKey}.title`)
-      : t(`services.${service.serviceKey}.title`),
-    description: service.serviceKey === 'projectManagement'
-      ? t(`homepage.services.${service.serviceKey}.description`)
-      : t(`services.${service.serviceKey}.description`),
+    title: t(`services.${service.serviceKey}.title`),
+    description: t(`services.${service.serviceKey}.description`),
     link: {
       ...service.link,
       text: t('common.details')
