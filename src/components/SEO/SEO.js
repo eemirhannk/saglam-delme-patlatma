@@ -16,7 +16,7 @@ function SEO({
   
   const baseUrl = 'https://saglam-tr.com';
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
-  const fullImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/logo.jpeg`;
+  const fullImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/Logo/logo.webp`;
   
   const defaultTitle = currentLanguage === 'tr' 
     ? 'Sağlam Delme & Patlatma | Güvenli Sondaj ve Patlatma Hizmetleri'

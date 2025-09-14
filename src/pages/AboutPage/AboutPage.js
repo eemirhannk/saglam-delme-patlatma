@@ -54,7 +54,7 @@ function AboutPage() {
         title={`${t('about.title')} | Sağlam Delme & Patlatma`}
         description={t('about.content.paragraph1')}
         keywords="hakkımızda, delme patlatma şirketi, sondaj uzmanı, patlatma mühendisi, güvenli hizmet, profesyonel ekip"
-        image="/images/hakkimizda.jpeg"
+        image="/images/AboutPage/hakkimizda.webp"
         url="/about"
         type="about"
       />

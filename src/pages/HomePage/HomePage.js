@@ -250,7 +250,7 @@ function HomePage() {
     "name": "Sağlam Delme & Patlatma",
     "alternateName": "Sağlam Delme ve Patlatma",
     "url": "https://saglam-tr.com",
-    "logo": "https://saglam-tr.com/images/logo.jpeg",
+    "logo": "https://saglam-tr.com/images/Logo/logo.webp",
     "description": t('homepage.hero.description'),
     "foundingDate": "2025",
     "address": {
@@ -309,7 +309,7 @@ function HomePage() {
         title={t('homepage.hero.title')}
         description={t('homepage.hero.description')}
         keywords="delme hizmetleri, patlatma hizmetleri, sondaj, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, MWD, danışmanlık, güvenli patlatma, kontrollü patlatma"
-        image="/images/logo.jpeg"
+        image="/images/Logo/logo.webp"
         url="/"
         structuredData={structuredData}
       />

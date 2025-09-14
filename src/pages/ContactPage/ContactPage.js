@@ -271,7 +271,7 @@ function ContactPage() {
         title={`${t('contact.title')} | Sağlam Delme & Patlatma`}
         description="Sağlam Delme & Patlatma ile iletişime geçin. Delme, patlatma ve danışmanlık hizmetleri için bizimle iletişime geçin."
         keywords="iletişim, delme patlatma iletişim, sondaj hizmetleri iletişim, patlatma danışmanlığı, teknik destek, proje danışmanlığı"
-        image="/images/logo.jpeg"
+        image="/images/Logo/logo.webp"
         url="/contact"
         type="contact"
         structuredData={structuredData}

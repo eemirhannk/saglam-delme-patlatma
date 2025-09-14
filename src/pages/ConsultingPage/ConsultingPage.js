@@ -117,7 +117,7 @@ function ConsultingPage() {
         title={`${t('navbar.consulting')} | Sağlam Delme & Patlatma`}
         description={t('services.consulting.description')}
         keywords="danışmanlık hizmetleri, teknik danışmanlık, proje danışmanlığı, delme patlatma danışmanlığı, mühendislik danışmanlığı, güvenlik danışmanlığı"
-        image="/images/consulting3.jpeg"
+        image="/images/ConsultingPage/consulting3.webp"
         url="/consulting"
         type="service"
         structuredData={structuredData}

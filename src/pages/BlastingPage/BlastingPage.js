@@ -158,7 +158,7 @@ function BlastingPage() {
         title={`${t('navbar.blasting')} | Sağlam Delme & Patlatma`}
         description={t('services.blasting.description')}
         keywords="patlatma hizmetleri, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, kontrollü patlatma, güvenli patlatma, USBM standartları, DIN standartları"
-        image="/images/quarry-blasting2.jpeg"
+        image="/images/BlastingPage/quarry-blasting2.webp"
         url="/blasting-services"
         type="service"
         structuredData={structuredData}

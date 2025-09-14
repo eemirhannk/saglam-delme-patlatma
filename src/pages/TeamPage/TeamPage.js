@@ -139,7 +139,7 @@ function TeamPage() {
         title={`${t('team.title')} | Sağlam Delme & Patlatma`}
         description={t('team.description')}
         keywords="ekibimiz, uzman kadro, patlayıcı mühendisi, jeoloji mühendisi, Rıza Sağlam, delme patlatma uzmanı, güvenli hizmet"
-        image="/images/riza-saglam.jpeg"
+        image="/images/TeamPage/riza-saglam.webp"
         url="/team"
         type="about"
         structuredData={structuredData}
