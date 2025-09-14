@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import SEO from '../../components/SEO';
+import { validateForm, validationRules } from '../../helpers/validation';
 import './ContactPage.css';
 
 function ContactPage() {
@@ -10,6 +11,8 @@ function ContactPage() {
   const [serviceType, setServiceType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [formErrors, setFormErrors] = useState({});
+  const [touched, setTouched] = useState({});
 
   const handleCompanyTypeChange = (e) => {
     const value = e.target.value;
@@ -19,6 +22,32 @@ function ContactPage() {
   const handleServiceTypeChange = (e) => {
     const value = e.target.value;
     setServiceType(value);
+  };
+
+  const handleFieldBlur = (fieldName) => {
+    setTouched(prev => ({ ...prev, [fieldName]: true }));
+  };
+
+  const handleFieldChange = (fieldName, value) => {
+    // Clear error when user starts typing
+    if (formErrors[fieldName]) {
+      setFormErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[fieldName];
+        return newErrors;
+      });
+    }
+  };
+
+  // Validation schema
+  const validationSchema = {
+    companyType: [validationRules.required],
+    serviceType: [validationRules.required],
+    name: [validationRules.required, validationRules.minLength(2)],
+    email: [validationRules.required, validationRules.email],
+    phone: [validationRules.required, validationRules.phone],
+    subject: [validationRules.required, validationRules.minLength(5)],
+    message: [validationRules.required, validationRules.minLength(10)]
   };
 
   const formFields = [
@@ -106,6 +135,9 @@ function ContactPage() {
     const field = formFields.find(f => f.id === fieldId);
     if (!field) return null;
 
+    const hasError = touched[fieldId] && formErrors[fieldId];
+    const inputClass = `form-input ${hasError ? 'form-input--error' : ''}`;
+
     if (field.type === 'select') {
       return (
         <div className="form-group" key={field.id}>
@@ -113,15 +145,20 @@ function ContactPage() {
           <select
             id={field.id}
             name={field.name}
-            className="form-input"
+            className={inputClass}
             value={field.value || ''}
-            onChange={field.onChange}
+            onChange={(e) => {
+              field.onChange(e);
+              handleFieldChange(fieldId, e.target.value);
+            }}
+            onBlur={() => handleFieldBlur(fieldId)}
             required={field.required}
           >
             {field.options.map((option, index) => (
               <option key={index} value={option.value}>{option.text}</option>
             ))}
           </select>
+          {hasError && <span className="form-error">{formErrors[fieldId]}</span>}
         </div>
       );
     }
@@ -133,10 +170,13 @@ function ContactPage() {
           type={field.type}
           id={field.id}
           name={field.name}
-          className="form-input"
+          className={inputClass}
           placeholder={field.placeholder}
           required={field.required}
+          onChange={(e) => handleFieldChange(fieldId, e.target.value)}
+          onBlur={() => handleFieldBlur(fieldId)}
         />
+        {hasError && <span className="form-error">{formErrors[fieldId]}</span>}
       </div>
     );
   };
@@ -156,6 +196,15 @@ function ContactPage() {
       subject: formData.get('subject'),
       message: formData.get('message')
     };
+
+    // Validate form
+    const validation = validateForm(data, validationSchema);
+    if (!validation.isValid) {
+      setFormErrors(validation.errors);
+      setTouched(Object.keys(validation.errors).reduce((acc, key) => ({ ...acc, [key]: true }), {}));
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       // EmailJS ile e-posta gönder
@@ -257,11 +306,16 @@ function ContactPage() {
                           <textarea 
                             id="message" 
                             name="message" 
-                            className="form-textarea" 
+                            className={`form-textarea ${touched.message && formErrors.message ? 'form-input--error' : ''}`}
                             rows="5" 
                             placeholder={t('contact.form.messagePlaceholder')} 
                             required
+                            onChange={(e) => handleFieldChange('message', e.target.value)}
+                            onBlur={() => handleFieldBlur('message')}
                           ></textarea>
+                          {touched.message && formErrors.message && (
+                            <span className="form-error">{formErrors.message}</span>
+                          )}
                         </div>
 
                         <div className="form-actions">

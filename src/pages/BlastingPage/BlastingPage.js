@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import './BlastingPage.css';
-import quarryImage from '@public/images/quarry-blasting2.jpeg';
-import urbanImage from '@public/images/sehiricipatlatma.jpeg';
-import urbanImage2 from '@public/images/sehiricipatlatma2.jpeg';
-import underwaterImage from '@public/images/sualti3.jpeg';
+import quarryImage from '@public/images/BlastingPage/quarry-blasting2.webp';
+import urbanImage from '@public/images/BlastingPage/sehiricipatlatma.webp';
+import urbanImage2 from '@public/images/BlastingPage/sehiricipatlatma2.webp';
+import underwaterImage from '@public/images/BlastingPage/sualti3.webp';
 
 function BlastingPage() {
   const { t } = useTranslation();

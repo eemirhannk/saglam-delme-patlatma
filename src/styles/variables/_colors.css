@@ -32,4 +32,9 @@
   --gradient-main: linear-gradient(135deg, var(--light-green) 0%, var(--primary-dark) 100%);
 }
 
+/* Utility Color Classes */
+.light-green {
+  color: var(--light-green) !important;
+}
+
 /* Custom Orange Gold Class */

@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   background-color: var(--soft-white);
+  overscroll-behavior: none;
+  position: relative;
 }
 
 main {

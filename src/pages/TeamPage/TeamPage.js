@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
-import teamMemberImage from '@public/images/riza-saglam.jpeg';
+import teamMemberImage from '@public/images/TeamPage/riza-saglam.webp';
 import './TeamPage.css';
 import { Link } from 'react-router-dom';
 

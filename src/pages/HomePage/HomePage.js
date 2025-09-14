@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
-import mwdImage from '@public/images/mwd-hizmetleri.jpg';
-import tunnelDrillingImage from '@public/images/tunel-delme-hizmetleri.jpeg';
-import openFieldDrillingImage from '@public/images/acik-saha-delme-hizmetleri.jpeg';
-import quarryBlastingImage from '@public/images/quarry-blasting2.jpeg';
-import urbanBlastingImage from '@public/images/urban-blasting.jpg';
-import underwaterBlastingImage from '@public/images/sualti3.jpeg';
+import mwdImage from '@public/images/HomePage/mwd-hizmetleri.webp';
+import tunnelDrillingImage from '@public/images/HomePage/tunel-delme-hizmetleri.webp';
+import openFieldDrillingImage from '@public/images/HomePage/acik-saha-delme-hizmetleri.webp';
+import quarryBlastingImage from '@public/images/HomePage/quarry-blasting2.webp';
+import urbanBlastingImage from '@public/images/HomePage/urban-blasting.webp';
+import underwaterBlastingImage from '@public/images/HomePage/sualti3.webp';
 import './HomePage.css';
 
 function HomePage() {

@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import './AboutPage.css';
-import hakkimizdaImage from '@public/images/hakkimizda.jpeg';
-import nedenbizImage from '@public/images/nedenbiz.jpeg';
+import hakkimizdaImage from '@public/images/AboutPage/hakkimizda.webp';
+import nedenbizImage from '@public/images/AboutPage/nedenbiz.webp';
 import Logo from '../../components/Navbar/Logo';
 
 function AboutPage() {

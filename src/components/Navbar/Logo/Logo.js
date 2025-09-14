@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Logo.css';
-import logoImage from '@public/images/logo.jpeg';
+import logoImage from '@public/images/Logo/logo.webp';
 
 function Logo() {
   const { t } = useTranslation();

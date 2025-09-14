@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import './DrillingPage.css';
-import drillingImage from '@public/images/3d-tunel-gorunumu.png';
+import drillingImage from '@public/images/DrillingPage/3d-tunel-gorunumu.webp';
 
 function DrillingPage() {
   const { t } = useTranslation();

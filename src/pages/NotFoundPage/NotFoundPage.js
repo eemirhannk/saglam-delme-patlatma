@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './NotFoundPage.css';
-import notFoundImage from '@public/images/ALT YARI PATLATMA SONRASI GÖRÜNÜM.jpg';
+import notFoundImage from '@public/images/NotFoundPage/ALT YARI PATLATMA SONRASI GÖRÜNÜM.webp';
 
 function NotFoundPage() {
   const { t } = useTranslation();
