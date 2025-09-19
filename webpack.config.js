@@ -33,6 +33,13 @@ module.exports = {
           filename: 'images/[name][ext]'
         }
       },
+      {
+        test: /\.(pdf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        }
+      },
     ],
   },
   plugins: [
