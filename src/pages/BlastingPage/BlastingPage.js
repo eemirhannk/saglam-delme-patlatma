@@ -155,9 +155,9 @@ function BlastingPage() {
   return (
     <div className="blasting-page">
       <SEO
-        title={`${t('navbar.blasting')} | Sağlam Delme & Patlatma`}
-        description={t('services.blasting.description')}
-        keywords="patlatma hizmetleri, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, kontrollü patlatma, güvenli patlatma, USBM standartları, DIN standartları"
+        title={`${t('navbar.blasting')} | Sağlam Delme & Patlatma - Güvenli ve Kontrollü Patlatma Hizmetleri`}
+        description={`${t('services.blasting.description')} Taş ocağı, şehir içi ve su altı patlatma hizmetlerimizle USBM ve DIN standartlarında güvenli çözümler. Titreşim kontrolü, gürültü azaltma ve çevresel koruma ile profesyonel hizmet.`}
+        keywords="patlatma hizmetleri, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, kontrollü patlatma, güvenli patlatma, USBM standartları, DIN standartları, titreşim kontrolü, gürültü azaltma, çevresel koruma, patlayıcı yükleme, zaman gecikmeleri, taş fırlaması önlemleri, elektronik fünye, kırma-eleme, parça boyutlandırma, metro projeleri, temel kazıları, liman projeleri, baraj projeleri, köprü projeleri"
         image="/images/BlastingPage/quarry-blasting2.webp"
         url="/blasting-services"
         type="service"

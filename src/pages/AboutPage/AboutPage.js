@@ -52,9 +52,9 @@ function AboutPage() {
   return (
     <div className="about-page">
       <SEO
-        title={`${t('about.title')} | Sağlam Delme & Patlatma`}
-        description={t('about.content.paragraph1')}
-        keywords="hakkımızda, delme patlatma şirketi, sondaj uzmanı, patlatma mühendisi, güvenli hizmet, profesyonel ekip"
+        title={`${t('about.title')} | Sağlam Delme & Patlatma - Uzman Kadro ve Deneyim`}
+        description={`${t('about.content.paragraph1')} 2025'ten beri madencilik, inşaat ve altyapı projelerinde güvenli delme ve patlatma hizmetleri. Uzman mühendis kadromuz, modern ekipmanlarımız ve uluslararası standartlarda çözümlerimizle projelerinizi güvenle hayata geçiriyoruz.`}
+        keywords="hakkımızda, delme patlatma şirketi, sondaj uzmanı, patlatma mühendisi, güvenli hizmet, profesyonel ekip, uzman kadro, modern ekipman, uluslararası standartlar, mühendislik disiplini, saha pratiği, uzmanlık markası, güvenlik önceliği, çevre bilinci, kalite, deneyim, 2025, madencilik projeleri, inşaat projeleri, altyapı projeleri"
         image="/images/AboutPage/hakkimizda.webp"
         url="/about"
         type="about"

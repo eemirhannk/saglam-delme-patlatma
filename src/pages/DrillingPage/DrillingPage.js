@@ -95,10 +95,10 @@ function DrillingPage() {
   return (
     <div className="drilling-page" style={{backgroundImage: `url(${drillingImage})`}}>
       <SEO
-        title={`${t('navbar.drilling')} | Sağlam Delme & Patlatma`}
-        description={t('services.drilling.description')}
-        keywords="delme hizmetleri, MWD, measurement while drilling, sondaj, tünel delme, açık saha delme, jeolojik modelleme, tahkimat tasarımı"
-        image="/images/3d-tunel-gorunumu.png"
+        title={`${t('navbar.drilling')} | Sağlam Delme & Patlatma - MWD Teknolojisi ile Profesyonel Sondaj`}
+        description={`${t('services.drilling.description')} MWD teknolojisi ile jeolojik modelleme, tahkimat tasarımı, verimlilik optimizasyonu ve güvenlik artırımı. Tünel delme ve açık saha delme hizmetlerimizle projelerinizi güvenle hayata geçirin.`}
+        keywords="delme hizmetleri, MWD, measurement while drilling, sondaj, tünel delme, açık saha delme, jeolojik modelleme, tahkimat tasarımı, penetrasyon hızı, tork, basınç, yön parametreleri, gerçek zamanlı veri, jeolojik belirsizlikler, operasyon verimliliği, kaya sertliği, çatlaklık, su zonları, kaya bulonu, püskürtme beton, çelik hasır, cevher ayrımı, patlatma optimizasyonu, iş güvenliği"
+        image="/images/DrillingPage/3d-tunel-gorunumu.webp"
         url="/drilling-services"
         type="service"
         structuredData={structuredData}

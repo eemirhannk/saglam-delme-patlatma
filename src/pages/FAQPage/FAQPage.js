@@ -168,6 +168,9 @@ function FAQPage() {
         title={t('faq.seo.title')}
         description={t('faq.seo.description')}
         keywords={t('faq.seo.keywords')}
+        image="/images/Logo/logo.webp"
+        url="/faq"
+        type="website"
         structuredData={structuredData}
       />
       

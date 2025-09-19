@@ -114,9 +114,9 @@ function ConsultingPage() {
   return (
     <div className="consulting-page">
       <SEO
-        title={`${t('navbar.consulting')} | Sağlam Delme & Patlatma`}
-        description={t('services.consulting.description')}
-        keywords="danışmanlık hizmetleri, teknik danışmanlık, proje danışmanlığı, delme patlatma danışmanlığı, mühendislik danışmanlığı, güvenlik danışmanlığı"
+        title={`${t('navbar.consulting')} | Sağlam Delme & Patlatma - Teknik Danışmanlık ve Mühendislik Hizmetleri`}
+        description={`${t('services.consulting.description')} Ruhsat süreçleri, patlayıcı dizayn çalışmaları, MWD verilerine dayalı teknik optimizasyon ve proje refakat hizmetleri. Uzman mühendis kadromuzla güvenli, verimli ve çevreye duyarlı çözümler.`}
+        keywords="danışmanlık hizmetleri, teknik danışmanlık, proje danışmanlığı, delme patlatma danışmanlığı, mühendislik danışmanlığı, güvenlik danışmanlığı, ruhsat süreçleri, patlayıcı dizayn, MWD veri analizi, teknik optimizasyon, proje refakat, çevreye duyarlı çözümler, güvenli operasyonlar, verimli projeler, uzman mühendis kadrosu, deneyimli ekip"
         image="/images/ConsultingPage/consulting3.webp"
         url="/consulting"
         type="service"

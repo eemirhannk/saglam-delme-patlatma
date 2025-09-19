@@ -2,11 +2,30 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import teamMemberImage from '@public/images/TeamPage/riza-saglam.webp';
+import certificateImage from '@public/images/TeamPage/Riza_Saglam_Certificate.jpeg';
 import './TeamPage.css';
 import { Link } from 'react-router-dom';
 
 function TeamPage() {
   const { t } = useTranslation();
+
+  const certificates = [
+    {
+      id: 'professional',
+      type: 'image',
+      title: t('team.member.certificates.otherCertificate'),
+      description: t('team.member.certificates.otherCertificateDesc'),
+      src: certificateImage
+    },
+    {
+      id: 'internal-auditor',
+      type: 'pdf',
+      title: t('team.member.certificates.internalAuditor'),
+      description: t('team.member.certificates.internalAuditorDesc'),
+      src: '/images/Riza_Saglam_Certificate2.pdf'
+    }
+  ];
+
 
   const memberDetails = [
     {
@@ -76,6 +95,26 @@ function TeamPage() {
                 ))}
               </ul>
             </div>
+            
+            <div className="member-certificates">
+              <h4>{t('team.member.certificates.title')}</h4>
+              <ul className="certificates-list">
+                {certificates.map((certificate) => (
+                  <li key={certificate.id} className="certificate-item">
+                    <a 
+                      href={certificate.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="certificate-link"
+                    >
+                      <i className={certificate.type === 'image' ? 'fas fa-image' : 'fas fa-file-pdf'}></i>
+                      <span className="certificate-text">{certificate.title}</span>
+                      <i className="fas fa-external-link-alt certificate-link-icon"></i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       )
@@ -129,9 +168,9 @@ function TeamPage() {
   return (
     <div className="team-page">
       <SEO
-        title={`${t('team.title')} | Sağlam Delme & Patlatma`}
-        description={t('team.description')}
-        keywords="ekibimiz, uzman kadro, patlayıcı mühendisi, jeoloji mühendisi, Rıza Sağlam, delme patlatma uzmanı, güvenli hizmet"
+        title={`${t('team.title')} | Sağlam Delme & Patlatma - Uzman Mühendis Kadromuz`}
+        description={`${t('team.description')} Rıza Sağlam liderliğindeki uzman ekibimiz, 10+ yıllık deneyim, Patlayıcı Mühendisliği Yüksek Lisans eğitimi ve uluslararası proje deneyimi ile güvenli ve profesyonel hizmet sunuyor.`}
+        keywords="ekibimiz, uzman kadro, patlayıcı mühendisi, Rıza Sağlam, delme patlatma uzmanı, güvenli hizmet, mühendis kadrosu, 10+ yıl deneyim, Patlayıcı Mühendisliği, Yüksek Lisans, Karadeniz Teknik Üniversitesi, Okan Üniversitesi, uluslararası proje deneyimi, Afrika, Avrupa, Güney Amerika, kariyer geçmişi, uzmanlık, güvenilir hizmet, profesyonel ekip"
         image="/images/TeamPage/riza-saglam.webp"
         url="/team"
         type="about"

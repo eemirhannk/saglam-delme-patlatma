@@ -309,9 +309,9 @@ function HomePage() {
   return (
     <>
       <SEO
-        title={t('homepage.hero.title')}
-        description={t('homepage.hero.description')}
-        keywords="delme hizmetleri, patlatma hizmetleri, sondaj, taş ocağı patlatma, şehir içi patlatma, su altı patlatma, MWD, danışmanlık, güvenli patlatma, kontrollü patlatma"
+        title={`${t('homepage.hero.title')} | Güvenli Sondaj ve Patlatma Hizmetleri`}
+        description={`${t('homepage.hero.description')} MWD teknolojisi, tünel delme, açık saha delme, taş ocağı patlatma, şehir içi kontrollü patlatma, su altı patlatma ve teknik danışmanlık hizmetleri. USBM ve DIN standartlarında güvenli çözümler.`}
+        keywords="delme hizmetleri, patlatma hizmetleri, sondaj, MWD teknolojisi, tünel delme, açık saha delme, taş ocağı patlatma, şehir içi patlatma, kontrollü patlatma, su altı patlatma, teknik danışmanlık, güvenli patlatma, USBM standartları, DIN standartları, patlatma mühendisi, sondaj uzmanı, madencilik, inşaat, altyapı projeleri, metro projeleri, köprü projeleri, baraj projeleri, liman projeleri"
         image="/images/Logo/logo.webp"
         url="/"
         structuredData={structuredData}

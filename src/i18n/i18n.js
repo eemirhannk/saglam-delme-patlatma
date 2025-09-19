@@ -28,10 +28,6 @@ const tr = {
         button: "Daha Fazla Bilgi"
       },
       carousel: {
-        slide1: {
-          imageTitle: "Profesyonel Ekip",
-          imageDescription: "Uzman kadromuzla güvenli çözümler"
-        },
         slide2: {
           title: "MWD Hizmetleri",
           description: "Measurement While Drilling (MWD) teknolojisi ile delme sırasında anlık veri toplama ve analiz imkânı sunuyoruz. Gerçek zamanlı bilgiler sayesinde, jeolojik koşulları anında okuyarak daha doğru, güvenli ve verimli çözümler üretiyoruz.",
@@ -74,13 +70,6 @@ const tr = {
           imageTitle: "Su Altı Patlatma",
           imageDescription: "Güvenli ve çevre dostu su altı operasyonlar"
         },
-        slide6: {
-          title: "Teknik Danışmanlık",
-          description: "Uzman ekibimizle projeleriniz için kapsamlı teknik danışmanlık hizmetleri sunuyoruz. Her aşamada yanınızdayız.",
-          button: "Daha Fazla Bilgi",
-          imageTitle: "Uzman Danışmanlık",
-          imageDescription: "Projelerinizde rehberlik"
-        },
         navigation: {
           previous: "Önceki",
           next: "Sonraki"
@@ -105,7 +94,6 @@ const tr = {
     about: {
       title: "Hakkımızda",
       subtitle: "Neler Yapıyoruz?",
-      description: "Sağlam Delme & Patlatma olarak, 2025'ten beri madencilik, inşaat ve altyapı projelerinde güvenli ve etkili delme ve patlatma hizmetleri sunuyoruz. Uzman ekibimiz ve modern ekipmanlarımızla, en zorlu projeleri başarıyla tamamlıyoruz.",
       content: {
         paragraph1: "<strong>Sağlam Delme & Patlatma</strong>, uzun yıllara dayanan tecrübenin, güçlü saha pratiğinin ve mühendislik disiplininin birleşiminden doğmuş bir <strong>uzmanlık markasıdır</strong>.",
         paragraph2: "Kurucumuz; <strong>sualtı patlatmalardan, tünel, metro, otoyol ve liman projelerine, taş ocaklarından büyük altyapı ve kanal çalışmalarına</strong> kadar sektörün en zorlu ve kritik alanlarında görev alarak değerli bir mühendislik birikimi kazanmıştır.",
@@ -131,12 +119,6 @@ const tr = {
       }
     },
     
-    // Drilling Page
-    drilling: {
-      title: "MWD",
-      subtitle: "Delme Esnasında Ölçüm",
-      description: "MWD, sondaj sırasında penetrasyon hızı, tork, basınç ve yön gibi parametreleri anlık olarak kaydeden ve yüzeye aktaran bir teknolojidir. Bu sayede maden ve tünel projelerinde jeolojik belirsizlikler azaltılır, güvenlik artırılır ve operasyon verimliliği yükseltilir."
-    },
     
     // Blasting Page
     blasting: {
@@ -186,6 +168,13 @@ const tr = {
             "Güney Amerika, Uruguay'da <strong>su altı patlatma uygulamalarında uzmanlık</strong>"
           ]
         },
+               certificates: {
+                 title: "Sertifikalar",
+                internalAuditor: "Entegre Yönetim Sistemleri İç Tetkikçi Eğitimi",
+                internalAuditorDesc: "Entegre yönetim sistemleri iç tetkikçi eğitimi sertifikası",
+                 otherCertificate: "Epiroc Underground Manager MWD",
+                 otherCertificateDesc: "Epiroc Underground Manager MWD sertifikası - Yeraltı madenciliği ve MWD teknolojisi uzmanlığı"
+               },
       },
       cta: {
         title: "Uzman Ekibimizle Çalışmak İster misiniz?",
@@ -381,8 +370,6 @@ const tr = {
     
     // Footer
     footer: {
-      contact: "İletişim",
-      copyright: "Tüm hakları saklıdır",
       copyrightFull: "© 2025 Sağlam Delme & Patlatma. Tüm hakları saklıdır",
       address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
     },
@@ -394,16 +381,10 @@ const tr = {
       refreshButton: "Sayfayı Yenile",
     },
     
-    // Loading
-    loading: {
-      screenReader: "Yükleniyor...",
-      text: "Sayfa yükleniyor..."
-    },
     
     // Images Alt Texts
     images: {
       team: "Sağlam Delme & Patlatma ekibi - 2025'ten beri güvenli hizmet",
-      logo: "Sağlam Delme & Patlatma logosu - Güvenli sondaj ve patlatma hizmetleri",
       whyUs: "Neden Sağlam Delme & Patlatma - Uzman kadro ve modern ekipmanlar",
       quarry: "Taş ocağında güvenli ve kontrollü patlatma işlemi - Sağlam Delme & Patlatma",
       urban1: "Şehir içi kontrollü patlatma işlemi - Güvenli ve profesyonel hizmet",
@@ -445,18 +426,6 @@ const tr = {
       underwaterBlasting: {
         title: "Su Altı Patlatmalar",
         description: "Deniz, göl ve nehir tabanında çevre dostu kontrollü patlatma hizmetleri sunuyoruz."
-      },
-      emergency: {
-        title: "Acil Müdahale",
-        description: "Acil durumlar için her zaman hazırız."
-      },
-      underwater: {
-        title: "Su Altı İşleri",
-        description: "Sertifikalı dalgıç ekibimizle su altı delme ve patlatma hizmetleri."
-      },
-      demolition: {
-        title: "Yıkım İşleri",
-        description: "Binalar, köprüler ve beton yapılar için güvenli yıkım hizmetleri."
       },
       consulting: {
         title: "Danışmanlık",
@@ -576,12 +545,8 @@ const tr = {
     // Common
     common: {
       details: "Detaylar",
-      learnMore: "Daha Fazla Bilgi",
-      readMore: "Devamını Oku",
-      close: "Kapat",
-      loading: "Yükleniyor...",
-      error: "Hata",
-      success: "Başarılı"
+      download: "İndir",
+      close: "Kapat"
     }
   }
 };
@@ -612,10 +577,6 @@ const en = {
         button: "Learn More"
       },
       carousel: {
-        slide1: {
-          imageTitle: "Professional Team",
-          imageDescription: "Safe solutions with our expert staff"
-        },
         slide2: {
           title: "MWD Services",
           description: "We provide instant data collection and analysis capabilities during drilling with Measurement While Drilling (MWD) technology. Thanks to real-time information, we produce more accurate, safe and efficient solutions by instantly reading geological conditions.",
@@ -658,13 +619,6 @@ const en = {
           imageTitle: "Underwater Blasting",
           imageDescription: "Safe and environmentally friendly underwater operations"
         },
-        slide6: {
-          title: "Technical Consulting",
-          description: "We provide comprehensive technical consulting services for your projects with our expert team. We are with you at every stage.",
-          button: "Learn More",
-          imageTitle: "Expert Consulting",
-          imageDescription: "Guidance in your projects"
-        },
         navigation: {
           previous: "Previous",
           next: "Next"
@@ -689,7 +643,6 @@ const en = {
     about: {
       title: "About Us",
       subtitle: "What Do We Do?",
-      description: "As Sağlam Drilling & Blasting, we have been providing safe and effective drilling and blasting services in mining, construction and infrastructure projects since 2025. With our expert team and modern equipment, we successfully complete the most challenging projects.",
       content: {
         paragraph1: "<strong>Sağlam Drilling & Blasting</strong> is an <strong>expertise brand</strong> born from the combination of long-standing experience, strong field practice and engineering discipline.",
         paragraph2: "Our founder has gained valuable engineering expertise by taking part in the most challenging and critical areas of the sector, from <strong>underwater blasting to tunnel, metro, highway and port projects, from quarries to large infrastructure and canal works</strong>.",
@@ -715,12 +668,6 @@ const en = {
       }
     },
     
-    // Drilling Page
-    drilling: {
-      title: "MWD",
-      subtitle: "Measurement While Drilling",
-      description: "MWD is a technology that records and transmits to the surface parameters such as penetration rate, torque, pressure and direction during drilling in real time. This reduces geological uncertainties in mining and tunnel projects, increases safety and improves operational efficiency."
-    },
     
     // Blasting Page
     blasting: {
@@ -770,6 +717,13 @@ const en = {
             "Expertise in <strong>underwater blasting applications</strong> in Uruguay, South America"
           ]
         },
+               certificates: {
+                 title: "Certificates",
+                internalAuditor: "Integrated Management Systems Internal Auditor Training",
+                internalAuditorDesc: "Integrated management systems internal auditor training certificate",
+                 otherCertificate: "Epiroc Underground Manager MWD",
+                 otherCertificateDesc: "Epiroc Underground Manager MWD certificate - Underground mining and MWD technology expertise"
+               },
       },
       cta: {
         title: "Would You Like to Work with Our Expert Team?",
@@ -967,8 +921,6 @@ const en = {
     
     // Footer
     footer: {
-      contact: "Contact",
-      copyright: "All rights reserved",
       copyrightFull: "© 2025 Sağlam Delme & Patlatma. All rights reserved",
       address: "Tığcılar Mahallesi Pamuklar<br />Sokak No : 14 İç Kapı No: 302<br />Adapazarı / SAKARYA"
     },
@@ -980,16 +932,10 @@ const en = {
       refreshButton: "Refresh Page",
     },
     
-    // Loading
-    loading: {
-      screenReader: "Loading...",
-      text: "Page is loading..."
-    },
     
     // Images Alt Texts
     images: {
       team: "Sağlam Delme & Patlatma team - Safe service since 2025",
-      logo: "Sağlam Delme & Patlatma logo - Safe drilling and blasting services",
       whyUs: "Why Sağlam Delme & Patlatma - Expert staff and modern equipment",
       quarry: "Safe and controlled blasting operation in quarry - Sağlam Delme & Patlatma",
       urban1: "Urban controlled blasting operation - Safe and professional service",
@@ -1031,18 +977,6 @@ const en = {
       underwaterBlasting: {
         title: "Underwater Blasting",
         description: "We provide environmentally friendly controlled blasting services on sea, lake and river beds."
-      },
-      emergency: {
-        title: "Emergency Response",
-        description: "We are always ready for emergencies."
-      },
-      underwater: {
-        title: "Underwater Works",
-        description: "Underwater drilling and blasting services with our certified diving team."
-      },
-      demolition: {
-        title: "Demolition Works",
-        description: "Safe demolition services for buildings, bridges and concrete structures."
       },
       consulting: {
         title: "Consulting",
@@ -1162,12 +1096,8 @@ const en = {
     // Common
     common: {
       details: "Details",
-      learnMore: "Learn More",
-      readMore: "Read More",
-      close: "Close",
-      loading: "Loading...",
-      error: "Error",
-      success: "Success"
+      download: "Download",
+      close: "Close"
     }
   }
 };

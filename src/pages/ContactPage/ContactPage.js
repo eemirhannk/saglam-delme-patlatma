@@ -268,9 +268,9 @@ function ContactPage() {
   return (
     <div className="contact-page">
       <SEO
-        title={`${t('contact.title')} | Sağlam Delme & Patlatma`}
-        description="Sağlam Delme & Patlatma ile iletişime geçin. Delme, patlatma ve danışmanlık hizmetleri için bizimle iletişime geçin."
-        keywords="iletişim, delme patlatma iletişim, sondaj hizmetleri iletişim, patlatma danışmanlığı, teknik destek, proje danışmanlığı"
+        title={`${t('contact.title')} | Sağlam Delme & Patlatma - Proje Teklifi ve İletişim`}
+        description="Sağlam Delme & Patlatma ile iletişime geçin. Delme, patlatma ve danışmanlık hizmetleri için ücretsiz proje teklifi alın. Uzman ekibimizle 1-5 iş günü içinde kapsamlı çözümler sunuyoruz."
+        keywords="iletişim, delme patlatma iletişim, sondaj hizmetleri iletişim, patlatma danışmanlığı, teknik destek, proje danışmanlığı, proje teklifi, ücretsiz keşif, saha kontrolü, kapsamlı teklif, uzman ekip, 1-5 iş günü, güvenli hizmet, profesyonel çözümler"
         image="/images/Logo/logo.webp"
         url="/contact"
         type="contact"
