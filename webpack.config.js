@@ -72,6 +72,10 @@ new CopyWebpackPlugin({
       from: 'public/apple-touch-icon.png',
       to: 'apple-touch-icon.png',
     },
+    {
+      from: 'public/images/Riza_Saglam_Certificate2.pdf',
+      to: 'images/Riza_Saglam_Certificate2.pdf',
+    },
   ],
 }),
   ],

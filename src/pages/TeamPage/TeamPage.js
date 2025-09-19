@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import SEO from '../../components/SEO';
 import teamMemberImage from '@public/images/TeamPage/riza-saglam.webp';
 import certificateImage from '@public/images/TeamPage/Riza_Saglam_Certificate.jpeg';
-import certificatePdf from '@public/images/Riza_Saglam_Certificate2.pdf';
 import './TeamPage.css';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ function TeamPage() {
       type: 'pdf',
       title: t('team.member.certificates.internalAuditor'),
       description: t('team.member.certificates.internalAuditorDesc'),
-      src: certificatePdf
+      src: '/images/Riza_Saglam_Certificate2.pdf'
     }
   ];
 
