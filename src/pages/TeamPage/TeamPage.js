@@ -22,7 +22,7 @@ function TeamPage() {
       type: 'pdf',
       title: t('team.member.certificates.internalAuditor'),
       description: t('team.member.certificates.internalAuditorDesc'),
-      src: '/images/Riza_Saglam_Certificate2.pdf'
+      src: '/Riza_Saglam_Certificate2.pdf'
     }
   ];
 
