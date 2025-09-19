@@ -82,17 +82,17 @@ function HomePage() {
   const safetyFeatureData = [
     {
       id: 1,
-      icon: "fas fa-shield-alt",
+      icon: "fas fa-trophy",
       featureKey: 'experience'
     },
     {
       id: 2,
-      icon: "fas fa-cogs",
+      icon: "fas fa-cog",
       featureKey: 'technology'
     },
     {
       id: 3,
-      icon: "fas fa-user-shield",
+      icon: "fas fa-lock",
       featureKey: 'safety'
     }
   ];

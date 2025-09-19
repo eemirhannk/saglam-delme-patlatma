@@ -116,6 +116,16 @@ function Navbar() {
               <Link className="nav-link" to="/contact">{t('navbar.contact')}</Link>
             </li>
             <li className="nav-item">
+              <a 
+                className="nav-link" 
+                href="https://www.researchgate.net/profile/Riza-Saglam?ev=hdr_xprf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {t('navbar.publications')}
+              </a>
+            </li>
+            <li className="nav-item">
               <LanguageSwitcher />
             </li>
           </ul>

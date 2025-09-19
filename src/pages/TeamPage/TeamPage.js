@@ -16,20 +16,15 @@ function TeamPage() {
     },
     {
       id: 2,
-      icon: "fas fa-university",
-      textKey: "team.member.education2"
-    },
-    {
-      id: 3,
       icon: "fas fa-tools",
       textKey: "team.member.expertise"
     }
   ];
 
   const ctaData = {
-    title: "Uzman Ekibimizle Çalışmak İster misiniz?",
-    description: "Projeleriniz için güvenilir ve profesyonel hizmet almak için hemen iletişime geçin.",
-    buttonText: "İletişime Geçin",
+    title: t('team.cta.title'),
+    description: t('team.cta.description'),
+    buttonText: t('team.cta.button'),
     buttonLink: "/contact"
   };
 
@@ -68,7 +63,7 @@ function TeamPage() {
               ))}
             </div>
             
-            <p className="member-description">{t('team.member.description')}</p>
+            <p className="member-description" dangerouslySetInnerHTML={{ __html: t('team.member.description') }}></p>
             
             <div className="member-career">
               <h4>{t('team.member.career.title')}</h4>
@@ -76,7 +71,7 @@ function TeamPage() {
                 {t('team.member.career.items', { returnObjects: true }).map((item, index) => (
                   <li key={index} className="career-item">
                     <i className="fas fa-arrow-right"></i>
-                    <span>{item}</span>
+                    <span dangerouslySetInnerHTML={{ __html: item }}></span>
                   </li>
                 ))}
               </ul>
@@ -126,9 +121,7 @@ function TeamPage() {
       ],
       "knowsAbout": [
         "Patlayıcı Mühendisliği",
-        "Jeoloji Mühendisliği",
-        "Delme ve Patlatma",
-        "Güvenlik Standartları"
+        "Delme ve Patlatma"
       ]
     }
   };

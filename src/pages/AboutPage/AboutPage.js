@@ -35,7 +35,8 @@ function AboutPage() {
     t('about.content.paragraph1'),
     t('about.content.paragraph2'),
     t('about.content.paragraph3'),
-    t('about.content.paragraph4')
+    t('about.content.paragraph4'),
+    t('about.content.paragraph5')
   ];
 
   const advantageBoxes = [
@@ -76,8 +77,7 @@ function AboutPage() {
             
             <div className="about-text">
               {aboutParagraphs.map((paragraph, index) => (
-                <p key={index}>
-                  {paragraph}
+                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}>
                 </p>
               ))}
             </div>
