@@ -1,30 +1,31 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 function ScrollToTop() {
-  const { pathname, hash } = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const scrollToElement = () => {
+      const hash = window.location.hash;
+
       if (hash) {
-        // Hash varsa o elemente scroll yap
         setTimeout(() => {
           const element = document.querySelector(hash);
           if (element) {
             const elementPosition = element.offsetTop;
-            const offsetPosition = elementPosition - 85; // 85px üstüne scroll (navbar için)
-            
+            const offsetPosition = elementPosition - 85;
+
             window.scrollTo({
               top: offsetPosition,
-              behavior: 'smooth'
+              behavior: 'smooth',
             });
           } else {
-            // Element bulunamazsa sayfanın başına scroll
             window.scrollTo(0, 0);
           }
         }, 100);
       } else {
-        // Hash yoksa sayfanın başına scroll
         window.scrollTo(0, 0);
         setTimeout(() => {
           window.scrollTo(0, 0);
@@ -33,7 +34,7 @@ function ScrollToTop() {
     };
 
     scrollToElement();
-  }, [pathname, hash]);
+  }, [pathname]);
 
   return null;
 }

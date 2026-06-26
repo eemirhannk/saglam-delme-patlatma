@@ -162,6 +162,7 @@
   }
   
   .navbar-custom .dropdown.show .dropdown-menu {
+    display: block;
     max-height: 300px;
   }
   

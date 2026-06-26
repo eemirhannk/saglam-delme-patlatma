@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Footer.css';
@@ -32,12 +34,15 @@ function Footer() {
             <a href="https://x.com/saglamtrcom" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="Twitter Profilimiz">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/saglamtrcom/" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="Instagram Profilimiz">
+            <a href="https://www.instagram.com/saglamdp/" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="Instagram Profilimiz">
               <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@saglamdp" target="_blank" rel="me noopener noreferrer" className="social-link" aria-label="YouTube Kanalımız">
+              <i className="fab fa-youtube"></i>
             </a>
           </div>
           <div className="footer-copyright">
-            <p>{t('footer.copyrightFull')}</p>
+            <p>{t('footer.copyrightFull', { year: new Date().getFullYear() })}</p>
           </div>
         </div>
       </div>

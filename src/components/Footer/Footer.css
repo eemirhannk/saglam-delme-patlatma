@@ -95,6 +95,12 @@
   background-color: rgba(228, 64, 95, 0.2);
 }
 
+/* YouTube hover */
+.social-link[href*="youtube"]:hover {
+  color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
 .footer-copyright {
   margin: 0;
 }

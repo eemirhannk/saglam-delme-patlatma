@@ -2,69 +2,57 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-function SEO({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
+const BASE_URL = 'https://saglam-tr.com';
+
+function SEO({
+  title,
+  description,
+  keywords,
+  image,
+  url,
   type = 'website',
-  structuredData 
+  structuredData,
 }) {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-  
-  const baseUrl = 'https://saglam-tr.com';
-  const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
-  const fullImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/Logo/logo.webp`;
-  
-  const defaultTitle = currentLanguage === 'tr' 
-    ? 'Sağlam Delme & Patlatma | Güvenli Sondaj ve Patlatma Hizmetleri'
-    : 'Sağlam Delme & Patlatma | Safe Drilling and Blasting Services';
-    
-  const defaultDescription = currentLanguage === 'tr'
-    ? "2025'ten beri güvenli ve profesyonel delme, patlatma ve danışmanlık hizmetleri. Taş ocağı, şehir içi ve su altı patlatma projelerinde uzman ekibimizle hizmetinizdeyiz."
-    : "Safe and professional drilling, blasting and consulting services since 2025. We serve you with our expert team in quarry, urban and underwater blasting projects.";
+  const { t } = useTranslation();
+
+  const fullUrl = url ? `${BASE_URL}${url}` : BASE_URL;
+  const fullImage = image ? `${BASE_URL}${image}` : `${BASE_URL}${t('seo.defaultImage')}`;
+  const pageTitle = title || t('seo.defaultTitle');
+  const pageDescription = description || t('seo.defaultDescription');
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{title || defaultTitle}</title>
-      <meta name="title" content={title || defaultTitle} />
-      <meta name="description" content={description || defaultDescription} />
+      <title>{pageTitle}</title>
+      <meta name="title" content={pageTitle} />
+      <meta name="description" content={pageDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="Sağlam Delme & Patlatma" />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content={currentLanguage === 'tr' ? 'Turkish' : 'English'} />
-      <meta name="revisit-after" content="7 days" />
-      
-      {/* Canonical URL */}
+      <meta name="author" content={t('seo.author')} />
+      <meta name="robots" content={t('seo.robots')} />
+      <meta name="language" content={t('seo.language')} />
+      <meta name="revisit-after" content={t('seo.revisitAfter')} />
+
       <link rel="canonical" href={fullUrl} />
-      
-      {/* Open Graph / Facebook */}
+
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={title || defaultTitle} />
-      <meta property="og:description" content={description || defaultDescription} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Sağlam Delme & Patlatma" />
-      <meta property="og:locale" content={currentLanguage === 'tr' ? 'tr_TR' : 'en_US'} />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="og:site_name" content={t('seo.siteName')} />
+      <meta property="og:locale" content={t('seo.ogLocale')} />
+
+      <meta property="twitter:card" content={t('seo.twitterCard')} />
       <meta property="twitter:url" content={fullUrl} />
-      <meta property="twitter:title" content={title || defaultTitle} />
-      <meta property="twitter:description" content={description || defaultDescription} />
+      <meta property="twitter:title" content={pageTitle} />
+      <meta property="twitter:description" content={pageDescription} />
       <meta property="twitter:image" content={fullImage} />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#1B2645" />
-      <meta name="msapplication-TileColor" content="#1B2645" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Sağlam Delme & Patlatma" />
-      
-      {/* Structured Data */}
+
+      <meta name="theme-color" content={t('seo.themeColor')} />
+      <meta name="msapplication-TileColor" content={t('seo.tileColor')} />
+      <meta name="apple-mobile-web-app-capable" content={t('seo.appleMobileWebAppCapable')} />
+      <meta name="apple-mobile-web-app-status-bar-style" content={t('seo.appleMobileWebAppStatusBarStyle')} />
+      <meta name="apple-mobile-web-app-title" content={t('seo.appleMobileWebAppTitle')} />
+
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

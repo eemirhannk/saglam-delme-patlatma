@@ -1,7 +1,8 @@
+'use client';
+
 import React from 'react';
 import i18n from '../../i18n/i18n';
 import './ErrorBoundary.css';
-import errorImage from '@public/images/ErrorBoundary/FARKLI 2 FORMASYON AYNA GÖRÜNÜM2.webp';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class ErrorBoundary extends React.Component {
           <div className="error-boundary-content">
             <div className="error-boundary-image">
               <img 
-                src={errorImage} 
+                src="/images/ErrorBoundary/FARKLI 2 FORMASYON AYNA GÖRÜNÜM2.webp"
                 alt="Error Background" 
                 className="error-boundary-img"
               />

@@ -1,20 +1,31 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
+import { localizeHref, stripLocaleFromPath, useLocale } from '@/i18n/navigation';
 import './LanguageSwitcher.css';
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState('tr');
+  const router = useRouter();
+  const pathname = usePathname();
+  const locale = useLocale();
+  const [currentLanguage, setCurrentLanguage] = useState(locale);
 
   useEffect(() => {
-    // İlk yüklemede mevcut dili al
-    const currentLang = i18n.language || 'tr';
-    setCurrentLanguage(currentLang);
-  }, [i18n.language]);
+    setCurrentLanguage(locale);
+  }, [locale]);
 
   const changeLanguage = (lng) => {
+    if (lng === currentLanguage) return;
+
+    const pathWithoutLocale = stripLocaleFromPath(pathname);
+    const nextPath = localizeHref(lng, pathWithoutLocale);
+
     i18n.changeLanguage(lng);
     setCurrentLanguage(lng);
+    router.push(nextPath);
   };
 
   return (
