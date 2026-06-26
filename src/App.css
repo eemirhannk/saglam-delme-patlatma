@@ -10,7 +10,8 @@
 main {
   flex: 1;
   background-color: var(--soft-white);
-  padding-top: 103px;
+  padding-top: 94px;
+  min-height: 100vh;
 }
 
 /* Section Backgrounds */
